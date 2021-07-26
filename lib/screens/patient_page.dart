@@ -9,6 +9,8 @@ import 'patient_treatment_results_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
+import 'package:therapist_buddy/main.dart';
 
 class PatientPageWidget extends StatefulWidget {
   PatientPageWidget({Key key}) : super(key: key);
@@ -19,68 +21,78 @@ class PatientPageWidget extends StatefulWidget {
 
 class _PatientPageWidgetState extends State<PatientPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  double actionButtonHeight = 75;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.primaryColor,
-            size: 24,
-          ),
-          iconSize: 24,
-        ),
-        title: Row(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
-              child: Container(
-                width: 38,
-                height: 38,
-                clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () async {
+              await Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      NavBarPage(initialPage: 'Treatments_page'),
                 ),
-                child: Image.network(
-                  'https://picsum.photos/seed/766/600',
-                ),
-              ),
+              );
+            },
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.primaryColor,
+              size: 24,
             ),
-            Container(
-              width: MediaQuery.of(context).size.width * 0.5,
-              decoration: BoxDecoration(),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  AutoSizeText(
-                    'ธนวิชญ์ แซ่ลิ่ม',
-                    style: GoogleFonts.getFont(
-                      'Kanit',
-                      color: FlutterFlowTheme.primaryColor,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 21,
-                    ),
-                  )
-                ],
+            iconSize: 24,
+          ),
+          title: Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+                child: Container(
+                  width: 38,
+                  height: 38,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.network(
+                    'https://picsum.photos/seed/766/600',
+                  ),
+                ),
               ),
-            )
-          ],
+              Container(
+                width: MediaQuery.of(context).size.width * 0.5,
+                decoration: BoxDecoration(),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'ธนวิชญ์ แซ่ลิ่ม',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                        color: FlutterFlowTheme.primaryColor,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 21,
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Color(0xFFF5F5F5),
       body: SafeArea(
@@ -91,7 +103,11 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
             children: [
               Container(
                 width: double.infinity,
-                height: 601,
+                height: MediaQuery.of(context).size.height -
+                    MediaQuery.of(context).padding.top -
+                    MediaQuery.of(context).padding.bottom -
+                    appbarHeight -
+                    actionButtonHeight,
                 decoration: BoxDecoration(),
                 child: SingleChildScrollView(
                   child: Column(
@@ -186,14 +202,22 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                             ),
                                           ),
                                           Container(
-                                            width: 171,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width -
+                                                24 -
+                                                32 -
+                                                90 -
+                                                14 -
+                                                28 -
+                                                16,
                                             decoration: BoxDecoration(),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                AutoSizeText(
+                                                Text(
                                                   'ธนวิชญ์ แซ่ลิ่ม',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',
@@ -259,14 +283,22 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                             ),
                                           ),
                                           Container(
-                                            width: 171,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width -
+                                                24 -
+                                                32 -
+                                                90 -
+                                                14 -
+                                                28 -
+                                                16,
                                             decoration: BoxDecoration(),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                AutoSizeText(
+                                                Text(
                                                   '20 ปี',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',
@@ -358,14 +390,17 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                     ),
                                   ),
                                   Container(
-                                    width: 295,
+                                    width: MediaQuery.of(context).size.width -
+                                        36 -
+                                        28 -
+                                        16,
                                     decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'Office Syndrome',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -428,14 +463,17 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                     ),
                                   ),
                                   Container(
-                                    width: 195,
+                                    width: MediaQuery.of(context).size.width -
+                                        36 -
+                                        128 -
+                                        16,
                                     decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           '15 มิถุนายน 2564',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -491,12 +529,13 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                           ),
                                         );
                                       },
-                                      child: AutoSizeText(
+                                      child: Text(
                                         'แก้ไข้',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
                                           color: FlutterFlowTheme.primaryColor,
                                           fontSize: 14,
+                                          decoration: TextDecoration.underline,
                                         ),
                                       ),
                                     )
@@ -507,7 +546,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      width: 32,
+                                      width: 22,
                                       decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -551,14 +590,17 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       ),
                                     ),
                                     Container(
-                                      width: 291,
+                                      width: MediaQuery.of(context).size.width -
+                                          36 -
+                                          22 -
+                                          16,
                                       decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             'พฤหัสบดีที่ 14 กรกฏาคม 2564 ',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -621,14 +663,17 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       ),
                                     ),
                                     Container(
-                                      width: 291,
+                                      width: MediaQuery.of(context).size.width -
+                                          36 -
+                                          32 -
+                                          16,
                                       decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             '11.00 น.',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -685,13 +730,14 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                           ),
                                         );
                                       },
-                                      child: AutoSizeText(
+                                      child: Text(
                                         'ดูรายละเอียด',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
                                           color: FlutterFlowTheme.primaryColor,
                                           fontWeight: FontWeight.normal,
                                           fontSize: 14,
+                                          decoration: TextDecoration.underline,
                                         ),
                                       ),
                                     )
@@ -767,7 +813,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                           mainAxisSize:
                                                               MainAxisSize.max,
                                                           children: [
-                                                            AutoSizeText(
+                                                            Text(
                                                               'ยกแขนด้านข้าง',
                                                               textAlign:
                                                                   TextAlign
@@ -782,6 +828,10 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                                         .w500,
                                                                 fontSize: 15,
                                                               ),
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                              maxLines: 1,
                                                             )
                                                           ],
                                                         ),
@@ -817,6 +867,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                                     .black,
                                                                 fontSize: 15,
                                                               ),
+                                                              maxLines: 1,
                                                             )
                                                           ],
                                                         ),
@@ -875,13 +926,14 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                           ),
                                         );
                                       },
-                                      child: AutoSizeText(
+                                      child: Text(
                                         'ดูเพิ่มเติม',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
                                           color: FlutterFlowTheme.primaryColor,
                                           fontWeight: FontWeight.normal,
                                           fontSize: 14,
+                                          decoration: TextDecoration.underline,
                                         ),
                                       ),
                                     )
@@ -1053,13 +1105,14 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                           ),
                                         );
                                       },
-                                      child: AutoSizeText(
+                                      child: Text(
                                         'ดูรายละเอียด',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
                                           color: FlutterFlowTheme.primaryColor,
                                           fontWeight: FontWeight.normal,
                                           fontSize: 14,
+                                          decoration: TextDecoration.underline,
                                         ),
                                       ),
                                     )
@@ -1125,8 +1178,8 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                       );
                     },
                     child: Container(
-                      width: 125,
-                      height: 75,
+                      width: MediaQuery.of(context).size.width / 3,
+                      height: actionButtonHeight,
                       decoration: BoxDecoration(
                         color: Colors.white,
                       ),
@@ -1165,8 +1218,8 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                       );
                     },
                     child: Container(
-                      width: 125,
-                      height: 75,
+                      width: MediaQuery.of(context).size.width / 3,
+                      height: actionButtonHeight,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.primaryColor,
                       ),
@@ -1196,8 +1249,8 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                     ),
                   ),
                   Container(
-                    width: 125,
-                    height: 75,
+                    width: MediaQuery.of(context).size.width / 3,
+                    height: actionButtonHeight,
                     decoration: BoxDecoration(
                       color: Colors.white,
                     ),

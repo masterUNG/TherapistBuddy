@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class HomePageWidget extends StatefulWidget {
   HomePageWidget({Key key}) : super(key: key);
@@ -19,28 +20,31 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        automaticallyImplyLeading: false,
-        leading: Padding(
-          padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-          child: Image.asset(
-            'assets/images/logo.png',
-            fit: BoxFit.fitWidth,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          automaticallyImplyLeading: false,
+          leading: Padding(
+            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Image.asset(
+              'assets/images/logo.png',
+              fit: BoxFit.fitWidth,
+            ),
           ),
-        ),
-        title: AutoSizeText(
-          'TherapistBuddy',
-          style: GoogleFonts.getFont(
-            'Raleway',
-            color: FlutterFlowTheme.primaryColor,
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
+          title: AutoSizeText(
+            'TherapistBuddy',
+            style: GoogleFonts.getFont(
+              'Raleway',
+              color: FlutterFlowTheme.primaryColor,
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
+            ),
           ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Color(0xFFF5F5F5),
       body: SafeArea(
@@ -92,6 +96,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   color: FlutterFlowTheme.primaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14,
+                                  decoration: TextDecoration.underline,
                                 ),
                               ),
                             )
@@ -151,7 +156,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             Padding(
                                               padding: EdgeInsets.fromLTRB(
                                                   8, 8, 8, 0),
-                                              child: AutoSizeText(
+                                              child: Text(
                                                 'ธนวิชญ์',
                                                 textAlign: TextAlign.center,
                                                 style: GoogleFonts.getFont(
@@ -160,12 +165,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 16,
                                                 ),
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 1,
                                               ),
                                             ),
                                             Padding(
                                               padding: EdgeInsets.fromLTRB(
                                                   8, 0, 8, 0),
-                                              child: AutoSizeText(
+                                              child: Text(
                                                 'แซ่ลิ่ม',
                                                 textAlign: TextAlign.center,
                                                 style: GoogleFonts.getFont(
@@ -173,12 +180,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   color: Colors.black,
                                                   fontSize: 12,
                                                 ),
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 1,
                                               ),
                                             ),
                                             Padding(
                                               padding: EdgeInsets.fromLTRB(
                                                   8, 0, 8, 8),
-                                              child: AutoSizeText(
+                                              child: Text(
                                                 '10.00 - 12.00 น.',
                                                 textAlign: TextAlign.center,
                                                 style: GoogleFonts.getFont(
@@ -187,6 +196,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   fontWeight: FontWeight.w300,
                                                   fontSize: 11,
                                                 ),
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 1,
                                               ),
                                             )
                                           ],
@@ -261,14 +272,19 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Container(
-                                            width: 242,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width -
+                                                36 -
+                                                85 -
+                                                12,
                                             decoration: BoxDecoration(),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                AutoSizeText(
+                                                Text(
                                                   'ธนภัทร พัฒนา',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',
@@ -276,6 +292,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 16,
                                                   ),
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  maxLines: 1,
                                                 )
                                               ],
                                             ),
@@ -337,7 +356,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 ),
                                               ),
                                               Container(
-                                                width: 187,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    36 -
+                                                    85 -
+                                                    12 -
+                                                    40 -
+                                                    15,
                                                 decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
@@ -345,7 +371,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'Office Syndrome',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -355,6 +381,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             FontWeight.normal,
                                                         fontSize: 14,
                                                       ),
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      maxLines: 1,
                                                     )
                                                   ],
                                                 ),
@@ -418,7 +447,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 ),
                                               ),
                                               Container(
-                                                width: 112,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    36 -
+                                                    85 -
+                                                    12 -
+                                                    115 -
+                                                    15,
                                                 decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
@@ -426,7 +462,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'เหมาะสม',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -437,6 +473,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             FontWeight.normal,
                                                         fontSize: 14,
                                                       ),
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      maxLines: 1,
                                                     )
                                                   ],
                                                 ),
@@ -500,7 +539,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 ),
                                               ),
                                               Container(
-                                                width: 112,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    36 -
+                                                    85 -
+                                                    12 -
+                                                    115 -
+                                                    15,
                                                 decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
@@ -508,7 +554,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       '25 มิ.ย. 2564',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -518,6 +564,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             FontWeight.normal,
                                                         fontSize: 14,
                                                       ),
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      maxLines: 1,
                                                     )
                                                   ],
                                                 ),

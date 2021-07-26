@@ -3,6 +3,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class AllAppointmentsPageWidget extends StatefulWidget {
   AllAppointmentsPageWidget({Key key}) : super(key: key);
@@ -19,33 +20,36 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.primaryColor,
-            size: 24,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () async {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.primaryColor,
+              size: 24,
+            ),
+            iconSize: 24,
           ),
-          iconSize: 24,
-        ),
-        title: AutoSizeText(
-          'การนัดหมายทั้งหมด',
-          style: GoogleFonts.getFont(
-            'Kanit',
-            color: FlutterFlowTheme.primaryColor,
-            fontWeight: FontWeight.w500,
-            fontSize: 21,
+          title: AutoSizeText(
+            'การนัดหมายทั้งหมด',
+            style: GoogleFonts.getFont(
+              'Kanit',
+              color: FlutterFlowTheme.primaryColor,
+              fontWeight: FontWeight.w500,
+              fontSize: 21,
+            ),
           ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -85,14 +89,17 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  width: 259,
+                                  width: MediaQuery.of(context).size.width -
+                                      36 -
+                                      68 -
+                                      12,
                                   decoration: BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      AutoSizeText(
+                                      Text(
                                         'ธนภัทร พัฒนา',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
@@ -153,14 +160,19 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
                                       ),
                                     ),
                                     Container(
-                                      width: 197,
+                                      width: MediaQuery.of(context).size.width -
+                                          36 -
+                                          68 -
+                                          12 -
+                                          30 -
+                                          15,
                                       decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             '25 มิถุนายน 2564',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -223,7 +235,12 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
                                       ),
                                     ),
                                     Container(
-                                      width: 197,
+                                      width: MediaQuery.of(context).size.width -
+                                          36 -
+                                          68 -
+                                          12 -
+                                          30 -
+                                          15,
                                       decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,

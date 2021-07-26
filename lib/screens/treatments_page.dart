@@ -211,14 +211,19 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Container(
-                                            width: 189,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width -
+                                                36 -
+                                                108 -
+                                                12,
                                             decoration: BoxDecoration(),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                AutoSizeText(
+                                                Text(
                                                   'ธนภัทร พัฒนา',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',
@@ -226,6 +231,9 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 16,
                                                   ),
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  maxLines: 1,
                                                 )
                                               ],
                                             ),
@@ -287,7 +295,14 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                 ),
                                               ),
                                               Container(
-                                                width: 149,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    36 -
+                                                    108 -
+                                                    12 -
+                                                    55 -
+                                                    15,
                                                 decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
@@ -295,7 +310,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'Office Syndrome',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -305,6 +320,9 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                             FontWeight.normal,
                                                         fontSize: 14,
                                                       ),
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      maxLines: 1,
                                                     )
                                                   ],
                                                 ),
@@ -368,7 +386,14 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                 ),
                                               ),
                                               Container(
-                                                width: 149,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    36 -
+                                                    108 -
+                                                    12 -
+                                                    55 -
+                                                    15,
                                                 decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
@@ -376,7 +401,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       '25 มิถุนายน 2564',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -386,6 +411,9 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                             FontWeight.normal,
                                                         fontSize: 14,
                                                       ),
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      maxLines: 1,
                                                     )
                                                   ],
                                                 ),
@@ -449,7 +477,14 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                 ),
                                               ),
                                               Container(
-                                                width: 96,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    36 -
+                                                    108 -
+                                                    12 -
+                                                    108 -
+                                                    15,
                                                 decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
@@ -457,7 +492,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'ยกแขนด้านบน',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -467,6 +502,9 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                             FontWeight.normal,
                                                         fontSize: 14,
                                                       ),
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      maxLines: 1,
                                                     )
                                                   ],
                                                 ),
@@ -530,7 +568,14 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                 ),
                                               ),
                                               Container(
-                                                width: 96,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    36 -
+                                                    108 -
+                                                    12 -
+                                                    108 -
+                                                    15,
                                                 decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
@@ -538,7 +583,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'เหมาะสม',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -549,6 +594,9 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                             FontWeight.normal,
                                                         fontSize: 14,
                                                       ),
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      maxLines: 1,
                                                     )
                                                   ],
                                                 ),

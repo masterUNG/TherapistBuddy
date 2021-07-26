@@ -1,9 +1,12 @@
+import 'package:flutter/cupertino.dart';
+
 import 'edit_assigned_exercise_page.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class AssignedExercisesPageWidget extends StatefulWidget {
   AssignedExercisesPageWidget({Key key}) : super(key: key);
@@ -21,33 +24,36 @@ class _AssignedExercisesPageWidgetState
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.primaryColor,
-            size: 24,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () async {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.primaryColor,
+              size: 24,
+            ),
+            iconSize: 24,
           ),
-          iconSize: 24,
-        ),
-        title: AutoSizeText(
-          'รายการออกกำลังกาย',
-          style: GoogleFonts.getFont(
-            'Kanit',
-            color: FlutterFlowTheme.primaryColor,
-            fontWeight: FontWeight.w500,
-            fontSize: 21,
+          title: AutoSizeText(
+            'รายการออกกำลังกาย',
+            style: GoogleFonts.getFont(
+              'Kanit',
+              color: FlutterFlowTheme.primaryColor,
+              fontWeight: FontWeight.w500,
+              fontSize: 21,
+            ),
           ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Color(0xFFF5F5F5),
       body: SafeArea(
@@ -101,14 +107,18 @@ class _AssignedExercisesPageWidgetState
                                     ),
                                   ),
                                   Container(
-                                    width: 180,
+                                    width: MediaQuery.of(context).size.width -
+                                        36 -
+                                        115 -
+                                        14 -
+                                        30,
                                     decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'Office Syndrome',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -144,13 +154,15 @@ class _AssignedExercisesPageWidgetState
                                                   ),
                                                 );
                                               },
-                                              child: AutoSizeText(
+                                              child: Text(
                                                 'แก้ไข้',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
                                                   color: FlutterFlowTheme
                                                       .primaryColor,
                                                   fontSize: 14,
+                                                  decoration:
+                                                      TextDecoration.underline,
                                                 ),
                                               ),
                                             )
@@ -290,14 +302,16 @@ class _AssignedExercisesPageWidgetState
                                     ),
                                   ),
                                   Container(
-                                    width: 169,
+                                    width: MediaQuery.of(context).size.width -
+                                        36 -
+                                        170,
                                     decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'ทุกวัน',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -340,14 +354,16 @@ class _AssignedExercisesPageWidgetState
                                     ),
                                   ),
                                   Container(
-                                    width: 153,
+                                    width: MediaQuery.of(context).size.width -
+                                        36 -
+                                        186,
                                     decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'ก่อนหน้าวัดนัด 1 วัน',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
