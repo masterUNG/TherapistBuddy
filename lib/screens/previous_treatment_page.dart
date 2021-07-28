@@ -512,6 +512,75 @@ class _PreviousTreatmentPageWidgetState
                             ),
                           )
                         ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 110,
+                            decoration: BoxDecoration(),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                AutoSizeText(
+                                  'สถานะการรักษา',
+                                  style: GoogleFonts.getFont(
+                                    'Kanit',
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 15,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 16,
+                            decoration: BoxDecoration(),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                  child: AutoSizeText(
+                                    ':',
+                                    style: GoogleFonts.getFont(
+                                      'Kanit',
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width -
+                                36 -
+                                110 -
+                                16,
+                            decoration: BoxDecoration(),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'ยกเลิกการรักษา',
+                                  style: GoogleFonts.getFont(
+                                    'Kanit',
+                                    color: Color(0xffFA8072),
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
                       )
                     ],
                   ),

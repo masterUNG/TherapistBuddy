@@ -7,6 +7,7 @@ import 'treatments_history_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class OthersPageWidget extends StatefulWidget {
   OthersPageWidget({Key key}) : super(key: key);
@@ -22,28 +23,31 @@ class _OthersPageWidgetState extends State<OthersPageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        automaticallyImplyLeading: false,
-        leading: Padding(
-          padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-          child: Image.asset(
-            'assets/images/logo.png',
-            fit: BoxFit.fitWidth,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          automaticallyImplyLeading: false,
+          leading: Padding(
+            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Image.asset(
+              'assets/images/logo.png',
+              fit: BoxFit.fitWidth,
+            ),
           ),
-        ),
-        title: AutoSizeText(
-          'TherapistBuddy',
-          style: GoogleFonts.getFont(
-            'Raleway',
-            color: FlutterFlowTheme.primaryColor,
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
+          title: AutoSizeText(
+            'TherapistBuddy',
+            style: GoogleFonts.getFont(
+              'Raleway',
+              color: FlutterFlowTheme.primaryColor,
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
+            ),
           ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Color(0xFFF5F5F5),
       body: SafeArea(
@@ -251,12 +255,55 @@ class _OthersPageWidgetState extends State<OthersPageWidget> {
                   ),
                   child: InkWell(
                     onTap: () async {
-                      await Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginPageWidget(),
-                        ),
-                        (r) => false,
+                      await showDialog(
+                        context: context,
+                        builder: (alertDialogContext) {
+                          return AlertDialog(
+                            title: Text(
+                              'ออกจากระบบ',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                              ),
+                            ),
+                            content: Text(
+                              'คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                              ),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () =>
+                                    Navigator.pop(alertDialogContext),
+                                child: Text(
+                                  'ยกเลิก',
+                                  style: GoogleFonts.getFont(
+                                    'Kanit',
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: () async {
+                                  Navigator.pop(alertDialogContext);
+                                  await Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginPageWidget(),
+                                    ),
+                                    (r) => false,
+                                  );
+                                  ;
+                                },
+                                child: Text(
+                                  'ยืนยัน',
+                                  style: GoogleFonts.getFont(
+                                    'Kanit',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
                       );
                     },
                     child: Row(

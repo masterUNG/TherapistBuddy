@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:therapist_buddy/variables.dart';
+import 'patient_page.dart';
 
 class EditAppointmentPageWidget extends StatefulWidget {
   EditAppointmentPageWidget({Key key}) : super(key: key);
@@ -33,7 +34,55 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
           automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
-              Navigator.pop(context);
+              await showDialog(
+                context: context,
+                builder: (alertDialogContext) {
+                  return AlertDialog(
+                    title: Text(
+                      'ละทิ้งการแก้ไขการนัดหมาย',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                      ),
+                    ),
+                    content: Text(
+                      'คุณแน่ใจหรือไม่ว่าต้องการละทิ้งการแก้ไขการนัดหมายนี้',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                      ),
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(alertDialogContext),
+                        child: Text(
+                          'ยกเลิก',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () async {
+                          Navigator.pop(alertDialogContext);
+                          await Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PatientPageWidget(),
+                            ),
+                            (r) => false,
+                          );
+                          ;
+                        },
+                        child: Text(
+                          'ยืนยัน',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              );
             },
             icon: Icon(
               Icons.arrow_back_rounded,
@@ -312,18 +361,71 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                 ),
               ),
             ),
-            Align(
-              alignment: Alignment(0, 0),
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
-                child: Text(
-                  'ลบการนัดหมาย',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.getFont(
-                    'Kanit',
-                    color: FlutterFlowTheme.primaryColor,
-                    fontSize: 16,
-                    decoration: TextDecoration.underline,
+            InkWell(
+              onTap: () async {
+                await showDialog(
+                  context: context,
+                  builder: (alertDialogContext) {
+                    return AlertDialog(
+                      title: Text(
+                        'ยืนยันการลบการนัดหมาย',
+                        style: GoogleFonts.getFont(
+                          'Kanit',
+                        ),
+                      ),
+                      content: Text(
+                        'คุณแน่ใจหรือไม่ว่าต้องการลบการนัดหมายนี้',
+                        style: GoogleFonts.getFont(
+                          'Kanit',
+                        ),
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(alertDialogContext),
+                          child: Text(
+                            'ยกเลิก',
+                            style: GoogleFonts.getFont(
+                              'Kanit',
+                            ),
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () async {
+                            Navigator.pop(alertDialogContext);
+                            await Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PatientPageWidget(),
+                              ),
+                              (r) => false,
+                            );
+                            ;
+                          },
+                          child: Text(
+                            'ยืนยัน',
+                            style: GoogleFonts.getFont(
+                              'Kanit',
+                            ),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              child: Align(
+                alignment: Alignment(0, 0),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                  child: Text(
+                    'ลบการนัดหมาย',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.getFont(
+                      'Kanit',
+                      color: FlutterFlowTheme.primaryColor,
+                      fontSize: 16,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
               ),

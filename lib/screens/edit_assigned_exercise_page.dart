@@ -10,6 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:therapist_buddy/variables.dart';
 import 'confirm_edited_exercise_page.dart';
 import 'exercise_introduction_page.dart';
+import 'patient_page.dart';
 
 class EditAssignedExercisePageWidget extends StatefulWidget {
   EditAssignedExercisePageWidget({Key key}) : super(key: key);
@@ -39,7 +40,55 @@ class _EditAssignedExercisePageWidgetState
           automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
-              Navigator.pop(context);
+              await showDialog(
+                context: context,
+                builder: (alertDialogContext) {
+                  return AlertDialog(
+                    title: Text(
+                      'ละทิ้งการแก้ไขรายการออกกำลังกาย',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                      ),
+                    ),
+                    content: Text(
+                      'คุณแน่ใจหรือไม่ว่าต้องการละทิ้งการแก้ไขรายการออกกำลังกายนี้',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                      ),
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(alertDialogContext),
+                        child: Text(
+                          'ยกเลิก',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () async {
+                          Navigator.pop(alertDialogContext);
+                          await Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PatientPageWidget(),
+                            ),
+                            (r) => false,
+                          );
+                          ;
+                        },
+                        child: Text(
+                          'ยืนยัน',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              );
             },
             icon: Icon(
               Icons.arrow_back_rounded,
@@ -595,18 +644,71 @@ class _EditAssignedExercisePageWidgetState
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment(-1, 0),
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(30, 25, 0, 25),
-                  child: Text(
-                    'ลบรายการออกกำลังกายนี้',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.getFont(
-                      'Kanit',
-                      color: FlutterFlowTheme.primaryColor,
-                      fontSize: 16,
-                      decoration: TextDecoration.underline,
+              InkWell(
+                onTap: () async {
+                  await showDialog(
+                    context: context,
+                    builder: (alertDialogContext) {
+                      return AlertDialog(
+                        title: Text(
+                          'ยืนยันการลบรายการออกกำลังกาย',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                        content: Text(
+                          'คุณแน่ใจหรือไม่ว่าต้องการลบรายการออกกำลังกายนี้',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(alertDialogContext),
+                            child: Text(
+                              'ยกเลิก',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () async {
+                              Navigator.pop(alertDialogContext);
+                              await Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => PatientPageWidget(),
+                                ),
+                                (r) => false,
+                              );
+                              ;
+                            },
+                            child: Text(
+                              'ยืนยัน',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                child: Align(
+                  alignment: Alignment(-1, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(30, 25, 0, 25),
+                    child: Text(
+                      'ลบรายการออกกำลังกายนี้',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                        color: FlutterFlowTheme.primaryColor,
+                        fontSize: 16,
+                        decoration: TextDecoration.underline,
+                      ),
                     ),
                   ),
                 ),

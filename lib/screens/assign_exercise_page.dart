@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:therapist_buddy/variables.dart';
+import 'patient_page.dart';
 
 class AssignExercisePageWidget extends StatefulWidget {
   AssignExercisePageWidget({Key key}) : super(key: key);
@@ -37,7 +38,55 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
           automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
-              Navigator.pop(context);
+              await showDialog(
+                context: context,
+                builder: (alertDialogContext) {
+                  return AlertDialog(
+                    title: Text(
+                      'ละทิ้งการมอบหมายรายการออกกำลังกาย',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                      ),
+                    ),
+                    content: Text(
+                      'คุณแน่ใจหรือไม่ว่าต้องการละทิ้งการมอบหมายรายการออกกำลังกายนี้',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                      ),
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(alertDialogContext),
+                        child: Text(
+                          'ยกเลิก',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () async {
+                          Navigator.pop(alertDialogContext);
+                          await Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PatientPageWidget(),
+                            ),
+                            (r) => false,
+                          );
+                          ;
+                        },
+                        child: Text(
+                          'ยืนยัน',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              );
             },
             icon: Icon(
               Icons.arrow_back_rounded,

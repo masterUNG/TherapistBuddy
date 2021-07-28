@@ -56,12 +56,75 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
           automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
-              await Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      NavBarPage(initialPage: 'Treatments_page'),
-                ),
+              await showDialog(
+                context: context,
+                builder: (alertDialogContext) {
+                  return AlertDialog(
+                    title: Text(
+                      'บันทึกการเปลี่ยนแปลง',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                      ),
+                    ),
+                    content: Text(
+                      'คุณต้องการบันทึกการเปลี่ยนแปลงโปรไฟล์ก่อนออกจากหน้านี้หรือไม่',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                      ),
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(alertDialogContext),
+                        child: Text(
+                          'ยกเลิก',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () async {
+                          Navigator.pop(alertDialogContext);
+                          await Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  NavBarPage(initialPage: 'Others_page'),
+                            ),
+                            (r) => false,
+                          );
+                          ;
+                        },
+                        child: Text(
+                          'ไม่บันทึก',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () async {
+                          Navigator.pop(alertDialogContext);
+                          await Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  NavBarPage(initialPage: 'Others_page'),
+                            ),
+                            (r) => false,
+                          );
+                          ;
+                        },
+                        child: Text(
+                          'บันทึก',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
               );
             },
             icon: Icon(
@@ -918,8 +981,71 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        await showDialog(
+                            context: context,
+                            builder: (context) {
+                              return Dialog(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4.0),
+                                ),
+                                child: Container(
+                                  height: 245,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.check_circle_rounded,
+                                        color: Color(0xff1AC05E),
+                                        size: 80,
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            35, 0, 35, 0),
+                                        child: AutoSizeText(
+                                          "แก้ไขโปรไฟล์\nเรียบร้อยแล้ว",
+                                          style: GoogleFonts.getFont(
+                                            'Kanit',
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 20,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                          maxLines: 2,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      FFButtonWidget(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        text: "ปิด",
+                                        options: FFButtonOptions(
+                                          width: 145,
+                                          height: 40,
+                                          color: Color(0xFF34ADFA),
+                                          textStyle: GoogleFonts.getFont(
+                                            'Kanit',
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 20,
+                                          ),
+                                          borderSide: BorderSide.none,
+                                          borderRadius: 32,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            });
                       },
                       text: 'บันทึก',
                       options: FFButtonOptions(

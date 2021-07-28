@@ -1248,34 +1248,89 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                       ),
                     ),
                   ),
-                  Container(
-                    width: MediaQuery.of(context).size.width / 3,
-                    height: actionButtonHeight,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                    ),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Icon(
-                          Icons.check_circle_outline_rounded,
-                          color: FlutterFlowTheme.primaryColor,
-                          size: 31,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 0, 0, 8),
-                          child: Text(
-                            'สำเร็จ',
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: FlutterFlowTheme.primaryColor,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
+                  InkWell(
+                    onTap: () async {
+                      await showDialog(
+                        context: context,
+                        builder: (alertDialogContext) {
+                          return AlertDialog(
+                            title: Text(
+                              'ยืนยันการสำเร็จการรักษา',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                              ),
                             ),
+                            content: Text(
+                              'คุณแน่ใจหรือไม่ว่าต้องการสำเร็จการรักษานี้',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                              ),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () =>
+                                    Navigator.pop(alertDialogContext),
+                                child: Text(
+                                  'ยกเลิก',
+                                  style: GoogleFonts.getFont(
+                                    'Kanit',
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: () async {
+                                  Navigator.pop(alertDialogContext);
+                                  await Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => NavBarPage(
+                                          initialPage: 'Treatments_page'),
+                                    ),
+                                    (r) => false,
+                                  );
+                                  ;
+                                },
+                                child: Text(
+                                  'ยืนยัน',
+                                  style: GoogleFonts.getFont(
+                                    'Kanit',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 3,
+                      height: actionButtonHeight,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Icon(
+                            Icons.check_circle_outline_rounded,
+                            color: FlutterFlowTheme.primaryColor,
+                            size: 31,
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 0, 8),
+                            child: Text(
+                              'สำเร็จ',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                                color: FlutterFlowTheme.primaryColor,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 16,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],

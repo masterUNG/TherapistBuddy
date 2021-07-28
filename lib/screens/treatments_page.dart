@@ -22,6 +22,52 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
     textController = TextEditingController();
   }
 
+  void popupMenuButtonAction(String value) {
+    if (value == "cancelTreatment") {
+      showDialog(
+        context: context,
+        builder: (alertDialogContext) {
+          return AlertDialog(
+            title: Text(
+              'ยืนยันการยกเลิกการรักษา',
+              style: GoogleFonts.getFont(
+                'Kanit',
+              ),
+            ),
+            content: Text(
+              'เมื่อยกเลิกการรักษาแล้วจะไม่สามารถเรียกคืนการรักษานี้ได้อีก คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการรักษานี้',
+              style: GoogleFonts.getFont(
+                'Kanit',
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(alertDialogContext),
+                child: Text(
+                  'ยกเลิก',
+                  style: GoogleFonts.getFont(
+                    'Kanit',
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(alertDialogContext);
+                },
+                child: Text(
+                  'ยืนยัน',
+                  style: GoogleFonts.getFont(
+                    'Kanit',
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -611,17 +657,24 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                               ),
                             ),
                           ),
-                          IconButton(
-                            onPressed: () {
-                              print('IconButton pressed ...');
+                          PopupMenuButton(
+                            itemBuilder: (context) {
+                              return [
+                                PopupMenuItem(
+                                  value: 'cancelTreatment',
+                                  child: Text(
+                                    'ยกเลิกการักษา',
+                                    style: GoogleFonts.getFont(
+                                      'Kanit',
+                                    ),
+                                  ),
+                                ),
+                              ];
                             },
-                            icon: Icon(
-                              Icons.more_vert,
-                              color: Colors.black,
-                              size: 30,
-                            ),
-                            iconSize: 30,
-                          )
+                            onSelected: (String value) {
+                              return popupMenuButtonAction(value);
+                            },
+                          ),
                         ],
                       ),
                       Divider(

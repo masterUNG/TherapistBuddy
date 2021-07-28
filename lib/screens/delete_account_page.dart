@@ -246,12 +246,54 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
               padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
               child: FFButtonWidget(
                 onPressed: () async {
-                  await Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LoginPageWidget(),
-                    ),
-                    (r) => false,
+                  await showDialog(
+                    context: context,
+                    builder: (alertDialogContext) {
+                      return AlertDialog(
+                        title: Text(
+                          'ยืนยันการลบบัญชี',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                        content: Text(
+                          'คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีนี้',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                          ),
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(alertDialogContext),
+                            child: Text(
+                              'ยกเลิก',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () async {
+                              Navigator.pop(alertDialogContext);
+                              await Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LoginPageWidget(),
+                                ),
+                                (r) => false,
+                              );
+                              ;
+                            },
+                            child: Text(
+                              'ยืนยัน',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
                   );
                 },
                 text: 'ยืนยัน',

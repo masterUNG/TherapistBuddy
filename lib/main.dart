@@ -7,7 +7,7 @@ import 'screens/home_page.dart';
 import 'screens/treatments_page.dart';
 import 'screens/add_treatment_page.dart';
 import 'screens/chats_page.dart';
-import 'screens/others_page_widget.dart';
+import 'screens/others_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
