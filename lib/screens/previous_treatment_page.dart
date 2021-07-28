@@ -6,6 +6,7 @@ import 'patient_treatment_results_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class PreviousTreatmentPageWidget extends StatefulWidget {
   PreviousTreatmentPageWidget({Key key}) : super(key: key);
@@ -23,63 +24,66 @@ class _PreviousTreatmentPageWidgetState
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.primaryColor,
-            size: 24,
-          ),
-          iconSize: 24,
-        ),
-        title: Row(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
-              child: Container(
-                width: 38,
-                height: 38,
-                clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                ),
-                child: Image.network(
-                  'https://picsum.photos/seed/766/600',
-                ),
-              ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () async {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.primaryColor,
+              size: 24,
             ),
-            Container(
-              width: MediaQuery.of(context).size.width * 0.5,
-              decoration: BoxDecoration(),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  AutoSizeText(
-                    'ธนวิชญ์ แซ่ลิ่ม',
-                    style: GoogleFonts.getFont(
-                      'Kanit',
-                      color: FlutterFlowTheme.primaryColor,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 21,
-                    ),
-                  )
-                ],
+            iconSize: 24,
+          ),
+          title: Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+                child: Container(
+                  width: 38,
+                  height: 38,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.network(
+                    'https://picsum.photos/seed/766/600',
+                  ),
+                ),
               ),
-            )
-          ],
+              Container(
+                width: MediaQuery.of(context).size.width * 0.5,
+                decoration: BoxDecoration(),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    AutoSizeText(
+                      'ธนวิชญ์ แซ่ลิ่ม',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                        color: FlutterFlowTheme.primaryColor,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 21,
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Color(0xFFF5F5F5),
       body: SafeArea(
@@ -88,14 +92,14 @@ class _PreviousTreatmentPageWidgetState
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
+                padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(16, 15, 16, 15),
+                    padding: EdgeInsets.fromLTRB(18, 15, 18, 15),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -173,14 +177,19 @@ class _PreviousTreatmentPageWidgetState
                                     ),
                                   ),
                                   Container(
-                                    width: 171,
+                                    width: MediaQuery.of(context).size.width -
+                                        36 -
+                                        90 -
+                                        14 -
+                                        28 -
+                                        16,
                                     decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'ธนวิชญ์ แซ่ลิ่ม',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -243,14 +252,19 @@ class _PreviousTreatmentPageWidgetState
                                     ),
                                   ),
                                   Container(
-                                    width: 171,
+                                    width: MediaQuery.of(context).size.width -
+                                        36 -
+                                        90 -
+                                        14 -
+                                        28 -
+                                        16,
                                     decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           '20 ปี',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -338,13 +352,16 @@ class _PreviousTreatmentPageWidgetState
                             ),
                           ),
                           Container(
-                            width: 295,
+                            width: MediaQuery.of(context).size.width -
+                                36 -
+                                28 -
+                                16,
                             decoration: BoxDecoration(),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                AutoSizeText(
+                                Text(
                                   'Office Syndrome',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
@@ -404,13 +421,16 @@ class _PreviousTreatmentPageWidgetState
                             ),
                           ),
                           Container(
-                            width: 213,
+                            width: MediaQuery.of(context).size.width -
+                                36 -
+                                110 -
+                                16,
                             decoration: BoxDecoration(),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                AutoSizeText(
+                                Text(
                                   '15 มิถุนายน 2564',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
@@ -470,13 +490,16 @@ class _PreviousTreatmentPageWidgetState
                             ),
                           ),
                           Container(
-                            width: 213,
+                            width: MediaQuery.of(context).size.width -
+                                36 -
+                                110 -
+                                16,
                             decoration: BoxDecoration(),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                AutoSizeText(
+                                Text(
                                   '15 มิถุนายน 2565',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
@@ -538,6 +561,7 @@ class _PreviousTreatmentPageWidgetState
                                   color: FlutterFlowTheme.primaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14,
+                                  decoration: TextDecoration.underline,
                                 ),
                               ),
                             )
@@ -706,6 +730,7 @@ class _PreviousTreatmentPageWidgetState
                                   color: FlutterFlowTheme.primaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14,
+                                  decoration: TextDecoration.underline,
                                 ),
                               ),
                             )
@@ -863,6 +888,7 @@ class _PreviousTreatmentPageWidgetState
                                   color: FlutterFlowTheme.primaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14,
+                                  decoration: TextDecoration.underline,
                                 ),
                               ),
                             )

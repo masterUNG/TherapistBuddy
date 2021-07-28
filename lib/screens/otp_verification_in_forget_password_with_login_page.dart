@@ -5,6 +5,7 @@ import 'set_new_password_with_login_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class OTPVerificationInForgetPasswordWithLoginPageWidget
     extends StatefulWidget {
@@ -18,8 +19,8 @@ class OTPVerificationInForgetPasswordWithLoginPageWidget
 
 class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
     extends State<OTPVerificationInForgetPasswordWithLoginPageWidget> {
-  TextEditingController oTPCodeTextfieldController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController oTPCodeTextfieldController;
 
   @override
   void initState() {
@@ -31,33 +32,36 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.add_box_outlined,
-            color: FlutterFlowTheme.primaryColor,
-            size: 24,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () async {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.primaryColor,
+              size: 24,
+            ),
+            iconSize: 24,
           ),
-          iconSize: 24,
-        ),
-        title: AutoSizeText(
-          'ใส่รหัสยืนยันตัวตน',
-          style: GoogleFonts.getFont(
-            'Kanit',
-            color: FlutterFlowTheme.primaryColor,
-            fontWeight: FontWeight.w500,
-            fontSize: 21,
+          title: AutoSizeText(
+            'ใส่รหัสยืนยันตัวตน',
+            style: GoogleFonts.getFont(
+              'Kanit',
+              color: FlutterFlowTheme.primaryColor,
+              fontWeight: FontWeight.w500,
+              fontSize: 21,
+            ),
           ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -108,7 +112,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFCCD0D5),
+                      color: Color(0xFF0080FF),
                       width: 1,
                     ),
                     borderRadius: BorderRadius.only(

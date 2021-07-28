@@ -6,6 +6,7 @@ import 'forget_password_with_login_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class ChangePasswordPageWidget extends StatefulWidget {
   ChangePasswordPageWidget({Key key}) : super(key: key);
@@ -16,13 +17,13 @@ class ChangePasswordPageWidget extends StatefulWidget {
 }
 
 class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController newPasswordTextfieldController;
   bool newPasswordTextfieldVisibility;
   TextEditingController oldPasswordTextfieldController;
   bool oldPasswordTextfieldVisibility;
   TextEditingController repeatNewPasswordTextfieldController;
   bool repeatNewPasswordTextfieldVisibility;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -39,33 +40,36 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.primaryColor,
-            size: 24,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () async {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.primaryColor,
+              size: 24,
+            ),
+            iconSize: 24,
           ),
-          iconSize: 24,
-        ),
-        title: AutoSizeText(
-          'เปลี่ยนรหัสผ่าน',
-          style: GoogleFonts.getFont(
-            'Kanit',
-            color: FlutterFlowTheme.primaryColor,
-            fontWeight: FontWeight.w500,
-            fontSize: 21,
+          title: AutoSizeText(
+            'เปลี่ยนรหัสผ่าน',
+            style: GoogleFonts.getFont(
+              'Kanit',
+              color: FlutterFlowTheme.primaryColor,
+              fontWeight: FontWeight.w500,
+              fontSize: 21,
+            ),
           ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton.extended(
@@ -87,9 +91,11 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
             color: FlutterFlowTheme.primaryColor,
             fontWeight: FontWeight.w300,
             fontSize: 18,
+            decoration: TextDecoration.underline,
           ),
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -149,7 +155,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFCCD0D5),
+                      color: Color(0xFF0080FF),
                       width: 1,
                     ),
                     borderRadius: BorderRadius.only(
@@ -240,7 +246,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFCCD0D5),
+                      color: Color(0xFF0080FF),
                       width: 1,
                     ),
                     borderRadius: BorderRadius.only(
@@ -331,7 +337,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFCCD0D5),
+                      color: Color(0xFF0080FF),
                       width: 1,
                     ),
                     borderRadius: BorderRadius.only(

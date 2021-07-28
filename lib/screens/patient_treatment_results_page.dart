@@ -3,6 +3,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class PatientTreatmentResultsPageWidget extends StatefulWidget {
   PatientTreatmentResultsPageWidget({Key key}) : super(key: key);
@@ -15,38 +16,43 @@ class PatientTreatmentResultsPageWidget extends StatefulWidget {
 class _PatientTreatmentResultsPageWidgetState
     extends State<PatientTreatmentResultsPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  double lineGraphAreaHeight = 260;
+  int symptomsNumber = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.primaryColor,
-            size: 24,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () async {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.primaryColor,
+              size: 24,
+            ),
+            iconSize: 24,
           ),
-          iconSize: 24,
-        ),
-        title: AutoSizeText(
-          'ผลการรักษา',
-          style: GoogleFonts.getFont(
-            'Kanit',
-            color: FlutterFlowTheme.primaryColor,
-            fontWeight: FontWeight.w500,
-            fontSize: 21,
+          title: AutoSizeText(
+            'ผลการรักษา',
+            style: GoogleFonts.getFont(
+              'Kanit',
+              color: FlutterFlowTheme.primaryColor,
+              fontWeight: FontWeight.w500,
+              fontSize: 21,
+            ),
           ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -58,7 +64,11 @@ class _PatientTreatmentResultsPageWidgetState
                 alignment: Alignment(0, 1),
                 child: Container(
                   width: double.infinity,
-                  height: 420,
+                  height: MediaQuery.of(context).size.height -
+                      MediaQuery.of(context).padding.top -
+                      MediaQuery.of(context).padding.bottom -
+                      appbarHeight -
+                      lineGraphAreaHeight,
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
@@ -110,7 +120,7 @@ class _PatientTreatmentResultsPageWidgetState
                 alignment: Alignment(0, -1),
                 child: Container(
                   width: double.infinity,
-                  height: 260,
+                  height: lineGraphAreaHeight,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
@@ -126,17 +136,29 @@ class _PatientTreatmentResultsPageWidgetState
                     initialIndex: 0,
                     child: Column(
                       children: [
-                        TabBar(
-                          isScrollable: true,
-                          labelColor: FlutterFlowTheme.primaryColor,
-                          unselectedLabelColor: Color(0xFF7A7A7A),
-                          indicatorColor: FlutterFlowTheme.primaryColor,
-                          indicatorWeight: 3,
-                          tabs: [
-                            Tab(
-                              text: 'Office Syndrome',
-                            )
-                          ],
+                        Container(
+                          height: 50,
+                          child: TabBar(
+                            isScrollable: true,
+                            labelPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                            labelColor: Color(0xFF0080FF),
+                            labelStyle:
+                                TextStyle(fontSize: 18.0, fontFamily: 'Kanit'),
+                            unselectedLabelColor: Color(0xFF7A7A7A),
+                            unselectedLabelStyle:
+                                TextStyle(fontSize: 18.0, fontFamily: 'Kanit'),
+                            indicatorColor: Color(0xFF0080FF),
+                            indicatorWeight: 3,
+                            tabs: [
+                              Container(
+                                width: MediaQuery.of(context).size.width /
+                                    symptomsNumber,
+                                child: Tab(
+                                  text: 'Office Syndrome',
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         Expanded(
                           child: TabBarView(

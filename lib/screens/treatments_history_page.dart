@@ -4,6 +4,7 @@ import 'previous_treatment_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class TreatmentsHistoryPageWidget extends StatefulWidget {
   TreatmentsHistoryPageWidget({Key key}) : super(key: key);
@@ -15,8 +16,8 @@ class TreatmentsHistoryPageWidget extends StatefulWidget {
 
 class _TreatmentsHistoryPageWidgetState
     extends State<TreatmentsHistoryPageWidget> {
-  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController textController;
 
   @override
   void initState() {
@@ -28,33 +29,36 @@ class _TreatmentsHistoryPageWidgetState
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.primaryColor,
-            size: 24,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () async {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.primaryColor,
+              size: 24,
+            ),
+            iconSize: 24,
           ),
-          iconSize: 24,
-        ),
-        title: AutoSizeText(
-          'ประวัติการรักษาคนไข้',
-          style: GoogleFonts.getFont(
-            'Kanit',
-            color: FlutterFlowTheme.primaryColor,
-            fontWeight: FontWeight.w500,
-            fontSize: 21,
+          title: AutoSizeText(
+            'ประวัติการรักษาคนไข้',
+            style: GoogleFonts.getFont(
+              'Kanit',
+              color: FlutterFlowTheme.primaryColor,
+              fontWeight: FontWeight.w500,
+              fontSize: 21,
+            ),
           ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -213,14 +217,17 @@ class _TreatmentsHistoryPageWidgetState
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      width: 240,
+                                      width: MediaQuery.of(context).size.width -
+                                          36 -
+                                          85 -
+                                          14,
                                       decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             'ธนภัทร พัฒนา',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -228,6 +235,8 @@ class _TreatmentsHistoryPageWidgetState
                                               fontWeight: FontWeight.w500,
                                               fontSize: 16,
                                             ),
+                                            overflow: TextOverflow.ellipsis,
+                                            maxLines: 1,
                                           )
                                         ],
                                       ),
@@ -238,7 +247,7 @@ class _TreatmentsHistoryPageWidgetState
                                           CrossAxisAlignment.start,
                                       children: [
                                         Container(
-                                          width: 55,
+                                          width: 40,
                                           decoration: BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -282,14 +291,21 @@ class _TreatmentsHistoryPageWidgetState
                                           ),
                                         ),
                                         Container(
-                                          width: 170,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width -
+                                              36 -
+                                              85 -
+                                              14 -
+                                              40 -
+                                              15,
                                           decoration: BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              AutoSizeText(
+                                              Text(
                                                 'Office Syndrome',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
@@ -297,6 +313,8 @@ class _TreatmentsHistoryPageWidgetState
                                                   fontWeight: FontWeight.normal,
                                                   fontSize: 14,
                                                 ),
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 1,
                                               )
                                             ],
                                           ),
@@ -309,7 +327,7 @@ class _TreatmentsHistoryPageWidgetState
                                           CrossAxisAlignment.start,
                                       children: [
                                         Container(
-                                          width: 102,
+                                          width: 78,
                                           decoration: BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -353,14 +371,21 @@ class _TreatmentsHistoryPageWidgetState
                                           ),
                                         ),
                                         Container(
-                                          width: 123,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width -
+                                              36 -
+                                              85 -
+                                              14 -
+                                              78 -
+                                              15,
                                           decoration: BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              AutoSizeText(
+                                              Text(
                                                 '25 มิ.ย. 2564',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
@@ -368,6 +393,8 @@ class _TreatmentsHistoryPageWidgetState
                                                   fontWeight: FontWeight.normal,
                                                   fontSize: 14,
                                                 ),
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 1,
                                               )
                                             ],
                                           ),
@@ -424,14 +451,21 @@ class _TreatmentsHistoryPageWidgetState
                                           ),
                                         ),
                                         Container(
-                                          width: 123,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width -
+                                              36 -
+                                              85 -
+                                              14 -
+                                              102 -
+                                              15,
                                           decoration: BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              AutoSizeText(
+                                              Text(
                                                 '25 มิ.ย. 2565',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
@@ -440,6 +474,8 @@ class _TreatmentsHistoryPageWidgetState
                                                   fontWeight: FontWeight.normal,
                                                   fontSize: 14,
                                                 ),
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 1,
                                               )
                                             ],
                                           ),

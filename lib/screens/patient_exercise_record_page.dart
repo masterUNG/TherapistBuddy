@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class PatientExerciseRecordPageWidget extends StatefulWidget {
   PatientExerciseRecordPageWidget({Key key}) : super(key: key);
@@ -15,40 +16,44 @@ class PatientExerciseRecordPageWidget extends StatefulWidget {
 
 class _PatientExerciseRecordPageWidgetState
     extends State<PatientExerciseRecordPageWidget> {
-  String dropDownValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  String dropDownValue;
+  double monthsAreaHeight = 120;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.add_box_outlined,
-            color: FlutterFlowTheme.primaryColor,
-            size: 24,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appbarHeight),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () async {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.primaryColor,
+              size: 24,
+            ),
+            iconSize: 24,
           ),
-          iconSize: 24,
-        ),
-        title: AutoSizeText(
-          'การออกกำลังกายทั้งหมด',
-          style: GoogleFonts.getFont(
-            'Kanit',
-            color: FlutterFlowTheme.primaryColor,
-            fontWeight: FontWeight.w500,
-            fontSize: 21,
+          title: AutoSizeText(
+            'การออกกำลังกายทั้งหมด',
+            style: GoogleFonts.getFont(
+              'Kanit',
+              color: FlutterFlowTheme.primaryColor,
+              fontWeight: FontWeight.w500,
+              fontSize: 21,
+            ),
           ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2,
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 2,
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -60,7 +65,7 @@ class _PatientExerciseRecordPageWidgetState
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 120,
+                  height: monthsAreaHeight,
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
@@ -126,7 +131,12 @@ class _PatientExerciseRecordPageWidgetState
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 590,
+              height: MediaQuery.of(context).size.height -
+                  MediaQuery.of(context).padding.top -
+                  MediaQuery.of(context).padding.bottom -
+                  appbarHeight -
+                  monthsAreaHeight -
+                  2,
               decoration: BoxDecoration(
                 color: Colors.white,
               ),
