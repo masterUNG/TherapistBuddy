@@ -94,7 +94,7 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                     height: 49,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(defaultBorderRadius),
                       shape: BoxShape.rectangle,
                       border: Border.all(
                         color: Color(0xFFCCD0D5),
@@ -136,24 +136,16 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                               color: Color(0xFFCCD0D5),
                               width: 1,
                             ),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(8),
-                              bottomRight: Radius.circular(8),
-                              topLeft: Radius.circular(8),
-                              topRight: Radius.circular(8),
-                            ),
+                            borderRadius:
+                                BorderRadius.circular(defaultBorderRadius),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0xFF0080FF),
                               width: 1,
                             ),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(8),
-                              bottomRight: Radius.circular(8),
-                              topLeft: Radius.circular(8),
-                              topRight: Radius.circular(8),
-                            ),
+                            borderRadius:
+                                BorderRadius.circular(defaultBorderRadius),
                           ),
                           filled: true,
                           fillColor: Colors.white,
@@ -197,24 +189,14 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                       color: Color(0xFFCCD0D5),
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(8),
-                      bottomRight: Radius.circular(8),
-                      topLeft: Radius.circular(8),
-                      topRight: Radius.circular(8),
-                    ),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFF0080FF),
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(8),
-                      bottomRight: Radius.circular(8),
-                      topLeft: Radius.circular(8),
-                      topRight: Radius.circular(8),
-                    ),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   filled: true,
                   fillColor: Colors.white,

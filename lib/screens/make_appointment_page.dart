@@ -130,7 +130,7 @@ class _MakeAppointmentPageWidgetState extends State<MakeAppointmentPageWidget> {
                 height: 52,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(defaultBorderRadius),
                   border: Border.all(
                     color: Color(0xFFCCD0D5),
                     width: 1,
@@ -202,7 +202,7 @@ class _MakeAppointmentPageWidgetState extends State<MakeAppointmentPageWidget> {
                 height: 52,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(defaultBorderRadius),
                   border: Border.all(
                     color: Color(0xFFCCD0D5),
                     width: 1,
@@ -244,7 +244,8 @@ class _MakeAppointmentPageWidgetState extends State<MakeAppointmentPageWidget> {
                       height: 52,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius:
+                            BorderRadius.circular(defaultBorderRadius),
                         border: Border.all(
                           color: Color(0xFFCCD0D5),
                           width: 1,
@@ -298,7 +299,8 @@ class _MakeAppointmentPageWidgetState extends State<MakeAppointmentPageWidget> {
                       height: 52,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius:
+                            BorderRadius.circular(defaultBorderRadius),
                         border: Border.all(
                           color: Color(0xFFCCD0D5),
                           width: 1,

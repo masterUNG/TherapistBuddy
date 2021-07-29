@@ -103,24 +103,14 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
                       color: Color(0xFFCCD0D5),
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(5),
-                      bottomRight: Radius.circular(5),
-                      topLeft: Radius.circular(5),
-                      topRight: Radius.circular(5),
-                    ),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFF0080FF),
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(5),
-                      bottomRight: Radius.circular(5),
-                      topLeft: Radius.circular(5),
-                      topRight: Radius.circular(5),
-                    ),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   filled: true,
                   fillColor: Colors.white,

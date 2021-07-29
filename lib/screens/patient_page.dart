@@ -1182,6 +1182,13 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                       height: actionButtonHeight,
                       decoration: BoxDecoration(
                         color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4,
+                            color: Color(0x41000000),
+                            offset: Offset(2, 0),
+                          )
+                        ],
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -1222,6 +1229,13 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                       height: actionButtonHeight,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.primaryColor,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4,
+                            color: Color(0x41000000),
+                            offset: Offset(2, 0),
+                          )
+                        ],
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -1307,6 +1321,13 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                       height: actionButtonHeight,
                       decoration: BoxDecoration(
                         color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4,
+                            color: Color(0x41000000),
+                            offset: Offset(2, 0),
+                          )
+                        ],
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,

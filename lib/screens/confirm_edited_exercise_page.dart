@@ -80,7 +80,7 @@ class _ConfirmEditedExercisePageWidgetState
                   height: 52,
                   decoration: BoxDecoration(
                     color: Color(0xFFF5F5F5),
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -229,7 +229,7 @@ class _ConfirmEditedExercisePageWidgetState
                   height: 52,
                   decoration: BoxDecoration(
                     color: Color(0xFFF5F5F5),
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -271,7 +271,7 @@ class _ConfirmEditedExercisePageWidgetState
                   height: 52,
                   decoration: BoxDecoration(
                     color: Color(0xFFF5F5F5),
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 0, 20, 0),

@@ -241,7 +241,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                               elevation: 2,
                               borderColor: Color(0xFFCCD0D5),
                               borderWidth: 1,
-                              borderRadius: 32,
+                              borderRadius: defaultBorderRadius,
                               margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                               hidesUnderline: true,
                             ),
@@ -257,24 +257,16 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                                         color: Color(0xFFCCD0D5),
                                         width: 1,
                                       ),
-                                      borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(32),
-                                        bottomRight: Radius.circular(32),
-                                        topLeft: Radius.circular(32),
-                                        topRight: Radius.circular(32),
-                                      ),
+                                      borderRadius: BorderRadius.circular(
+                                          defaultBorderRadius),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0xFF0080FF),
                                         width: 1,
                                       ),
-                                      borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(32),
-                                        bottomRight: Radius.circular(32),
-                                        topLeft: Radius.circular(32),
-                                        topRight: Radius.circular(32),
-                                      ),
+                                      borderRadius: BorderRadius.circular(
+                                          defaultBorderRadius),
                                     ),
                                     filled: true,
                                     fillColor: Colors.white,
@@ -319,24 +311,16 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                                 color: Color(0xFFCCD0D5),
                                 width: 1,
                               ),
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(32),
-                                bottomRight: Radius.circular(32),
-                                topLeft: Radius.circular(32),
-                                topRight: Radius.circular(32),
-                              ),
+                              borderRadius:
+                                  BorderRadius.circular(defaultBorderRadius),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0xFF0080FF),
                                 width: 1,
                               ),
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(32),
-                                bottomRight: Radius.circular(32),
-                                topLeft: Radius.circular(32),
-                                topRight: Radius.circular(32),
-                              ),
+                              borderRadius:
+                                  BorderRadius.circular(defaultBorderRadius),
                             ),
                             filled: true,
                             fillColor: Colors.white,
@@ -408,7 +392,8 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                               height: 49,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                borderRadius: BorderRadius.circular(32),
+                                borderRadius:
+                                    BorderRadius.circular(defaultBorderRadius),
                                 shape: BoxShape.rectangle,
                                 border: Border.all(
                                   color: Color(0xFFCCD0D5),
@@ -452,24 +437,16 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                                         color: Color(0xFFCCD0D5),
                                         width: 1,
                                       ),
-                                      borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(32),
-                                        bottomRight: Radius.circular(32),
-                                        topLeft: Radius.circular(32),
-                                        topRight: Radius.circular(32),
-                                      ),
+                                      borderRadius: BorderRadius.circular(
+                                          defaultBorderRadius),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0xFFCCD0D5),
                                         width: 1,
                                       ),
-                                      borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(32),
-                                        bottomRight: Radius.circular(32),
-                                        topLeft: Radius.circular(32),
-                                        topRight: Radius.circular(32),
-                                      ),
+                                      borderRadius: BorderRadius.circular(
+                                          defaultBorderRadius),
                                     ),
                                     filled: true,
                                     fillColor: Colors.white,
@@ -549,24 +526,16 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                                 color: Color(0xFFCCD0D5),
                                 width: 1,
                               ),
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(32),
-                                bottomRight: Radius.circular(32),
-                                topLeft: Radius.circular(32),
-                                topRight: Radius.circular(32),
-                              ),
+                              borderRadius:
+                                  BorderRadius.circular(defaultBorderRadius),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0xFFCCD0D5),
                                 width: 1,
                               ),
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(32),
-                                bottomRight: Radius.circular(32),
-                                topLeft: Radius.circular(32),
-                                topRight: Radius.circular(32),
-                              ),
+                              borderRadius:
+                                  BorderRadius.circular(defaultBorderRadius),
                             ),
                             filled: true,
                             fillColor: Colors.white,
@@ -615,7 +584,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                           elevation: 2,
                           borderColor: Color(0xFFCCD0D5),
                           borderWidth: 1,
-                          borderRadius: 32,
+                          borderRadius: defaultBorderRadius,
                           margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                           hidesUnderline: true,
                         ),
@@ -653,7 +622,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                           elevation: 2,
                           borderColor: Color(0xFFCCD0D5),
                           borderWidth: 1,
-                          borderRadius: 32,
+                          borderRadius: defaultBorderRadius,
                           margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                           hidesUnderline: true,
                         ),
@@ -726,7 +695,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                               elevation: 2,
                               borderColor: Color(0xFFCCD0D5),
                               borderWidth: 1,
-                              borderRadius: 32,
+                              borderRadius: defaultBorderRadius,
                               margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                               hidesUnderline: true,
                             ),
@@ -761,7 +730,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                                 elevation: 2,
                                 borderColor: Color(0xFFCCD0D5),
                                 borderWidth: 1,
-                                borderRadius: 32,
+                                borderRadius: defaultBorderRadius,
                                 margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                                 hidesUnderline: true,
                               ),
@@ -911,7 +880,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                                 elevation: 2,
                                 borderColor: Color(0xFFCCD0D5),
                                 borderWidth: 1,
-                                borderRadius: 32,
+                                borderRadius: defaultBorderRadius,
                                 margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                                 hidesUnderline: true,
                               ),

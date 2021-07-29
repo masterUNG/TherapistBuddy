@@ -7,16 +7,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:therapist_buddy/variables.dart';
 
-class OTPVerificationInSetNewPasswordPageWidget extends StatefulWidget {
-  OTPVerificationInSetNewPasswordPageWidget({Key key}) : super(key: key);
+class OTPVerificationInSetNewPhoneNumberPageWidget extends StatefulWidget {
+  OTPVerificationInSetNewPhoneNumberPageWidget({Key key}) : super(key: key);
 
   @override
-  _OTPVerificationInSetNewPasswordPageWidgetState createState() =>
-      _OTPVerificationInSetNewPasswordPageWidgetState();
+  _OTPVerificationInSetNewPhoneNumberPageWidgetState createState() =>
+      _OTPVerificationInSetNewPhoneNumberPageWidgetState();
 }
 
-class _OTPVerificationInSetNewPasswordPageWidgetState
-    extends State<OTPVerificationInSetNewPasswordPageWidget> {
+class _OTPVerificationInSetNewPhoneNumberPageWidgetState
+    extends State<OTPVerificationInSetNewPhoneNumberPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController oTPCodeTextfieldController;
 
@@ -101,24 +101,14 @@ class _OTPVerificationInSetNewPasswordPageWidgetState
                       color: Color(0xFFCCD0D5),
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(5),
-                      bottomRight: Radius.circular(5),
-                      topLeft: Radius.circular(5),
-                      topRight: Radius.circular(5),
-                    ),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFF0080FF),
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(5),
-                      bottomRight: Radius.circular(5),
-                      topLeft: Radius.circular(5),
-                      topRight: Radius.circular(5),
-                    ),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   filled: true,
                   fillColor: Colors.white,

@@ -7,6 +7,7 @@ import 'signup_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:therapist_buddy/variables.dart';
 
 class LoginPageWidget extends StatefulWidget {
   LoginPageWidget({Key key}) : super(key: key);
@@ -96,7 +97,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       height: 49,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(32),
+                        borderRadius:
+                            BorderRadius.circular(defaultBorderRadius),
                         shape: BoxShape.rectangle,
                         border: Border.all(
                           color: FlutterFlowTheme.primaryColor,
@@ -145,24 +147,16 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 color: FlutterFlowTheme.primaryColor,
                                 width: 1.5,
                               ),
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(32),
-                                bottomRight: Radius.circular(32),
-                                topLeft: Radius.circular(32),
-                                topRight: Radius.circular(32),
-                              ),
+                              borderRadius:
+                                  BorderRadius.circular(defaultBorderRadius),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.primaryColor,
                                 width: 1.5,
                               ),
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(32),
-                                bottomRight: Radius.circular(32),
-                                topLeft: Radius.circular(32),
-                                topRight: Radius.circular(32),
-                              ),
+                              borderRadius:
+                                  BorderRadius.circular(defaultBorderRadius),
                             ),
                             filled: true,
                             fillColor: Colors.white,
@@ -200,24 +194,14 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         color: FlutterFlowTheme.primaryColor,
                         width: 1.5,
                       ),
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(32),
-                        bottomRight: Radius.circular(32),
-                        topLeft: Radius.circular(32),
-                        topRight: Radius.circular(32),
-                      ),
+                      borderRadius: BorderRadius.circular(defaultBorderRadius),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: FlutterFlowTheme.primaryColor,
                         width: 1.5,
                       ),
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(32),
-                        bottomRight: Radius.circular(32),
-                        topLeft: Radius.circular(32),
-                        topRight: Radius.circular(32),
-                      ),
+                      borderRadius: BorderRadius.circular(defaultBorderRadius),
                     ),
                     filled: true,
                     fillColor: Colors.white,

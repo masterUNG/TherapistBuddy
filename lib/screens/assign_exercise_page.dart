@@ -147,7 +147,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                   elevation: 2,
                   borderColor: Color(0xFFCCD0D5),
                   borderWidth: 1,
-                  borderRadius: 8,
+                  borderRadius: defaultBorderRadius,
                   margin: EdgeInsets.fromLTRB(20, 0, 12, 0),
                   hidesUnderline: true,
                 ),
@@ -560,7 +560,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                   height: 52,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.primaryColor,
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 0, 20, 0),

@@ -1,11 +1,11 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import 'otp_verification_in_set_new_password_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:therapist_buddy/variables.dart';
+import 'otp_verification_in_set_new_phone_number_page.dart';
 
 class SetNewPhoneNumberPageWidget extends StatefulWidget {
   SetNewPhoneNumberPageWidget({Key key}) : super(key: key);
@@ -91,7 +91,7 @@ class _SetNewPhoneNumberPageWidgetState
                     height: 49,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(defaultBorderRadius),
                       shape: BoxShape.rectangle,
                       border: Border.all(
                         color: Color(0xFFCCD0D5),
@@ -133,24 +133,16 @@ class _SetNewPhoneNumberPageWidgetState
                               color: Color(0xFFCCD0D5),
                               width: 1,
                             ),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(8),
-                              bottomRight: Radius.circular(8),
-                              topLeft: Radius.circular(8),
-                              topRight: Radius.circular(8),
-                            ),
+                            borderRadius:
+                                BorderRadius.circular(defaultBorderRadius),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0xFF0080FF),
                               width: 1,
                             ),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(8),
-                              bottomRight: Radius.circular(8),
-                              topLeft: Radius.circular(8),
-                              topRight: Radius.circular(8),
-                            ),
+                            borderRadius:
+                                BorderRadius.circular(defaultBorderRadius),
                           ),
                           filled: true,
                           fillColor: Colors.white,
@@ -177,7 +169,7 @@ class _SetNewPhoneNumberPageWidgetState
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          OTPVerificationInSetNewPasswordPageWidget(),
+                          OTPVerificationInSetNewPhoneNumberPageWidget(),
                     ),
                   );
                 },
