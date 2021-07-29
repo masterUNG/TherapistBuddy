@@ -133,27 +133,18 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                               color: Color(0x00000000),
                               width: 1,
                             ),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(30),
-                              bottomRight: Radius.circular(30),
-                              topLeft: Radius.circular(30),
-                              topRight: Radius.circular(30),
-                            ),
+                            borderRadius: BorderRadius.circular(30),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
                               width: 1,
                             ),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(30),
-                              bottomRight: Radius.circular(30),
-                              topLeft: Radius.circular(30),
-                              topRight: Radius.circular(30),
-                            ),
+                            borderRadius: BorderRadius.circular(30),
                           ),
                           filled: true,
                           fillColor: Color(0xFFF0F2F5),
+                          contentPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                           prefixIcon: Icon(
                             Icons.search,
                             color: Colors.black,

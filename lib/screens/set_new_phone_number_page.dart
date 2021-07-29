@@ -146,7 +146,7 @@ class _SetNewPhoneNumberPageWidgetState
                           ),
                           filled: true,
                           fillColor: Colors.white,
-                          contentPadding: EdgeInsets.fromLTRB(20, 18, 20, 18),
+                          contentPadding: EdgeInsets.fromLTRB(18, 14, 18, 14),
                         ),
                         style: GoogleFonts.getFont(
                           'Kanit',

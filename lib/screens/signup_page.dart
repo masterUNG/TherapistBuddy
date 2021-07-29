@@ -187,7 +187,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                             ),
                             filled: true,
                             fillColor: Colors.white,
-                            contentPadding: EdgeInsets.fromLTRB(20, 18, 20, 18),
+                            contentPadding: EdgeInsets.fromLTRB(18, 14, 18, 14),
                           ),
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -238,7 +238,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                     ),
                     filled: true,
                     fillColor: Colors.white,
-                    contentPadding: EdgeInsets.fromLTRB(20, 18, 20, 18),
+                    contentPadding: EdgeInsets.fromLTRB(18, 14, 18, 14),
                   ),
                   style: GoogleFonts.getFont(
                     'Kanit',
@@ -350,7 +350,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                             ),
                             filled: true,
                             fillColor: Colors.white,
-                            contentPadding: EdgeInsets.fromLTRB(20, 18, 20, 18),
+                            contentPadding: EdgeInsets.fromLTRB(18, 14, 18, 14),
                           ),
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -504,7 +504,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                     ),
                     filled: true,
                     fillColor: Colors.white,
-                    contentPadding: EdgeInsets.fromLTRB(20, 18, 20, 18),
+                    contentPadding: EdgeInsets.fromLTRB(18, 14, 18, 14),
                     suffixIcon: InkWell(
                       onTap: () => setState(
                         () => repeatPasswordTextfieldVisibility =
