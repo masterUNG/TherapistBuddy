@@ -110,7 +110,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                             obscureText: false,
                             decoration: InputDecoration(
                               isDense: true,
-                              hintText: 'โปรดใส่หมายเลขโทรศัพท์',
+                              hintText: 'โปรดใส่ไอดีผู้ใช้ของคนไข้',
                               hintStyle: GoogleFonts.getFont(
                                 'Kanit',
                                 color: Color(0xFFA7A8AF),
