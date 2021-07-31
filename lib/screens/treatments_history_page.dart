@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'previous_treatment_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -33,15 +32,13 @@ class _TreatmentsHistoryPageWidgetState
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -50,7 +47,7 @@ class _TreatmentsHistoryPageWidgetState
             'ประวัติการรักษาคนไข้',
             style: GoogleFonts.getFont(
               'Kanit',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 21,
             ),
@@ -94,24 +91,14 @@ class _TreatmentsHistoryPageWidgetState
                               color: Color(0x00000000),
                               width: 1,
                             ),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(30),
-                              bottomRight: Radius.circular(30),
-                              topLeft: Radius.circular(30),
-                              topRight: Radius.circular(30),
-                            ),
+                            borderRadius: BorderRadius.circular(30),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
                               width: 1,
                             ),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(30),
-                              bottomRight: Radius.circular(30),
-                              topLeft: Radius.circular(30),
-                              topRight: Radius.circular(30),
-                            ),
+                            borderRadius: BorderRadius.circular(30),
                           ),
                           filled: true,
                           fillColor: Color(0xFFF0F2F5),
@@ -127,7 +114,7 @@ class _TreatmentsHistoryPageWidgetState
                                   ),
                                   child: Icon(
                                     Icons.clear,
-                                    color: FlutterFlowTheme.tertiaryColor,
+                                    color: Colors.black,
                                     size: 22,
                                   ),
                                 )
@@ -157,7 +144,7 @@ class _TreatmentsHistoryPageWidgetState
                       padding: EdgeInsets.fromLTRB(18, 0, 12, 0),
                       child: Icon(
                         Icons.perm_identity_rounded,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: primaryColor,
                         size: 24,
                       ),
                     ),
@@ -469,8 +456,7 @@ class _TreatmentsHistoryPageWidgetState
                                                 '25 มิ.ย. 2565',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
-                                                  color: FlutterFlowTheme
-                                                      .tertiaryColor,
+                                                  color: Colors.black,
                                                   fontWeight: FontWeight.normal,
                                                   fontSize: 14,
                                                 ),

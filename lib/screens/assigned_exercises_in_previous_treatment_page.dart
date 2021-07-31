@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -25,15 +24,13 @@ class _AssignedExercisesInPreviousTreatmentPageWidgetState
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -42,7 +39,7 @@ class _AssignedExercisesInPreviousTreatmentPageWidgetState
             'รายการออกกำลังกาย',
             style: GoogleFonts.getFont(
               'Kanit',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 21,
             ),
@@ -94,8 +91,7 @@ class _AssignedExercisesInPreviousTreatmentPageWidgetState
                                           'รายการที่ 1  :',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
-                                            color:
-                                                FlutterFlowTheme.primaryColor,
+                                            color: primaryColor,
                                             fontWeight: FontWeight.w500,
                                             fontSize: 19,
                                           ),
@@ -117,8 +113,7 @@ class _AssignedExercisesInPreviousTreatmentPageWidgetState
                                           'Office Syndrome',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
-                                            color:
-                                                FlutterFlowTheme.primaryColor,
+                                            color: primaryColor,
                                             fontSize: 19,
                                           ),
                                         )
@@ -246,8 +241,7 @@ class _AssignedExercisesInPreviousTreatmentPageWidgetState
                                           'ตารางการออกกำลังกาย  :',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
-                                            color:
-                                                FlutterFlowTheme.tertiaryColor,
+                                            color: Colors.black,
                                             fontWeight: FontWeight.w500,
                                             fontSize: 15,
                                           ),
@@ -269,8 +263,7 @@ class _AssignedExercisesInPreviousTreatmentPageWidgetState
                                           'ทุกวัน',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
-                                            color:
-                                                FlutterFlowTheme.tertiaryColor,
+                                            color: Colors.black,
                                             fontSize: 15,
                                           ),
                                         )
@@ -298,8 +291,7 @@ class _AssignedExercisesInPreviousTreatmentPageWidgetState
                                           'วันสิ้นสุดการออกกำลังกาย  :',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
-                                            color:
-                                                FlutterFlowTheme.tertiaryColor,
+                                            color: Colors.black,
                                             fontWeight: FontWeight.w500,
                                             fontSize: 15,
                                           ),
@@ -321,8 +313,7 @@ class _AssignedExercisesInPreviousTreatmentPageWidgetState
                                           'ก่อนหน้าวัดนัด 1 วัน',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
-                                            color:
-                                                FlutterFlowTheme.tertiaryColor,
+                                            color: Colors.black,
                                             fontSize: 15,
                                           ),
                                         )

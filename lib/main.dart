@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'auth/firebase_user_provider.dart';
 import 'package:therapist_buddy/screens/login_page.dart';
-import 'flutter_flow/flutter_flow_theme.dart';
 import 'screens/home_page.dart';
 import 'screens/treatments_page.dart';
 import 'screens/add_treatment_page.dart';
@@ -94,7 +93,7 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             activeIcon: Icon(
               Icons.home_sharp,
-              color: FlutterFlowTheme.primaryColor,
+              color: Color(0xFF0080FF),
               size: 24,
             ),
             label: 'หน้าหลัก',
@@ -107,7 +106,7 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             activeIcon: Icon(
               Icons.medical_services,
-              color: FlutterFlowTheme.primaryColor,
+              color: Color(0xFF0080FF),
               size: 24,
             ),
             label: 'การรักษา',
@@ -120,7 +119,7 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             activeIcon: Icon(
               Icons.add_circle_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: Color(0xFF0080FF),
               size: 24,
             ),
             label: 'เพิ่ม',
@@ -133,7 +132,7 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             activeIcon: Icon(
               Icons.chat,
-              color: FlutterFlowTheme.primaryColor,
+              color: Color(0xFF0080FF),
               size: 24,
             ),
             label: 'แชท',
@@ -146,7 +145,7 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             activeIcon: Icon(
               Icons.dehaze_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: Color(0xFF0080FF),
               size: 24,
             ),
             label: 'อื่นๆ',
@@ -155,7 +154,7 @@ class _NavBarPageState extends State<NavBarPage> {
         backgroundColor: Colors.white,
         currentIndex: tabs.keys.toList().indexOf(_currentPage),
         selectedLabelStyle: TextStyle(fontFamily: 'Kanit'),
-        selectedItemColor: FlutterFlowTheme.primaryColor,
+        selectedItemColor: Color(0xFF0080FF),
         unselectedLabelStyle: TextStyle(fontFamily: 'Kanit'),
         unselectedItemColor: Color(0xFF7A7A7A),
         onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),

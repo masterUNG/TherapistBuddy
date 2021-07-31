@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'patient_page.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -77,7 +76,6 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          automaticallyImplyLeading: false,
           leading: Padding(
             padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
             child: Image.asset(
@@ -89,7 +87,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),
@@ -157,7 +155,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                   ),
                                   child: Icon(
                                     Icons.clear,
-                                    color: FlutterFlowTheme.tertiaryColor,
+                                    color: Colors.black,
                                     size: 22,
                                   ),
                                 )
@@ -189,7 +187,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                         padding: EdgeInsets.fromLTRB(18, 0, 12, 0),
                         child: Icon(
                           Icons.perm_identity_rounded,
-                          color: FlutterFlowTheme.primaryColor,
+                          color: primaryColor,
                           size: 24,
                         ),
                       ),

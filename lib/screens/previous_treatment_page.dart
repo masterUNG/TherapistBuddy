@@ -1,5 +1,4 @@
 import 'assigned_exercises_in_previous_treatment_page.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'patient_exercise_record_page.dart';
 import 'patient_treatment_results_page.dart';
@@ -28,15 +27,13 @@ class _PreviousTreatmentPageWidgetState
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -70,7 +67,7 @@ class _PreviousTreatmentPageWidgetState
                       'ธนวิชญ์ แซ่ลิ่ม',
                       style: GoogleFonts.getFont(
                         'Kanit',
-                        color: FlutterFlowTheme.primaryColor,
+                        color: primaryColor,
                         fontWeight: FontWeight.w500,
                         fontSize: 21,
                       ),
@@ -123,7 +120,7 @@ class _PreviousTreatmentPageWidgetState
                                 'ข้อมูลโปรไฟล์คนไข้',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.w500,
                                   fontSize: 20,
                                 ),
@@ -301,7 +298,7 @@ class _PreviousTreatmentPageWidgetState
                         'ข้อมูลการรักษา',
                         style: GoogleFonts.getFont(
                           'Kanit',
-                          color: FlutterFlowTheme.primaryColor,
+                          color: primaryColor,
                           fontWeight: FontWeight.w500,
                           fontSize: 20,
                         ),
@@ -591,7 +588,7 @@ class _PreviousTreatmentPageWidgetState
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.secondaryColor,
+                    color: secondaryColor,
                   ),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -608,7 +605,7 @@ class _PreviousTreatmentPageWidgetState
                               'ท่าออกกำลังกายที่มอบหมาย',
                               style: GoogleFonts.getFont(
                                 'Kanit',
-                                color: FlutterFlowTheme.primaryColor,
+                                color: primaryColor,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 19,
                               ),
@@ -627,7 +624,7 @@ class _PreviousTreatmentPageWidgetState
                                 'ดูรายละเอียด',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14,
                                   decoration: TextDecoration.underline,
@@ -777,7 +774,7 @@ class _PreviousTreatmentPageWidgetState
                               'การออกกำลังกายทั้งหมด',
                               style: GoogleFonts.getFont(
                                 'Kanit',
-                                color: FlutterFlowTheme.primaryColor,
+                                color: primaryColor,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 19,
                               ),
@@ -796,7 +793,7 @@ class _PreviousTreatmentPageWidgetState
                                 'เปลี่ยนมุมมอง',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14,
                                   decoration: TextDecoration.underline,
@@ -935,7 +932,7 @@ class _PreviousTreatmentPageWidgetState
                               'ผลการรักษา',
                               style: GoogleFonts.getFont(
                                 'Kanit',
-                                color: FlutterFlowTheme.primaryColor,
+                                color: primaryColor,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 19,
                               ),
@@ -954,7 +951,7 @@ class _PreviousTreatmentPageWidgetState
                                 'ดูรายละเอียด',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14,
                                   decoration: TextDecoration.underline,
@@ -981,7 +978,7 @@ class _PreviousTreatmentPageWidgetState
                                     'Office Syndrome',
                                     style: GoogleFonts.getFont(
                                       'Kanit',
-                                      color: FlutterFlowTheme.primaryColor,
+                                      color: primaryColor,
                                       fontWeight: FontWeight.w500,
                                       fontSize: 17,
                                     ),

@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'patient_page.dart';
@@ -27,15 +26,13 @@ class _ConfirmEditedExercisePageWidgetState
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -44,7 +41,7 @@ class _ConfirmEditedExercisePageWidgetState
             'ยืนยันการมอบหมาย',
             style: GoogleFonts.getFont(
               'Kanit',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 21,
             ),
@@ -67,7 +64,7 @@ class _ConfirmEditedExercisePageWidgetState
                   'อาการของคนไข้',
                   style: GoogleFonts.getFont(
                     'Kanit',
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                   ),
@@ -109,7 +106,7 @@ class _ConfirmEditedExercisePageWidgetState
                   'ท่าออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                   ),
@@ -216,7 +213,7 @@ class _ConfirmEditedExercisePageWidgetState
                   'ตารางการออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                   ),
@@ -258,7 +255,7 @@ class _ConfirmEditedExercisePageWidgetState
                   'วันสิ้นสุดการออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                   ),
@@ -312,7 +309,7 @@ class _ConfirmEditedExercisePageWidgetState
                     options: FFButtonOptions(
                       width: 190,
                       height: 49,
-                      color: FlutterFlowTheme.primaryColor,
+                      color: primaryColor,
                       textStyle: GoogleFonts.getFont(
                         'Kanit',
                         color: Colors.white,

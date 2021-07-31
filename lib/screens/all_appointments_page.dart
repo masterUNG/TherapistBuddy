@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -24,15 +23,13 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -41,7 +38,7 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
             'การนัดหมายทั้งหมด',
             style: GoogleFonts.getFont(
               'Kanit',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 21,
             ),

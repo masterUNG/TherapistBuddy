@@ -1,6 +1,5 @@
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'otp_verification_in_signup_page.dart';
@@ -53,15 +52,13 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -70,7 +67,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
             'ลงทะเบียน',
             style: GoogleFonts.getFont(
               'Kanit',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 21,
             ),
@@ -156,7 +153,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                       ),
                       fillColor: Colors.white,
                       elevation: 2,
-                      borderColor: Color(0xFFCCD0D5),
+                      borderColor: secondaryColor,
                       borderWidth: 1,
                       borderRadius: defaultBorderRadius,
                       margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
@@ -171,7 +168,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                           decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0xFFCCD0D5),
+                                color: secondaryColor,
                                 width: 1,
                               ),
                               borderRadius:
@@ -179,7 +176,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0xFF0080FF),
+                                color: primaryColor,
                                 width: 1,
                               ),
                               borderRadius:
@@ -224,14 +221,14 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFCCD0D5),
+                        color: secondaryColor,
                         width: 1,
                       ),
                       borderRadius: BorderRadius.circular(defaultBorderRadius),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFF0080FF),
+                        color: primaryColor,
                         width: 1,
                       ),
                       borderRadius: BorderRadius.circular(defaultBorderRadius),
@@ -298,7 +295,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                             BorderRadius.circular(defaultBorderRadius),
                         shape: BoxShape.rectangle,
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -334,7 +331,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                           decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0xFFCCD0D5),
+                                color: secondaryColor,
                                 width: 1,
                               ),
                               borderRadius:
@@ -342,7 +339,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0xFF0080FF),
+                                color: primaryColor,
                                 width: 1,
                               ),
                               borderRadius:
@@ -409,14 +406,14 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFCCD0D5),
+                        color: secondaryColor,
                         width: 1,
                       ),
                       borderRadius: BorderRadius.circular(defaultBorderRadius),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFF0080FF),
+                        color: primaryColor,
                         width: 1,
                       ),
                       borderRadius: BorderRadius.circular(defaultBorderRadius),
@@ -490,14 +487,14 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFCCD0D5),
+                        color: secondaryColor,
                         width: 1,
                       ),
                       borderRadius: BorderRadius.circular(defaultBorderRadius),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFF0080FF),
+                        color: secondaryColor,
                         width: 1,
                       ),
                       borderRadius: BorderRadius.circular(defaultBorderRadius),
@@ -559,7 +556,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   ),
                   fillColor: Colors.white,
                   elevation: 2,
-                  borderColor: Color(0xFFCCD0D5),
+                  borderColor: secondaryColor,
                   borderWidth: 1,
                   borderRadius: defaultBorderRadius,
                   margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
@@ -597,7 +594,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   ),
                   fillColor: Colors.white,
                   elevation: 2,
-                  borderColor: Color(0xFFCCD0D5),
+                  borderColor: secondaryColor,
                   borderWidth: 1,
                   borderRadius: defaultBorderRadius,
                   margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
@@ -670,7 +667,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                       ),
                       fillColor: Colors.white,
                       elevation: 2,
-                      borderColor: Color(0xFFCCD0D5),
+                      borderColor: secondaryColor,
                       borderWidth: 1,
                       borderRadius: defaultBorderRadius,
                       margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
@@ -706,7 +703,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                         ),
                         fillColor: Colors.white,
                         elevation: 2,
-                        borderColor: Color(0xFFCCD0D5),
+                        borderColor: secondaryColor,
                         borderWidth: 1,
                         borderRadius: defaultBorderRadius,
                         margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
@@ -900,7 +897,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                     textPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                     buttonPosition: RadioButtonPosition.left,
                     direction: Axis.vertical,
-                    radioButtonColor: FlutterFlowTheme.primaryColor,
+                    radioButtonColor: primaryColor,
                     toggleable: false,
                     horizontalAlignment: WrapAlignment.start,
                     verticalAlignment: WrapCrossAlignment.start,
@@ -923,7 +920,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   options: FFButtonOptions(
                     width: 190,
                     height: 49,
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     textStyle: GoogleFonts.getFont(
                       'Kanit',
                       color: Colors.white,

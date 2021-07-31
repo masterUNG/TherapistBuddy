@@ -1,6 +1,5 @@
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -36,8 +35,6 @@ class _EditAssignedExercisePageWidgetState
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               await showDialog(
@@ -92,7 +89,7 @@ class _EditAssignedExercisePageWidgetState
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -101,7 +98,7 @@ class _EditAssignedExercisePageWidgetState
             'แก้ไขรายการออกกำลังกาย',
             style: GoogleFonts.getFont(
               'Kanit',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 21,
             ),
@@ -124,7 +121,7 @@ class _EditAssignedExercisePageWidgetState
                   'อาการของคนไข้',
                   style: GoogleFonts.getFont(
                     'Kanit',
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                   ),
@@ -147,7 +144,7 @@ class _EditAssignedExercisePageWidgetState
                   ),
                   fillColor: Colors.white,
                   elevation: 2,
-                  borderColor: Color(0xFFCCD0D5),
+                  borderColor: secondaryColor,
                   borderWidth: 1,
                   borderRadius: defaultBorderRadius,
                   margin: EdgeInsets.fromLTRB(20, 0, 12, 0),
@@ -160,7 +157,7 @@ class _EditAssignedExercisePageWidgetState
                   'ท่าออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                   ),
@@ -276,7 +273,7 @@ class _EditAssignedExercisePageWidgetState
                                         color: Colors.white,
                                         shape: BoxShape.circle,
                                         border: Border.all(
-                                          color: Color(0xFFCCD0D5),
+                                          color: secondaryColor,
                                           width: 1,
                                         ),
                                       ),
@@ -303,7 +300,7 @@ class _EditAssignedExercisePageWidgetState
                   'ตารางการออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                   ),
@@ -323,7 +320,7 @@ class _EditAssignedExercisePageWidgetState
                         color: Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -352,7 +349,7 @@ class _EditAssignedExercisePageWidgetState
                         color: Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -381,7 +378,7 @@ class _EditAssignedExercisePageWidgetState
                         color: Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -410,7 +407,7 @@ class _EditAssignedExercisePageWidgetState
                         color: Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -439,7 +436,7 @@ class _EditAssignedExercisePageWidgetState
                         color: Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -468,7 +465,7 @@ class _EditAssignedExercisePageWidgetState
                         color: Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -497,7 +494,7 @@ class _EditAssignedExercisePageWidgetState
                         color: Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -537,7 +534,7 @@ class _EditAssignedExercisePageWidgetState
                   ),
                   buttonPosition: RadioButtonPosition.left,
                   direction: Axis.horizontal,
-                  radioButtonColor: FlutterFlowTheme.primaryColor,
+                  radioButtonColor: primaryColor,
                   toggleable: true,
                   horizontalAlignment: WrapAlignment.start,
                   verticalAlignment: WrapCrossAlignment.start,
@@ -549,7 +546,7 @@ class _EditAssignedExercisePageWidgetState
                   'วันสิ้นสุดการออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                   ),
@@ -561,7 +558,7 @@ class _EditAssignedExercisePageWidgetState
                   width: double.infinity,
                   height: 52,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   child: Padding(
@@ -605,7 +602,7 @@ class _EditAssignedExercisePageWidgetState
                   ),
                   buttonPosition: RadioButtonPosition.left,
                   direction: Axis.horizontal,
-                  radioButtonColor: FlutterFlowTheme.primaryColor,
+                  radioButtonColor: primaryColor,
                   toggleable: true,
                   horizontalAlignment: WrapAlignment.start,
                   verticalAlignment: WrapCrossAlignment.start,
@@ -629,7 +626,7 @@ class _EditAssignedExercisePageWidgetState
                     options: FFButtonOptions(
                       width: 190,
                       height: 49,
-                      color: FlutterFlowTheme.primaryColor,
+                      color: primaryColor,
                       textStyle: GoogleFonts.getFont(
                         'Kanit',
                         color: Colors.white,
@@ -705,7 +702,7 @@ class _EditAssignedExercisePageWidgetState
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         'Kanit',
-                        color: FlutterFlowTheme.primaryColor,
+                        color: primaryColor,
                         fontSize: 16,
                         decoration: TextDecoration.underline,
                       ),

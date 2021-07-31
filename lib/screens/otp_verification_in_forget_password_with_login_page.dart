@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'set_new_password_with_login_page.dart';
@@ -36,15 +35,13 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -53,7 +50,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
             'ใส่รหัสยืนยันตัวตน',
             style: GoogleFonts.getFont(
               'Kanit',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 21,
             ),
@@ -100,14 +97,14 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFCCD0D5),
+                      color: secondaryColor,
                       width: 1,
                     ),
                     borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFF0080FF),
+                      color: primaryColor,
                       width: 1,
                     ),
                     borderRadius: BorderRadius.circular(defaultBorderRadius),
@@ -141,7 +138,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
                 options: FFButtonOptions(
                   width: 190,
                   height: 49,
-                  color: FlutterFlowTheme.primaryColor,
+                  color: primaryColor,
                   textStyle: GoogleFonts.getFont(
                     'Kanit',
                     color: Colors.white,
@@ -176,7 +173,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
                       '60',
                       style: GoogleFonts.getFont(
                         'Kanit',
-                        color: FlutterFlowTheme.primaryColor,
+                        color: primaryColor,
                         fontWeight: FontWeight.normal,
                         fontSize: 17,
                       ),

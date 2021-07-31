@@ -1,7 +1,6 @@
 import 'assign_exercise_page.dart';
 import 'assigned_exercises_page.dart';
 import 'edit_appointment_page.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'make_appointment_page.dart';
 import 'patient_exercise_record_page.dart';
@@ -31,8 +30,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               await Navigator.push(
@@ -45,7 +42,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -79,7 +76,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                       'ธนวิชญ์ แซ่ลิ่ม',
                       style: GoogleFonts.getFont(
                         'Kanit',
-                        color: FlutterFlowTheme.primaryColor,
+                        color: primaryColor,
                         fontWeight: FontWeight.w500,
                         fontSize: 21,
                       ),
@@ -146,7 +143,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         'ข้อมูลโปรไฟล์คนไข้',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: primaryColor,
                                           fontWeight: FontWeight.w500,
                                           fontSize: 20,
                                         ),
@@ -336,7 +333,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                 'ข้อมูลการรักษา',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.w500,
                                   fontSize: 20,
                                 ),
@@ -514,7 +511,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       'การนัดหมาย',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
-                                        color: FlutterFlowTheme.primaryColor,
+                                        color: primaryColor,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 20,
                                       ),
@@ -533,7 +530,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         'แก้ไข้',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: primaryColor,
                                           fontSize: 14,
                                           decoration: TextDecoration.underline,
                                         ),
@@ -697,7 +694,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.secondaryColor,
+                            color: secondaryColor,
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -715,7 +712,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       'ท่าออกกำลังกายที่มอบหมาย',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
-                                        color: FlutterFlowTheme.primaryColor,
+                                        color: primaryColor,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 19,
                                       ),
@@ -734,7 +731,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         'ดูรายละเอียด',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: primaryColor,
                                           fontWeight: FontWeight.normal,
                                           fontSize: 14,
                                           decoration: TextDecoration.underline,
@@ -911,7 +908,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       'การออกกำลังกายสัปดาห์นี้',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
-                                        color: FlutterFlowTheme.primaryColor,
+                                        color: primaryColor,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 19,
                                       ),
@@ -930,7 +927,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         'ดูเพิ่มเติม',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: primaryColor,
                                           fontWeight: FontWeight.normal,
                                           fontSize: 14,
                                           decoration: TextDecoration.underline,
@@ -1090,7 +1087,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       'ผลการรักษา',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
-                                        color: FlutterFlowTheme.primaryColor,
+                                        color: primaryColor,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 19,
                                       ),
@@ -1109,7 +1106,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         'ดูรายละเอียด',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: primaryColor,
                                           fontWeight: FontWeight.normal,
                                           fontSize: 14,
                                           decoration: TextDecoration.underline,
@@ -1137,8 +1134,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                             'Office Syndrome',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
-                                              color:
-                                                  FlutterFlowTheme.primaryColor,
+                                              color: primaryColor,
                                               fontWeight: FontWeight.w500,
                                               fontSize: 17,
                                             ),
@@ -1196,7 +1192,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                         children: [
                           Icon(
                             Icons.calendar_today_outlined,
-                            color: FlutterFlowTheme.primaryColor,
+                            color: primaryColor,
                             size: 30,
                           ),
                           Padding(
@@ -1205,7 +1201,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                               'นัดคนไข้',
                               style: GoogleFonts.getFont(
                                 'Kanit',
-                                color: FlutterFlowTheme.primaryColor,
+                                color: primaryColor,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 16,
                               ),
@@ -1228,7 +1224,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                       width: MediaQuery.of(context).size.width / 3,
                       height: actionButtonHeight,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.primaryColor,
+                        color: primaryColor,
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 4,
@@ -1335,7 +1331,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                         children: [
                           Icon(
                             Icons.check_circle_outline_rounded,
-                            color: FlutterFlowTheme.primaryColor,
+                            color: primaryColor,
                             size: 31,
                           ),
                           Padding(
@@ -1344,7 +1340,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                               'สำเร็จ',
                               style: GoogleFonts.getFont(
                                 'Kanit',
-                                color: FlutterFlowTheme.primaryColor,
+                                color: primaryColor,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 16,
                               ),

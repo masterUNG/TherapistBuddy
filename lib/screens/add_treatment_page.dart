@@ -1,5 +1,4 @@
 import '../flutter_flow/flutter_flow_radio_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -35,7 +34,6 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          automaticallyImplyLeading: false,
           leading: Padding(
             padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
             child: Image.asset(
@@ -47,7 +45,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),
@@ -80,13 +78,13 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                       optionHeight: 25,
                       textStyle: GoogleFonts.getFont(
                         'Kanit',
-                        color: FlutterFlowTheme.tertiaryColor,
+                        color: Colors.black,
                         fontWeight: FontWeight.normal,
                         fontSize: 16,
                       ),
                       buttonPosition: RadioButtonPosition.left,
                       direction: Axis.horizontal,
-                      radioButtonColor: FlutterFlowTheme.primaryColor,
+                      radioButtonColor: primaryColor,
                       toggleable: false,
                       horizontalAlignment: WrapAlignment.start,
                       verticalAlignment: WrapCrossAlignment.start,
@@ -157,7 +155,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                       ),
                                       child: Icon(
                                         Icons.clear,
-                                        color: FlutterFlowTheme.tertiaryColor,
+                                        color: Colors.black,
                                         size: 22,
                                       ),
                                     )
@@ -193,7 +191,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                 },
                                 icon: Icon(
                                   Icons.search_rounded,
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color: primaryColor,
                                   size: 23,
                                 ),
                                 iconSize: 23,
@@ -229,7 +227,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
                               'Kanit',
-                              color: FlutterFlowTheme.tertiaryColor,
+                              color: Colors.black,
                               fontWeight: FontWeight.w500,
                               fontSize: 21,
                             ),
@@ -243,7 +241,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                           options: FFButtonOptions(
                             width: 150,
                             height: 40,
-                            color: FlutterFlowTheme.primaryColor,
+                            color: primaryColor,
                             textStyle: GoogleFonts.getFont(
                               'Kanit',
                               color: Colors.white,
@@ -310,7 +308,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                 ),
                                 child: Icon(
                                   Icons.clear,
-                                  color: FlutterFlowTheme.tertiaryColor,
+                                  color: Colors.black,
                                   size: 22,
                                 ),
                               )
@@ -367,8 +365,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                             'จ๊อบ แซ่ลิ่ม',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
-                                              color: FlutterFlowTheme
-                                                  .tertiaryColor,
+                                              color: Colors.black,
                                               fontSize: 14,
                                             ),
                                           )
@@ -385,7 +382,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                         },
                                         icon: Icon(
                                           Icons.add_circle_rounded,
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: primaryColor,
                                           size: 35,
                                         ),
                                         iconSize: 35,

@@ -1,6 +1,5 @@
 import 'confirm_appointment_in_edit_appointment_page.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -30,8 +29,6 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               await showDialog(
@@ -86,7 +83,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -95,7 +92,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
             'แก้ไขการนัดหมายคนไข้',
             style: GoogleFonts.getFont(
               'Kanit',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 21,
             ),
@@ -117,7 +114,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                 'วันที่',
                 style: GoogleFonts.getFont(
                   'Kanit',
-                  color: FlutterFlowTheme.primaryColor,
+                  color: primaryColor,
                   fontWeight: FontWeight.w500,
                   fontSize: 18,
                 ),
@@ -132,7 +129,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(defaultBorderRadius),
                   border: Border.all(
-                    color: Color(0xFFCCD0D5),
+                    color: secondaryColor,
                     width: 1,
                   ),
                 ),
@@ -154,7 +151,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                       ),
                       FaIcon(
                         FontAwesomeIcons.calendarAlt,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: primaryColor,
                         size: 24,
                       )
                     ],
@@ -168,7 +165,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                 'เวลา',
                 style: GoogleFonts.getFont(
                   'Kanit',
-                  color: FlutterFlowTheme.primaryColor,
+                  color: primaryColor,
                   fontWeight: FontWeight.w500,
                   fontSize: 18,
                 ),
@@ -189,7 +186,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                 ),
                 buttonPosition: RadioButtonPosition.left,
                 direction: Axis.horizontal,
-                radioButtonColor: FlutterFlowTheme.primaryColor,
+                radioButtonColor: primaryColor,
                 toggleable: false,
                 horizontalAlignment: WrapAlignment.start,
                 verticalAlignment: WrapCrossAlignment.start,
@@ -204,7 +201,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(defaultBorderRadius),
                   border: Border.all(
-                    color: Color(0xFFCCD0D5),
+                    color: secondaryColor,
                     width: 1,
                   ),
                 ),
@@ -226,7 +223,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                       ),
                       Icon(
                         Icons.access_time_rounded,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: primaryColor,
                         size: 24,
                       )
                     ],
@@ -247,7 +244,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                         borderRadius:
                             BorderRadius.circular(defaultBorderRadius),
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -302,7 +299,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                         borderRadius:
                             BorderRadius.circular(defaultBorderRadius),
                         border: Border.all(
-                          color: Color(0xFFCCD0D5),
+                          color: secondaryColor,
                           width: 1,
                         ),
                       ),
@@ -348,7 +345,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                   options: FFButtonOptions(
                     width: 190,
                     height: 49,
-                    color: FlutterFlowTheme.primaryColor,
+                    color: primaryColor,
                     textStyle: GoogleFonts.getFont(
                       'Kanit',
                       color: Colors.white,
@@ -424,7 +421,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                     textAlign: TextAlign.center,
                     style: GoogleFonts.getFont(
                       'Kanit',
-                      color: FlutterFlowTheme.primaryColor,
+                      color: primaryColor,
                       fontSize: 16,
                       decoration: TextDecoration.underline,
                     ),

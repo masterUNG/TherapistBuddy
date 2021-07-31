@@ -1,5 +1,4 @@
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -28,15 +27,13 @@ class _PatientExerciseRecordPageWidgetState
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-          automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () async {
               Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               size: 24,
             ),
             iconSize: 24,
@@ -45,7 +42,7 @@ class _PatientExerciseRecordPageWidgetState
             'การออกกำลังกายทั้งหมด',
             style: GoogleFonts.getFont(
               'Kanit',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 21,
             ),
@@ -100,7 +97,7 @@ class _PatientExerciseRecordPageWidgetState
                         ),
                         fillColor: Colors.white,
                         elevation: 2,
-                        borderColor: Color(0xFFCCD0D5),
+                        borderColor: secondaryColor,
                         borderWidth: 1,
                         borderRadius: 8,
                         margin: EdgeInsets.fromLTRB(25, 0, 15, 0),
@@ -167,7 +164,7 @@ class _PatientExerciseRecordPageWidgetState
                                         'วันจันทร์ ที่ 13 มิถุนายน 2564',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: primaryColor,
                                           fontWeight: FontWeight.w500,
                                           fontSize: 18,
                                         ),

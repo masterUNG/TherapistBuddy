@@ -1,5 +1,4 @@
 import 'all_appointments_page.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +35,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),
@@ -74,7 +73,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               'การนัดหมายวันนี้',
                               style: GoogleFonts.getFont(
                                 'Kanit',
-                                color: FlutterFlowTheme.primaryColor,
+                                color: primaryColor,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 19,
                               ),
@@ -93,7 +92,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 'ดูการนัดหมายทั้งหมด',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color: primaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14,
                                   decoration: TextDecoration.underline,
@@ -232,7 +231,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           'ผลการรักษาล่าสุดของคนไข้',
                           style: GoogleFonts.getFont(
                             'Kanit',
-                            color: FlutterFlowTheme.primaryColor,
+                            color: primaryColor,
                             fontWeight: FontWeight.w500,
                             fontSize: 19,
                           ),

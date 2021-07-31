@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +22,6 @@ class _ChatsPageWidgetState extends State<ChatsPageWidget> {
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          automaticallyImplyLeading: false,
           leading: Padding(
             padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
             child: Image.asset(
@@ -35,7 +33,7 @@ class _ChatsPageWidgetState extends State<ChatsPageWidget> {
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),

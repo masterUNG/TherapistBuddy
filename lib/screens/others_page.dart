@@ -1,5 +1,4 @@
 import 'edit_profile_page.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'login_page.dart';
 import 'settings_page.dart';
@@ -27,7 +26,6 @@ class _OthersPageWidgetState extends State<OthersPageWidget> {
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
           backgroundColor: Colors.white,
-          automaticallyImplyLeading: false,
           leading: Padding(
             padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
             child: Image.asset(
@@ -39,7 +37,7 @@ class _OthersPageWidgetState extends State<OthersPageWidget> {
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',
-              color: FlutterFlowTheme.primaryColor,
+              color: primaryColor,
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),
