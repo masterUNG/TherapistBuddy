@@ -694,7 +694,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: secondaryColor,
+                            color: Colors.white,
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
