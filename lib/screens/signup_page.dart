@@ -122,7 +122,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
               Align(
                 alignment: Alignment(-1, 0),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(45, 0, 0, 0),
+                  padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
                   child: AutoSizeText(
                     'ชื่อ',
                     style: GoogleFonts.getFont(
@@ -202,7 +202,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
               Align(
                 alignment: Alignment(-1, 0),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                  padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                   child: AutoSizeText(
                     'นามสกุล',
                     style: GoogleFonts.getFont(
@@ -247,7 +247,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(45, 8, 45, 0),
+                padding: EdgeInsets.fromLTRB(30, 8, 30, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -364,7 +364,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(45, 8, 45, 0),
+                padding: EdgeInsets.fromLTRB(30, 8, 30, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -445,7 +445,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(45, 8, 45, 0),
+                padding: EdgeInsets.fromLTRB(30, 8, 30, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -604,7 +604,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
               Align(
                 alignment: Alignment(-1, 0),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                  padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                   child: AutoSizeText(
                     'วันเกิด',
                     style: GoogleFonts.getFont(
@@ -867,7 +867,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
               Align(
                 alignment: Alignment(-1, 0),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                  padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                   child: AutoSizeText(
                     'เพศ',
                     style: GoogleFonts.getFont(

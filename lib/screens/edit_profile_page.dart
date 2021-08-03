@@ -205,7 +205,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                       Align(
                         alignment: Alignment(-1, 0),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(45, 0, 0, 0),
+                          padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
                           child: AutoSizeText(
                             'ชื่อ',
                             style: GoogleFonts.getFont(
@@ -286,7 +286,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                       Align(
                         alignment: Alignment(-1, 0),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                          padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                           child: AutoSizeText(
                             'นามสกุล',
                             style: GoogleFonts.getFont(
@@ -333,7 +333,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(45, 8, 45, 0),
+                        padding: EdgeInsets.fromLTRB(30, 8, 30, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -465,7 +465,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(45, 8, 45, 0),
+                        padding: EdgeInsets.fromLTRB(30, 8, 30, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -550,7 +550,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                       Align(
                         alignment: Alignment(-1, 0),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                          padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                           child: AutoSizeText(
                             'ตำแหน่งทางการแพทย์',
                             style: GoogleFonts.getFont(
@@ -589,7 +589,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                       Align(
                         alignment: Alignment(-1, 0),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                          padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                           child: AutoSizeText(
                             'สถานพยาบาลที่ปฏิบัติงานอยู่',
                             style: GoogleFonts.getFont(
@@ -627,7 +627,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                       Align(
                         alignment: Alignment(-1, 0),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                          padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                           child: AutoSizeText(
                             'วันเกิด',
                             style: GoogleFonts.getFont(
@@ -888,7 +888,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                       Align(
                         alignment: Alignment(-1, 0),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                          padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                           child: AutoSizeText(
                             'เพศ',
                             style: GoogleFonts.getFont(
