@@ -71,7 +71,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                   Padding(
                     padding: EdgeInsets.fromLTRB(18, 0, 0, 0),
                     child: FlutterFlowRadioButton(
-                      options: ['หมายเลขโทรศัพท์', 'รายชื่อคนไข้'],
+                      options: ['ไอดีผู้ใช้', 'รายชื่อคนไข้'],
                       onChanged: (value) {
                         setState(() => radioButtonValue = value);
                       },
