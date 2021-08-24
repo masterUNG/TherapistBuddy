@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
 
@@ -39,7 +38,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
               fit: BoxFit.fitWidth,
             ),
           ),
-          title: AutoSizeText(
+          title: Text(
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',
@@ -220,7 +219,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                         ),
                         Padding(
                           padding: EdgeInsets.fromLTRB(30, 5, 30, 8),
-                          child: AutoSizeText(
+                          child: Text(
                             'ธนวิชญ์ แซ่ลิ่ม',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -359,7 +358,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             'จ๊อบ แซ่ลิ่ม',
                                             style: GoogleFonts.getFont(
                                               'Kanit',

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:therapist_buddy/variables.dart';
 
@@ -31,7 +30,7 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'การนัดหมายทั้งหมด',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -117,7 +116,7 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             'วันที่',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -140,7 +139,7 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                            child: AutoSizeText(
+                                            child: Text(
                                               ':',
                                               style: GoogleFonts.getFont(
                                                 'Kanit',
@@ -192,7 +191,7 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             'เวลา',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -215,7 +214,7 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                            child: AutoSizeText(
+                                            child: Text(
                                               ':',
                                               style: GoogleFonts.getFont(
                                                 'Kanit',
@@ -241,7 +240,7 @@ class _AllAppointmentsPageWidgetState extends State<AllAppointmentsPageWidget> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             '10.00 - 12.00 น.',
                                             style: GoogleFonts.getFont(
                                               'Kanit',

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_youtube_player.dart';
 
 import 'package:therapist_buddy/variables.dart';
@@ -33,7 +32,7 @@ class _ExerciseIntroductionPageWidgetState
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'ยกแขนด้านข้าง',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -75,7 +74,7 @@ class _ExerciseIntroductionPageWidgetState
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          AutoSizeText(
+                          Text(
                             'เวลา',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -85,7 +84,7 @@ class _ExerciseIntroductionPageWidgetState
                               fontSize: 16,
                             ),
                           ),
-                          AutoSizeText(
+                          Text(
                             '03.15',
                             style: GoogleFonts.getFont(
                               'Kanit',
@@ -111,7 +110,7 @@ class _ExerciseIntroductionPageWidgetState
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          AutoSizeText(
+                          Text(
                             'จำนวน',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -121,7 +120,7 @@ class _ExerciseIntroductionPageWidgetState
                               fontSize: 16,
                             ),
                           ),
-                          AutoSizeText(
+                          Text(
                             '10 ครั้ง',
                             style: GoogleFonts.getFont(
                               'Kanit',
@@ -154,7 +153,7 @@ class _ExerciseIntroductionPageWidgetState
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(20, 5, 20, 20),
-                  child: AutoSizeText(
+                  child: Text(
                     'ทุกครั้งที่เราออกกำลังกายควรเตรียมร่างกายให้พร้อมก่อนเพื่อลดโอกาสที่จะเกิดการบาดเจ็บและเพิ่มประสิทธิภาพในการออกกำลังกาย บางคนอาจไม่รู้ว่าต้องปฏิบัติตัวยังไงเริ่มจากอะไรก่อนและควรทำนานเท่าไร สุดท้ายแล้วก็อาจทำได้เพียงหมุนคอ หมุนแขน สะบัดข้อมือ วันนี้เรามาดูกันว่าขั้นตอนและหลักการในการเตรียมความพร้อมก่อนออกกำลังกายเป็นอย่างไร ลองไปดูกันครับ 1. อบอุ่นร่างกายทั่วไปขั้นแรกให้เริ่มจากการอบอุ่นร่างกาย โดยทั่วไปแล้ววิธีการที่ง่ายที่สุดคือ การปฏิบัติกิจกรรมที่เราจะใช้ออกกำลังกายอย่างเบาๆและช้ากว่าการออกกำลังกายปกติ 2. การยืดกล้ามเนื้อแบบอยู่กับที่การยืดกล้ามเนื้อแบบอยู่กับที่ (Static stretching) เป็นการยืดกล้ามเนื้อที่ไม่มีการเคลื่อนไหวร่างกายเป็นการยืดในลักษณะเหยียดตึง เช่น ก้มเอามือแตะปลายเท้าเพื่อยืดกล้ามเนื้อหลัง ยกขาพาดเก้าอี้เพื่อยืดต้นขาด้านหลัง หรือยืนดันกำแพงเพื่อยืดน่อง เป็นต้น',
                     style: GoogleFonts.getFont(
                       'Kanit',

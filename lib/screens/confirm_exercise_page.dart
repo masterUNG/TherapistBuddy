@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 
 import 'package:therapist_buddy/variables.dart';
@@ -33,7 +32,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'ยืนยันการมอบหมาย',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -56,8 +55,8 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
             children: [
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 25, 0, 8),
-                child: AutoSizeText(
-                  'อาการของคนไข้',
+                child: Text(
+                  'โรคของคนไข้',
                   style: GoogleFonts.getFont(
                     'Kanit',
                     color: primaryColor,
@@ -82,7 +81,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        AutoSizeText(
+                        Text(
                           'Office Syndrome',
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -98,7 +97,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 18, 0, 8),
-                child: AutoSizeText(
+                child: Text(
                   'ท่าออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
@@ -139,7 +138,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                AutoSizeText(
+                                Text(
                                   'ยกแขนด้านข้าง',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
@@ -161,7 +160,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
                                         size: 18,
                                       ),
                                     ),
-                                    AutoSizeText(
+                                    Text(
                                       '10 ครั้ง',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
@@ -184,7 +183,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
                                         size: 18,
                                       ),
                                     ),
-                                    AutoSizeText(
+                                    Text(
                                       '05.15',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
@@ -205,7 +204,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 3, 0, 8),
-                child: AutoSizeText(
+                child: Text(
                   'ตารางการออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
@@ -231,7 +230,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        AutoSizeText(
+                        Text(
                           'ทุกวัน',
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -247,7 +246,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 18, 0, 8),
-                child: AutoSizeText(
+                child: Text(
                   'วันสิ้นสุดการออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
@@ -273,7 +272,7 @@ class _ConfirmExercisePageWidgetState extends State<ConfirmExercisePageWidget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        AutoSizeText(
+                        Text(
                           'ก่อนวันนัดครั้งต่อไป 1 วัน',
                           style: GoogleFonts.getFont(
                             'Kanit',

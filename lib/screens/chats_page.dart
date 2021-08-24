@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:therapist_buddy/variables.dart';
 
@@ -29,7 +28,7 @@ class _ChatsPageWidgetState extends State<ChatsPageWidget> {
               fit: BoxFit.fitWidth,
             ),
           ),
-          title: AutoSizeText(
+          title: Text(
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 
 import 'package:therapist_buddy/variables.dart';
@@ -54,7 +53,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'เปลี่ยนรหัสผ่าน',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -80,7 +79,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
         },
         backgroundColor: Colors.white,
         elevation: 0,
-        label: AutoSizeText(
+        label: Text(
           'ลืมรหัสผ่านใช่หรือไม่',
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
@@ -106,7 +105,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
                 children: [
                   Align(
                     alignment: Alignment(-1, 0),
-                    child: AutoSizeText(
+                    child: Text(
                       'ใส่รหัสผ่านเก่า',
                       style: GoogleFonts.getFont(
                         'Kanit',
@@ -119,7 +118,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
                     alignment: Alignment(-1, 0),
                     child: Padding(
                       padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                      child: AutoSizeText(
+                      child: Text(
                         '(รหัสผ่านไม่ถูกต้อง)',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -187,7 +186,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
                 children: [
                   Align(
                     alignment: Alignment(-1, 0),
-                    child: AutoSizeText(
+                    child: Text(
                       'ใส่รหัสผ่านใหม่',
                       style: GoogleFonts.getFont(
                         'Kanit',
@@ -200,7 +199,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
                     alignment: Alignment(-1, 0),
                     child: Padding(
                       padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                      child: AutoSizeText(
+                      child: Text(
                         '(ใส่รหัสผ่านอย่างน้อย 8 ตัว)',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -268,7 +267,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
                 children: [
                   Align(
                     alignment: Alignment(-1, 0),
-                    child: AutoSizeText(
+                    child: Text(
                       'ใส่รหัสผ่านใหม่อีกครั้ง',
                       style: GoogleFonts.getFont(
                         'Kanit',
@@ -281,7 +280,7 @@ class _ChangePasswordPageWidgetState extends State<ChangePasswordPageWidget> {
                     alignment: Alignment(-1, 0),
                     child: Padding(
                       padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                      child: AutoSizeText(
+                      child: Text(
                         '(รหัสผ่านไม่ตรงกัน)',
                         style: GoogleFonts.getFont(
                           'Kanit',

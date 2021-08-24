@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:therapist_buddy/variables.dart';
 import 'edit_assigned_exercise_page.dart';
@@ -33,7 +32,7 @@ class _AssignedExercisesPageWidgetState
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'รายการออกกำลังกาย',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -85,7 +84,7 @@ class _AssignedExercisesPageWidgetState
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'รายการที่ 1  :',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -199,7 +198,7 @@ class _AssignedExercisesPageWidgetState
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              AutoSizeText(
+                                              Text(
                                                 'ยกแขนด้านข้าง',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
@@ -221,7 +220,7 @@ class _AssignedExercisesPageWidgetState
                                                       size: 18,
                                                     ),
                                                   ),
-                                                  AutoSizeText(
+                                                  Text(
                                                     '10 ครั้ง',
                                                     style: GoogleFonts.getFont(
                                                       'Kanit',
@@ -244,7 +243,7 @@ class _AssignedExercisesPageWidgetState
                                                       size: 18,
                                                     ),
                                                   ),
-                                                  AutoSizeText(
+                                                  Text(
                                                     '05.15',
                                                     style: GoogleFonts.getFont(
                                                       'Kanit',
@@ -277,7 +276,7 @@ class _AssignedExercisesPageWidgetState
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'ตารางการออกกำลังกาย  :',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -327,7 +326,7 @@ class _AssignedExercisesPageWidgetState
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'วันสิ้นสุดการออกกำลังกาย  :',
                                           style: GoogleFonts.getFont(
                                             'Kanit',

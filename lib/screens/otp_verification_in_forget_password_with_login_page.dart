@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 
 import 'package:therapist_buddy/variables.dart';
@@ -44,7 +43,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'ใส่รหัสยืนยันตัวตน',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -66,7 +65,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
           children: [
             Padding(
               padding: EdgeInsets.fromLTRB(50, 25, 50, 0),
-              child: AutoSizeText(
+              child: Text(
                 'รหัสยืนยันตัวตนจะถูกส่งไปทาง sms ที่',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.getFont(
@@ -77,7 +76,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
                 ),
               ),
             ),
-            AutoSizeText(
+            Text(
               '(+66) 812345678',
               textAlign: TextAlign.center,
               style: GoogleFonts.getFont(
@@ -156,7 +155,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AutoSizeText(
+                  Text(
                     'กรุณารอ',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -167,7 +166,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
                   ),
                   Padding(
                     padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                    child: AutoSizeText(
+                    child: Text(
                       '60',
                       style: GoogleFonts.getFont(
                         'Kanit',
@@ -177,7 +176,7 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
                       ),
                     ),
                   ),
-                  AutoSizeText(
+                  Text(
                     'วินาทีก่อนกดส่งอีกครั้ง',
                     style: GoogleFonts.getFont(
                       'Kanit',

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 
 import '../main.dart';
@@ -43,7 +42,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
         },
         backgroundColor: Colors.white,
         elevation: 0,
-        label: AutoSizeText(
+        label: Text(
           'สร้างบัญชีใหม่',
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
@@ -71,7 +70,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 18, 0, 0),
-                child: AutoSizeText(
+                child: Text(
                   'TherapistBuddy',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.getFont(
@@ -113,7 +112,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           ),
                           Padding(
                             padding: EdgeInsets.fromLTRB(3, 0, 0, 0),
-                            child: AutoSizeText(
+                            child: Text(
                               '+66',
                               style: GoogleFonts.getFont(
                                 'Kanit',
@@ -243,7 +242,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           ),
                         );
                       },
-                      child: AutoSizeText(
+                      child: Text(
                         'ลืมรหัสผ่านใช่หรือไม่',
                         style: GoogleFonts.getFont('Kanit',
                             color: Color(0xFF7A7A7A),

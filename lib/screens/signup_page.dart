@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
@@ -61,7 +60,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'ลงทะเบียน',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -121,7 +120,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'ชื่อ',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -137,8 +136,8 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     FlutterFlowDropDown(
-                      initialOption: 'พญ.',
-                      options: ['พญ.'],
+                      initialOption: 'กภ.',
+                      options: ['กภ.'],
                       onChanged: (value) {
                         setState(() => dropDownValue1 = value);
                       },
@@ -201,7 +200,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'นามสกุล',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -253,7 +252,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   children: [
                     Align(
                       alignment: Alignment(-1, 0),
-                      child: AutoSizeText(
+                      child: Text(
                         'หมายเลขโทรศัพท์',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -266,7 +265,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                       alignment: Alignment(-1, 0),
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                        child: AutoSizeText(
+                        child: Text(
                           '(หมายเลขนี้ถูกใช้งานแล้ว)',
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -308,7 +307,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                           ),
                           Padding(
                             padding: EdgeInsets.fromLTRB(3, 0, 0, 0),
-                            child: AutoSizeText(
+                            child: Text(
                               '+66',
                               style: GoogleFonts.getFont(
                                 'Kanit',
@@ -370,7 +369,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   children: [
                     Align(
                       alignment: Alignment(-1, 0),
-                      child: AutoSizeText(
+                      child: Text(
                         'รหัสผ่าน',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -383,7 +382,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                       alignment: Alignment(-1, 0),
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                        child: AutoSizeText(
+                        child: Text(
                           '(ใส่รหัสผ่านอย่างน้อย 8 ตัว)',
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -451,7 +450,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   children: [
                     Align(
                       alignment: Alignment(-1, 0),
-                      child: AutoSizeText(
+                      child: Text(
                         'ใส่รหัสผ่านอีกครั้ง',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -464,7 +463,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                       alignment: Alignment(-1, 0),
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                        child: AutoSizeText(
+                        child: Text(
                           '(รหัสผ่านไม่ตรงกัน)',
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -527,7 +526,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'ตำแหน่งทางการแพทย์',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -565,7 +564,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'สถานพยาบาลที่ปฏิบัติงานอยู่',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -603,7 +602,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'วันเกิด',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -866,7 +865,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'เพศ',
                     style: GoogleFonts.getFont(
                       'Kanit',

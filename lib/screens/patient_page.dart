@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:therapist_buddy/main.dart';
 import 'package:therapist_buddy/variables.dart';
@@ -137,7 +136,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      AutoSizeText(
+                                      Text(
                                         'ข้อมูลโปรไฟล์คนไข้',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
@@ -159,7 +158,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                AutoSizeText(
+                                                Text(
                                                   'ชื่อ',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',
@@ -182,7 +181,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                 Padding(
                                                   padding: EdgeInsets.fromLTRB(
                                                       5, 0, 5, 0),
-                                                  child: AutoSizeText(
+                                                  child: Text(
                                                     ':',
                                                     style: GoogleFonts.getFont(
                                                       'Kanit',
@@ -240,7 +239,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                AutoSizeText(
+                                                Text(
                                                   'อายุ',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',
@@ -263,7 +262,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                 Padding(
                                                   padding: EdgeInsets.fromLTRB(
                                                       5, 0, 5, 0),
-                                                  child: AutoSizeText(
+                                                  child: Text(
                                                     ':',
                                                     style: GoogleFonts.getFont(
                                                       'Kanit',
@@ -327,7 +326,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AutoSizeText(
+                              Text(
                                 'ข้อมูลการรักษา',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
@@ -348,7 +347,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'โรค',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -371,7 +370,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         Padding(
                                           padding:
                                               EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          child: AutoSizeText(
+                                          child: Text(
                                             ':',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -421,7 +420,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'วันที่เข้ารับการรักษา',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -444,7 +443,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         Padding(
                                           padding:
                                               EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          child: AutoSizeText(
+                                          child: Text(
                                             ':',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -505,7 +504,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
-                                    AutoSizeText(
+                                    Text(
                                       'การนัดหมาย',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
@@ -548,7 +547,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             'วัน',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -571,7 +570,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                            child: AutoSizeText(
+                                            child: Text(
                                               ':',
                                               style: GoogleFonts.getFont(
                                                 'Kanit',
@@ -621,7 +620,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             'เวลา',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -644,7 +643,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                            child: AutoSizeText(
+                                            child: Text(
                                               ':',
                                               style: GoogleFonts.getFont(
                                                 'Kanit',
@@ -706,7 +705,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
-                                    AutoSizeText(
+                                    Text(
                                       'ท่าออกกำลังกายที่มอบหมาย',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
@@ -850,7 +849,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                               CrossAxisAlignment
                                                                   .center,
                                                           children: [
-                                                            AutoSizeText(
+                                                            Text(
                                                               '10 ครั้ง, 05.25 นาที',
                                                               textAlign:
                                                                   TextAlign
@@ -902,7 +901,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
-                                    AutoSizeText(
+                                    Text(
                                       'การออกกำลังกายสัปดาห์นี้',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
@@ -977,7 +976,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                       padding:
                                                           EdgeInsets.fromLTRB(
                                                               0, 14, 0, 0),
-                                                      child: AutoSizeText(
+                                                      child: Text(
                                                         'อาทิตย์',
                                                         textAlign:
                                                             TextAlign.center,
@@ -991,7 +990,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                         ),
                                                       ),
                                                     ),
-                                                    AutoSizeText(
+                                                    Text(
                                                       '13 มิ.ย. 64',
                                                       textAlign:
                                                           TextAlign.center,
@@ -1081,7 +1080,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
-                                    AutoSizeText(
+                                    Text(
                                       'ผลการรักษา',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
@@ -1128,7 +1127,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          AutoSizeText(
+                                          Text(
                                             'Office Syndrome',
                                             style: GoogleFonts.getFont(
                                               'Kanit',

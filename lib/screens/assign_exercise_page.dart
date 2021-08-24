@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
@@ -90,7 +89,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'มอบหมาย',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -113,8 +112,8 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
             children: [
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 25, 0, 8),
-                child: AutoSizeText(
-                  'อาการของคนไข้',
+                child: Text(
+                  'โรคของคนไข้',
                   style: GoogleFonts.getFont(
                     'Kanit',
                     color: primaryColor,
@@ -149,7 +148,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 18, 0, 8),
-                child: AutoSizeText(
+                child: Text(
                   'ท่าออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
@@ -202,7 +201,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    AutoSizeText(
+                                    Text(
                                       'ยกแขนด้านข้าง',
                                       style: GoogleFonts.getFont(
                                         'Kanit',
@@ -224,7 +223,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                                             size: 18,
                                           ),
                                         ),
-                                        AutoSizeText(
+                                        Text(
                                           '10 ครั้ง',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -247,7 +246,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                                             size: 18,
                                           ),
                                         ),
-                                        AutoSizeText(
+                                        Text(
                                           '05.15',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -292,7 +291,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 18, 0, 12),
-                child: AutoSizeText(
+                child: Text(
                   'ตารางการออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
@@ -325,7 +324,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AutoSizeText(
+                          Text(
                             'อา.',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -354,7 +353,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AutoSizeText(
+                          Text(
                             'จ.',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -383,7 +382,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AutoSizeText(
+                          Text(
                             'อ.',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -412,7 +411,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AutoSizeText(
+                          Text(
                             'พ.',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -441,7 +440,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AutoSizeText(
+                          Text(
                             'พฤ.',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -470,7 +469,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AutoSizeText(
+                          Text(
                             'ศ.',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -499,7 +498,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AutoSizeText(
+                          Text(
                             'ส.',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.getFont(
@@ -538,7 +537,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 18, 0, 12),
-                child: AutoSizeText(
+                child: Text(
                   'วันสิ้นสุดการออกกำลังกาย',
                   style: GoogleFonts.getFont(
                     'Kanit',
@@ -564,7 +563,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        AutoSizeText(
+                        Text(
                           '25 มิถุนายน 2564',
                           style: GoogleFonts.getFont(
                             'Kanit',

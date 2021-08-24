@@ -88,7 +88,6 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                             ),
                             (r) => false,
                           );
-                          ;
                         },
                         child: Text(
                           'ไม่บันทึก',
@@ -108,7 +107,6 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                             ),
                             (r) => false,
                           );
-                          ;
                         },
                         child: Text(
                           'บันทึก',
@@ -129,7 +127,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'แก้ไขโปรไฟล์',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -189,7 +187,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'ชื่อ',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -205,8 +203,8 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     FlutterFlowDropDown(
-                      initialOption: 'พญ.',
-                      options: ['พญ.'],
+                      initialOption: 'กภ.',
+                      options: ['กภ.'],
                       onChanged: (value) {
                         setState(() => dropDownValue1 = value);
                       },
@@ -269,7 +267,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'นามสกุล',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -321,7 +319,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                   children: [
                     Align(
                       alignment: Alignment(-1, 0),
-                      child: AutoSizeText(
+                      child: Text(
                         'หมายเลขโทรศัพท์',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -388,7 +386,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                           ),
                           Padding(
                             padding: EdgeInsets.fromLTRB(3, 0, 0, 0),
-                            child: AutoSizeText(
+                            child: Text(
                               '+66',
                               style: GoogleFonts.getFont(
                                 'Kanit',
@@ -452,7 +450,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                   children: [
                     Align(
                       alignment: Alignment(-1, 0),
-                      child: AutoSizeText(
+                      child: Text(
                         'รหัสผ่าน',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -475,7 +473,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                               ),
                             );
                           },
-                          child: AutoSizeText(
+                          child: Text(
                             'เปลี่ยนรหัสผ่าน',
                             style: GoogleFonts.getFont(
                               'Kanit',
@@ -528,7 +526,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'ตำแหน่งทางการแพทย์',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -566,7 +564,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'สถานพยาบาลที่ปฏิบัติงานอยู่',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -604,7 +602,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'วันเกิด',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -867,7 +865,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 alignment: Alignment(-1, 0),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: AutoSizeText(
+                  child: Text(
                     'เพศ',
                     style: GoogleFonts.getFont(
                       'Kanit',

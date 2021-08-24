@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:therapist_buddy/variables.dart';
 import 'edit_profile_page.dart';
@@ -30,7 +29,7 @@ class _OthersPageWidgetState extends State<OthersPageWidget> {
               fit: BoxFit.fitWidth,
             ),
           ),
-          title: AutoSizeText(
+          title: Text(
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',
@@ -90,7 +89,7 @@ class _OthersPageWidgetState extends State<OthersPageWidget> {
                             ),
                           ),
                         ),
-                        AutoSizeText(
+                        Text(
                           'แก้ไขโปรไฟล์ของคุณ',
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -154,7 +153,7 @@ class _OthersPageWidgetState extends State<OthersPageWidget> {
                             ),
                           ),
                         ),
-                        AutoSizeText(
+                        Text(
                           'ประวัติการรักษาคนไข้',
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -218,7 +217,7 @@ class _OthersPageWidgetState extends State<OthersPageWidget> {
                             ),
                           ),
                         ),
-                        AutoSizeText(
+                        Text(
                           'การตั้งค่า',
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -326,7 +325,7 @@ class _OthersPageWidgetState extends State<OthersPageWidget> {
                             ),
                           ),
                         ),
-                        AutoSizeText(
+                        Text(
                           'ออกจากระบบ',
                           style: GoogleFonts.getFont(
                             'Kanit',

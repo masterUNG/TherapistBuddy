@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
@@ -65,7 +64,6 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                             ),
                             (r) => false,
                           );
-                          ;
                         },
                         child: Text(
                           'ยืนยัน',
@@ -86,7 +84,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'แก้ไขการนัดหมายคนไข้',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -108,7 +106,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
           children: [
             Padding(
               padding: EdgeInsets.fromLTRB(30, 25, 0, 8),
-              child: AutoSizeText(
+              child: Text(
                 'วันที่',
                 style: GoogleFonts.getFont(
                   'Kanit',
@@ -138,7 +136,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      AutoSizeText(
+                      Text(
                         '25 มิถุนายน 2564',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -159,7 +157,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(30, 18, 0, 8),
-              child: AutoSizeText(
+              child: Text(
                 'เวลา',
                 style: GoogleFonts.getFont(
                   'Kanit',
@@ -210,7 +208,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      AutoSizeText(
+                      Text(
                         '10.00 น.',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -253,7 +251,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            AutoSizeText(
+                            Text(
                               '10.00 น.',
                               style: GoogleFonts.getFont(
                                 'Kanit',
@@ -276,7 +274,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        AutoSizeText(
+                        Text(
                           'ถึง',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.getFont(
@@ -308,7 +306,7 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            AutoSizeText(
+                            Text(
                               '12.00 น.',
                               style: GoogleFonts.getFont(
                                 'Kanit',
@@ -396,7 +394,6 @@ class _EditAppointmentPageWidgetState extends State<EditAppointmentPageWidget> {
                               ),
                               (r) => false,
                             );
-                            ;
                           },
                           child: Text(
                             'ยืนยัน',

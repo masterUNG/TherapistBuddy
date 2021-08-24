@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:therapist_buddy/variables.dart';
 import 'assigned_exercises_in_previous_treatment_page.dart';
@@ -60,7 +59,7 @@ class _PreviousTreatmentPageWidgetState
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AutoSizeText(
+                    Text(
                       'ธนวิชญ์ แซ่ลิ่ม',
                       style: GoogleFonts.getFont(
                         'Kanit',
@@ -113,7 +112,7 @@ class _PreviousTreatmentPageWidgetState
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AutoSizeText(
+                              Text(
                                 'ข้อมูลโปรไฟล์คนไข้',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
@@ -134,7 +133,7 @@ class _PreviousTreatmentPageWidgetState
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'ชื่อ',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -157,7 +156,7 @@ class _PreviousTreatmentPageWidgetState
                                         Padding(
                                           padding:
                                               EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          child: AutoSizeText(
+                                          child: Text(
                                             ':',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -209,7 +208,7 @@ class _PreviousTreatmentPageWidgetState
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        AutoSizeText(
+                                        Text(
                                           'อายุ',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
@@ -232,7 +231,7 @@ class _PreviousTreatmentPageWidgetState
                                         Padding(
                                           padding:
                                               EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          child: AutoSizeText(
+                                          child: Text(
                                             ':',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
@@ -291,7 +290,7 @@ class _PreviousTreatmentPageWidgetState
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      AutoSizeText(
+                      Text(
                         'ข้อมูลการรักษา',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -311,7 +310,7 @@ class _PreviousTreatmentPageWidgetState
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                AutoSizeText(
+                                Text(
                                   'โรค',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
@@ -332,7 +331,7 @@ class _PreviousTreatmentPageWidgetState
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: AutoSizeText(
+                                  child: Text(
                                     ':',
                                     style: GoogleFonts.getFont(
                                       'Kanit',
@@ -380,7 +379,7 @@ class _PreviousTreatmentPageWidgetState
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                AutoSizeText(
+                                Text(
                                   'เริ่มการรักษา',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
@@ -401,7 +400,7 @@ class _PreviousTreatmentPageWidgetState
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: AutoSizeText(
+                                  child: Text(
                                     ':',
                                     style: GoogleFonts.getFont(
                                       'Kanit',
@@ -449,7 +448,7 @@ class _PreviousTreatmentPageWidgetState
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                AutoSizeText(
+                                Text(
                                   'เสร็จสิ้นการรักษา',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
@@ -470,7 +469,7 @@ class _PreviousTreatmentPageWidgetState
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: AutoSizeText(
+                                  child: Text(
                                     ':',
                                     style: GoogleFonts.getFont(
                                       'Kanit',
@@ -518,7 +517,7 @@ class _PreviousTreatmentPageWidgetState
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                AutoSizeText(
+                                Text(
                                   'สถานะการรักษา',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
@@ -539,7 +538,7 @@ class _PreviousTreatmentPageWidgetState
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: AutoSizeText(
+                                  child: Text(
                                     ':',
                                     style: GoogleFonts.getFont(
                                       'Kanit',
@@ -585,7 +584,7 @@ class _PreviousTreatmentPageWidgetState
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: secondaryColor,
+                    color: Colors.white,
                   ),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -598,7 +597,7 @@ class _PreviousTreatmentPageWidgetState
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            AutoSizeText(
+                            Text(
                               'ท่าออกกำลังกายที่มอบหมาย',
                               style: GoogleFonts.getFont(
                                 'Kanit',
@@ -617,7 +616,7 @@ class _PreviousTreatmentPageWidgetState
                                   ),
                                 );
                               },
-                              child: AutoSizeText(
+                              child: Text(
                                 'ดูรายละเอียด',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
@@ -688,7 +687,7 @@ class _PreviousTreatmentPageWidgetState
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'ยกแขนด้านข้าง',
                                                       textAlign:
                                                           TextAlign.center,
@@ -719,7 +718,7 @@ class _PreviousTreatmentPageWidgetState
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.center,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       '10 ครั้ง, 05.25 นาที',
                                                       textAlign:
                                                           TextAlign.center,
@@ -767,7 +766,7 @@ class _PreviousTreatmentPageWidgetState
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            AutoSizeText(
+                            Text(
                               'การออกกำลังกายทั้งหมด',
                               style: GoogleFonts.getFont(
                                 'Kanit',
@@ -786,7 +785,7 @@ class _PreviousTreatmentPageWidgetState
                                   ),
                                 );
                               },
-                              child: AutoSizeText(
+                              child: Text(
                                 'เปลี่ยนมุมมอง',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
@@ -836,7 +835,7 @@ class _PreviousTreatmentPageWidgetState
                                             Padding(
                                               padding: EdgeInsets.fromLTRB(
                                                   0, 14, 0, 0),
-                                              child: AutoSizeText(
+                                              child: Text(
                                                 'อาทิตย์',
                                                 textAlign: TextAlign.center,
                                                 style: GoogleFonts.getFont(
@@ -847,7 +846,7 @@ class _PreviousTreatmentPageWidgetState
                                                 ),
                                               ),
                                             ),
-                                            AutoSizeText(
+                                            Text(
                                               '13 มิ.ย. 64',
                                               textAlign: TextAlign.center,
                                               style: GoogleFonts.getFont(
@@ -925,7 +924,7 @@ class _PreviousTreatmentPageWidgetState
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            AutoSizeText(
+                            Text(
                               'ผลการรักษา',
                               style: GoogleFonts.getFont(
                                 'Kanit',
@@ -944,7 +943,7 @@ class _PreviousTreatmentPageWidgetState
                                   ),
                                 );
                               },
-                              child: AutoSizeText(
+                              child: Text(
                                 'ดูรายละเอียด',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
@@ -971,7 +970,7 @@ class _PreviousTreatmentPageWidgetState
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  AutoSizeText(
+                                  Text(
                                     'Office Syndrome',
                                     style: GoogleFonts.getFont(
                                       'Kanit',

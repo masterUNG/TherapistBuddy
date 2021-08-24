@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
 
 import 'package:therapist_buddy/variables.dart';
@@ -36,7 +35,7 @@ class _PatientExerciseRecordPageWidgetState
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'การออกกำลังกายทั้งหมด',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -158,7 +157,7 @@ class _PatientExerciseRecordPageWidgetState
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.fromLTRB(0, 0, 0, 8),
-                                      child: AutoSizeText(
+                                      child: Text(
                                         'วันจันทร์ ที่ 13 มิถุนายน 2564',
                                         style: GoogleFonts.getFont(
                                           'Kanit',
@@ -200,7 +199,7 @@ class _PatientExerciseRecordPageWidgetState
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'ยกแขนด้านข้าง',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -227,7 +226,7 @@ class _PatientExerciseRecordPageWidgetState
                                                             size: 18,
                                                           ),
                                                         ),
-                                                        AutoSizeText(
+                                                        Text(
                                                           '10 ครั้ง',
                                                           style: GoogleFonts
                                                               .getFont(
@@ -255,7 +254,7 @@ class _PatientExerciseRecordPageWidgetState
                                                             size: 18,
                                                           ),
                                                         ),
-                                                        AutoSizeText(
+                                                        Text(
                                                           '05.15',
                                                           style: GoogleFonts
                                                               .getFont(

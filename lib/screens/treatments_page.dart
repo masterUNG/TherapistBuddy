@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:therapist_buddy/variables.dart';
 import 'patient_page.dart';
@@ -81,7 +80,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
               fit: BoxFit.fitWidth,
             ),
           ),
-          title: AutoSizeText(
+          title: Text(
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',
@@ -189,7 +188,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                           size: 24,
                         ),
                       ),
-                      AutoSizeText(
+                      Text(
                         'การรักษาปัจจุบัน (2)',
                         style: GoogleFonts.getFont(
                           'Kanit',
@@ -289,8 +288,8 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
-                                                      'อาการ',
+                                                    Text(
+                                                      'โรค',
                                                       style:
                                                           GoogleFonts.getFont(
                                                         'Kanit',
@@ -316,7 +315,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                       padding:
                                                           EdgeInsets.fromLTRB(
                                                               5, 0, 5, 0),
-                                                      child: AutoSizeText(
+                                                      child: Text(
                                                         ':',
                                                         style:
                                                             GoogleFonts.getFont(
@@ -380,7 +379,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'นัดหมาย',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -407,7 +406,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                       padding:
                                                           EdgeInsets.fromLTRB(
                                                               5, 0, 5, 0),
-                                                      child: AutoSizeText(
+                                                      child: Text(
                                                         ':',
                                                         style:
                                                             GoogleFonts.getFont(
@@ -471,7 +470,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'ท่าออกกำลังกาย',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -498,7 +497,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                       padding:
                                                           EdgeInsets.fromLTRB(
                                                               5, 0, 5, 0),
-                                                      child: AutoSizeText(
+                                                      child: Text(
                                                         ':',
                                                         style:
                                                             GoogleFonts.getFont(
@@ -562,7 +561,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'ผลการรักษาล่าสุด',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -589,7 +588,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                                                       padding:
                                                           EdgeInsets.fromLTRB(
                                                               5, 0, 5, 0),
-                                                      child: AutoSizeText(
+                                                      child: Text(
                                                         ':',
                                                         style:
                                                             GoogleFonts.getFont(

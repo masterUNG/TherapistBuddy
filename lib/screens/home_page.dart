@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:therapist_buddy/variables.dart';
 import 'all_appointments_page.dart';
@@ -28,7 +27,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               fit: BoxFit.fitWidth,
             ),
           ),
-          title: AutoSizeText(
+          title: Text(
             'TherapistBuddy',
             style: GoogleFonts.getFont(
               'Raleway',
@@ -66,7 +65,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            AutoSizeText(
+                            Text(
                               'การนัดหมายวันนี้',
                               style: GoogleFonts.getFont(
                                 'Kanit',
@@ -85,7 +84,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                 );
                               },
-                              child: AutoSizeText(
+                              child: Text(
                                 'ดูการนัดหมายทั้งหมด',
                                 style: GoogleFonts.getFont(
                                   'Kanit',
@@ -224,7 +223,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsets.fromLTRB(18, 20, 0, 10),
-                        child: AutoSizeText(
+                        child: Text(
                           'ผลการรักษาล่าสุดของคนไข้',
                           style: GoogleFonts.getFont(
                             'Kanit',
@@ -301,7 +300,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Container(
-                                                width: 40,
+                                                width: 25,
                                                 decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
@@ -309,8 +308,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
-                                                      'อาการ',
+                                                    Text(
+                                                      'โรค',
                                                       style:
                                                           GoogleFonts.getFont(
                                                         'Kanit',
@@ -336,7 +335,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       padding:
                                                           EdgeInsets.fromLTRB(
                                                               5, 0, 5, 0),
-                                                      child: AutoSizeText(
+                                                      child: Text(
                                                         ':',
                                                         style:
                                                             GoogleFonts.getFont(
@@ -358,7 +357,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     36 -
                                                     85 -
                                                     12 -
-                                                    40 -
+                                                    25 -
                                                     15,
                                                 decoration: BoxDecoration(),
                                                 child: Column(
@@ -400,7 +399,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'ผลการรักษาล่าสุด',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -427,7 +426,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       padding:
                                                           EdgeInsets.fromLTRB(
                                                               5, 0, 5, 0),
-                                                      child: AutoSizeText(
+                                                      child: Text(
                                                         ':',
                                                         style:
                                                             GoogleFonts.getFont(
@@ -492,7 +491,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    AutoSizeText(
+                                                    Text(
                                                       'วันที่ทำแบบประเมิณ',
                                                       style:
                                                           GoogleFonts.getFont(
@@ -519,7 +518,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       padding:
                                                           EdgeInsets.fromLTRB(
                                                               5, 0, 5, 0),
-                                                      child: AutoSizeText(
+                                                      child: Text(
                                                         ':',
                                                         style:
                                                             GoogleFonts.getFont(

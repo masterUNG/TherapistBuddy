@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:therapist_buddy/variables.dart';
 import 'previous_treatment_page.dart';
@@ -41,7 +40,7 @@ class _TreatmentsHistoryPageWidgetState
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'ประวัติการรักษาคนไข้',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -100,6 +99,7 @@ class _TreatmentsHistoryPageWidgetState
                           ),
                           filled: true,
                           fillColor: Color(0xFFF0F2F5),
+                          contentPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                           prefixIcon: Icon(
                             Icons.search,
                             color: Colors.black,
@@ -146,7 +146,7 @@ class _TreatmentsHistoryPageWidgetState
                         size: 24,
                       ),
                     ),
-                    AutoSizeText(
+                    Text(
                       'ประวัติการรักษาทั้งหมด (1)',
                       style: GoogleFonts.getFont(
                         'Kanit',
@@ -232,15 +232,15 @@ class _TreatmentsHistoryPageWidgetState
                                           CrossAxisAlignment.start,
                                       children: [
                                         Container(
-                                          width: 40,
+                                          width: 25,
                                           decoration: BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              AutoSizeText(
-                                                'อาการ',
+                                              Text(
+                                                'โรค',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
                                                   color: Colors.black,
@@ -262,7 +262,7 @@ class _TreatmentsHistoryPageWidgetState
                                               Padding(
                                                 padding: EdgeInsets.fromLTRB(
                                                     5, 0, 5, 0),
-                                                child: AutoSizeText(
+                                                child: Text(
                                                   ':',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',
@@ -282,7 +282,7 @@ class _TreatmentsHistoryPageWidgetState
                                               36 -
                                               105 -
                                               14 -
-                                              40 -
+                                              25 -
                                               15,
                                           decoration: BoxDecoration(),
                                           child: Column(
@@ -319,7 +319,7 @@ class _TreatmentsHistoryPageWidgetState
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              AutoSizeText(
+                                              Text(
                                                 'เริ่มการรักษา',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
@@ -342,7 +342,7 @@ class _TreatmentsHistoryPageWidgetState
                                               Padding(
                                                 padding: EdgeInsets.fromLTRB(
                                                     5, 0, 5, 0),
-                                                child: AutoSizeText(
+                                                child: Text(
                                                   ':',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',
@@ -399,7 +399,7 @@ class _TreatmentsHistoryPageWidgetState
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              AutoSizeText(
+                                              Text(
                                                 'เสร็จสิ้นการรักษา',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
@@ -422,7 +422,7 @@ class _TreatmentsHistoryPageWidgetState
                                               Padding(
                                                 padding: EdgeInsets.fromLTRB(
                                                     5, 0, 5, 0),
-                                                child: AutoSizeText(
+                                                child: Text(
                                                   ':',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',
@@ -479,7 +479,7 @@ class _TreatmentsHistoryPageWidgetState
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              AutoSizeText(
+                                              Text(
                                                 'สถานะการรักษา',
                                                 style: GoogleFonts.getFont(
                                                   'Kanit',
@@ -502,7 +502,7 @@ class _TreatmentsHistoryPageWidgetState
                                               Padding(
                                                 padding: EdgeInsets.fromLTRB(
                                                     5, 0, 5, 0),
-                                                child: AutoSizeText(
+                                                child: Text(
                                                   ':',
                                                   style: GoogleFonts.getFont(
                                                     'Kanit',

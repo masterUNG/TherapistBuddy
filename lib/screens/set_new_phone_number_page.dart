@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 
 import 'package:therapist_buddy/variables.dart';
@@ -42,7 +41,7 @@ class _SetNewPhoneNumberPageWidgetState
             ),
             iconSize: 24,
           ),
-          title: AutoSizeText(
+          title: Text(
             'หมายเลขโทรศัพท์ใหม่',
             style: GoogleFonts.getFont(
               'Kanit',
@@ -65,7 +64,7 @@ class _SetNewPhoneNumberPageWidgetState
               alignment: Alignment(-1, 0),
               child: Padding(
                 padding: EdgeInsets.fromLTRB(30, 25, 0, 0),
-                child: AutoSizeText(
+                child: Text(
                   'ใส่หมายเลขโทรศัพท์ใหม่',
                   style: GoogleFonts.getFont(
                     'Kanit',
@@ -104,7 +103,7 @@ class _SetNewPhoneNumberPageWidgetState
                         ),
                         Padding(
                           padding: EdgeInsets.fromLTRB(3, 0, 0, 0),
-                          child: AutoSizeText(
+                          child: Text(
                             '+66',
                             style: GoogleFonts.getFont(
                               'Kanit',
