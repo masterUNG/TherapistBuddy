@@ -1,6 +1,7 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'auth/firebase_user_provider.dart';
+
 import 'package:therapist_buddy/screens/login_page.dart';
 import 'screens/home_page.dart';
 import 'screens/treatments_page.dart';
