@@ -1,13 +1,13 @@
-import 'confirm_appointment_in_make_appointment_page.dart';
-import '../flutter_flow/flutter_flow_radio_button.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../flutter_flow/flutter_flow_radio_button.dart';
+
 import 'package:therapist_buddy/variables.dart';
 import 'patient_page.dart';
+import 'confirm_appointment_in_make_appointment_page.dart';
 
 class MakeAppointmentPageWidget extends StatefulWidget {
   MakeAppointmentPageWidget({Key key}) : super(key: key);
@@ -19,12 +19,10 @@ class MakeAppointmentPageWidget extends StatefulWidget {
 
 class _MakeAppointmentPageWidgetState extends State<MakeAppointmentPageWidget> {
   String radioButtonValue;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

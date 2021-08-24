@@ -1,8 +1,8 @@
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+
 import 'package:therapist_buddy/variables.dart';
 import 'otp_verification_in_set_new_phone_number_page.dart';
 
@@ -17,7 +17,6 @@ class SetNewPhoneNumberPageWidget extends StatefulWidget {
 class _SetNewPhoneNumberPageWidgetState
     extends State<SetNewPhoneNumberPageWidget> {
   TextEditingController newPhoneNumberTextfieldController;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -28,7 +27,6 @@ class _SetNewPhoneNumberPageWidgetState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

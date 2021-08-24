@@ -1,12 +1,12 @@
-import '../flutter_flow/flutter_flow_drop_down_template.dart';
-import '../flutter_flow/flutter_flow_radio_button.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'otp_verification_in_signup_page.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../flutter_flow/flutter_flow_drop_down_template.dart';
+import '../flutter_flow/flutter_flow_radio_button.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'otp_verification_in_signup_page.dart';
 
 class SignupPageWidget extends StatefulWidget {
   SignupPageWidget({Key key}) : super(key: key);
@@ -30,7 +30,6 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
   String dropDownValue5;
   String dropDownValue6;
   String radioButtonValue;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -47,7 +46,6 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
@@ -528,7 +526,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
               Align(
                 alignment: Alignment(-1, 0),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                  padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                   child: AutoSizeText(
                     'ตำแหน่งทางการแพทย์',
                     style: GoogleFonts.getFont(
@@ -566,7 +564,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
               Align(
                 alignment: Alignment(-1, 0),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(45, 8, 0, 0),
+                  padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                   child: AutoSizeText(
                     'สถานพยาบาลที่ปฏิบัติงานอยู่',
                     style: GoogleFonts.getFont(

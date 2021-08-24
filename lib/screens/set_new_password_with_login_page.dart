@@ -1,10 +1,10 @@
-import 'edit_profile_page.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'edit_profile_page.dart';
 
 class SetNewPasswordWithLoginPageWidget extends StatefulWidget {
   SetNewPasswordWithLoginPageWidget({Key key}) : super(key: key);
@@ -16,7 +16,6 @@ class SetNewPasswordWithLoginPageWidget extends StatefulWidget {
 
 class _SetNewPasswordWithLoginPageWidgetState
     extends State<SetNewPasswordWithLoginPageWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController passwordTextfieldController;
   bool passwordTextfieldVisibility;
   TextEditingController repeatPasswordTextfieldController;
@@ -34,7 +33,6 @@ class _SetNewPasswordWithLoginPageWidgetState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

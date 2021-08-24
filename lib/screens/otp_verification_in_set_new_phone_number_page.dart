@@ -1,10 +1,10 @@
-import 'edit_profile_page.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'edit_profile_page.dart';
 
 class OTPVerificationInSetNewPhoneNumberPageWidget extends StatefulWidget {
   OTPVerificationInSetNewPhoneNumberPageWidget({Key key}) : super(key: key);
@@ -16,7 +16,6 @@ class OTPVerificationInSetNewPhoneNumberPageWidget extends StatefulWidget {
 
 class _OTPVerificationInSetNewPhoneNumberPageWidgetState
     extends State<OTPVerificationInSetNewPhoneNumberPageWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController oTPCodeTextfieldController;
 
   @override
@@ -28,7 +27,6 @@ class _OTPVerificationInSetNewPhoneNumberPageWidgetState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

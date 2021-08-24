@@ -1,9 +1,9 @@
-import 'delete_account_page.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'delete_account_page.dart';
 
 class SettingsPageWidget extends StatefulWidget {
   SettingsPageWidget({Key key}) : super(key: key);
@@ -13,12 +13,9 @@ class SettingsPageWidget extends StatefulWidget {
 }
 
 class _SettingsPageWidgetState extends State<SettingsPageWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

@@ -1,11 +1,11 @@
-import 'edit_profile_page.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'forget_password_with_login_page.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'edit_profile_page.dart';
+import 'forget_password_with_login_page.dart';
 
 class ChangePasswordPageWidget extends StatefulWidget {
   ChangePasswordPageWidget({Key key}) : super(key: key);

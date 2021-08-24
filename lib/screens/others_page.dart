@@ -1,12 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+
+import 'package:therapist_buddy/variables.dart';
 import 'edit_profile_page.dart';
-import '../flutter_flow/flutter_flow_util.dart';
 import 'login_page.dart';
 import 'settings_page.dart';
 import 'treatments_history_page.dart';
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:therapist_buddy/variables.dart';
 
 class OthersPageWidget extends StatefulWidget {
   OthersPageWidget({Key key}) : super(key: key);
@@ -16,12 +16,9 @@ class OthersPageWidget extends StatefulWidget {
 }
 
 class _OthersPageWidgetState extends State<OthersPageWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

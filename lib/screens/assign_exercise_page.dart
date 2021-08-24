@@ -1,15 +1,15 @@
-import 'confirm_exercise_page.dart';
-import 'exercise_introduction_page.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'confirm_exercise_page.dart';
 import 'patient_page.dart';
+import 'exercise_introduction_page.dart';
 
 class AssignExercisePageWidget extends StatefulWidget {
   AssignExercisePageWidget({Key key}) : super(key: key);
@@ -23,12 +23,10 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
   String dropDownValue;
   String radioButtonValue1;
   String radioButtonValue2;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

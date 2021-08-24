@@ -1,15 +1,15 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+
+import 'package:therapist_buddy/main.dart';
+import 'package:therapist_buddy/variables.dart';
 import 'assign_exercise_page.dart';
 import 'assigned_exercises_page.dart';
 import 'edit_appointment_page.dart';
-import '../flutter_flow/flutter_flow_util.dart';
 import 'make_appointment_page.dart';
 import 'patient_exercise_record_page.dart';
 import 'patient_treatment_results_page.dart';
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:therapist_buddy/variables.dart';
-import 'package:therapist_buddy/main.dart';
 
 class PatientPageWidget extends StatefulWidget {
   PatientPageWidget({Key key}) : super(key: key);
@@ -19,13 +19,11 @@ class PatientPageWidget extends StatefulWidget {
 }
 
 class _PatientPageWidgetState extends State<PatientPageWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   double actionButtonHeight = 75;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

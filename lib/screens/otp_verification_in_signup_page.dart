@@ -1,10 +1,10 @@
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'login_page.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'login_page.dart';
 
 class OTPVerificationInSignupPageWidget extends StatefulWidget {
   OTPVerificationInSignupPageWidget({Key key}) : super(key: key);
@@ -16,19 +16,17 @@ class OTPVerificationInSignupPageWidget extends StatefulWidget {
 
 class _OTPVerificationInSignupPageWidgetState
     extends State<OTPVerificationInSignupPageWidget> {
-  TextEditingController oTPCodeTextfieldController;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController OTPCodeTextfieldController;
 
   @override
   void initState() {
     super.initState();
-    oTPCodeTextfieldController = TextEditingController();
+    OTPCodeTextfieldController = TextEditingController();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
@@ -90,7 +88,7 @@ class _OTPVerificationInSignupPageWidgetState
             Padding(
               padding: EdgeInsets.fromLTRB(30, 25, 30, 0),
               child: TextFormField(
-                controller: oTPCodeTextfieldController,
+                controller: OTPCodeTextfieldController,
                 obscureText: false,
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(

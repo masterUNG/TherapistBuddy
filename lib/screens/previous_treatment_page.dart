@@ -1,11 +1,11 @@
-import 'assigned_exercises_in_previous_treatment_page.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import 'patient_exercise_record_page.dart';
-import 'patient_treatment_results_page.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'assigned_exercises_in_previous_treatment_page.dart';
+import 'patient_exercise_record_page.dart';
+import 'patient_treatment_results_page.dart';
 
 class PreviousTreatmentPageWidget extends StatefulWidget {
   PreviousTreatmentPageWidget({Key key}) : super(key: key);
@@ -17,12 +17,9 @@ class PreviousTreatmentPageWidget extends StatefulWidget {
 
 class _PreviousTreatmentPageWidgetState
     extends State<PreviousTreatmentPageWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

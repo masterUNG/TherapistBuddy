@@ -1,12 +1,12 @@
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'forget_password_not_login_page.dart';
-import '../main.dart';
-import 'signup_page.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+
+import '../main.dart';
 import 'package:therapist_buddy/variables.dart';
+import 'forget_password_not_login_page.dart';
+import 'signup_page.dart';
 
 class LoginPageWidget extends StatefulWidget {
   LoginPageWidget({Key key}) : super(key: key);
@@ -19,7 +19,6 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
   TextEditingController passwordTextfieldController;
   bool passwordTextfieldVisibility;
   TextEditingController phoneNumberTextfieldController;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -32,7 +31,6 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () async {

@@ -1,8 +1,8 @@
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_youtube_player.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import '../flutter_flow/flutter_flow_youtube_player.dart';
+
 import 'package:therapist_buddy/variables.dart';
 
 class ExerciseIntroductionPageWidget extends StatefulWidget {
@@ -15,12 +15,9 @@ class ExerciseIntroductionPageWidget extends StatefulWidget {
 
 class _ExerciseIntroductionPageWidgetState
     extends State<ExerciseIntroductionPageWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

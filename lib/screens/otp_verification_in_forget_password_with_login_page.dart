@@ -1,10 +1,10 @@
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import 'set_new_password_with_login_page.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'set_new_password_with_login_page.dart';
 
 class OTPVerificationInForgetPasswordWithLoginPageWidget
     extends StatefulWidget {
@@ -18,7 +18,6 @@ class OTPVerificationInForgetPasswordWithLoginPageWidget
 
 class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
     extends State<OTPVerificationInForgetPasswordWithLoginPageWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController oTPCodeTextfieldController;
 
   @override
@@ -30,7 +29,6 @@ class _OTPVerificationInForgetPasswordWithLoginPageWidgetState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(

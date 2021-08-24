@@ -1,9 +1,9 @@
-import '../flutter_flow/flutter_flow_util.dart';
-import 'previous_treatment_page.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+
 import 'package:therapist_buddy/variables.dart';
+import 'previous_treatment_page.dart';
 
 class TreatmentsHistoryPageWidget extends StatefulWidget {
   TreatmentsHistoryPageWidget({Key key}) : super(key: key);
@@ -15,7 +15,6 @@ class TreatmentsHistoryPageWidget extends StatefulWidget {
 
 class _TreatmentsHistoryPageWidgetState
     extends State<TreatmentsHistoryPageWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController textController;
 
   @override
@@ -27,7 +26,6 @@ class _TreatmentsHistoryPageWidgetState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appbarHeight),
         child: AppBar(
