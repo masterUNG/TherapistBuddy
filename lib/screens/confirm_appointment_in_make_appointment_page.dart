@@ -124,7 +124,7 @@ class _ConfirmAppointmentInMakeAppointmentPageWidgetState
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        '10.00 น.',
+                        '10.00 น. - 12.00 น.',
                         style: GoogleFonts.getFont(
                           'Kanit',
                           color: Colors.black,

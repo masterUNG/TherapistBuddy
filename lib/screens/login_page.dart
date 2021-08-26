@@ -16,15 +16,15 @@ class LoginPageWidget extends StatefulWidget {
 
 class _LoginPageWidgetState extends State<LoginPageWidget> {
   TextEditingController passwordTextfieldController;
-  bool passwordTextfieldVisibility;
   TextEditingController phoneNumberTextfieldController;
+  bool passwordTextfieldVisibility;
 
   @override
   void initState() {
     super.initState();
     passwordTextfieldController = TextEditingController();
-    passwordTextfieldVisibility = false;
     phoneNumberTextfieldController = TextEditingController();
+    passwordTextfieldVisibility = false;
   }
 
   @override

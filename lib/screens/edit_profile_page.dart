@@ -22,6 +22,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
   TextEditingController lastNameTextfieldController;
   TextEditingController phoneNumberTextfieldController;
   TextEditingController passwordTextfieldController;
+  TextEditingController licenseNumberTextfieldController;
   bool passwordTextfieldVisibility;
   String dropDownValue1;
   String dropDownValue2;
@@ -38,6 +39,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
     lastNameTextfieldController = TextEditingController(text: 'สุขล้น');
     phoneNumberTextfieldController = TextEditingController(text: '0812345678');
     passwordTextfieldController = TextEditingController(text: '12345678');
+    licenseNumberTextfieldController = TextEditingController(text: '00001');
     passwordTextfieldVisibility = false;
   }
 
@@ -519,6 +521,87 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                     fontSize: 14,
                   ),
                   maxLines: 1,
+                ),
+              ),
+              Align(
+                alignment: Alignment(-1, 0),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(30, 8, 30, 0),
+                  child: Text(
+                    'เลขที่ใบประกอบ',
+                    style: GoogleFonts.getFont(
+                      'Kanit',
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(30, 8, 30, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    FlutterFlowDropDown(
+                      initialOption: 'กภ.',
+                      options: ['กภ.'],
+                      onChanged: (value) {
+                        setState(() => dropDownValue1 = value);
+                      },
+                      width: 95,
+                      height: 49,
+                      textStyle: GoogleFonts.getFont(
+                        'Kanit',
+                        color: Colors.black,
+                        fontSize: 14,
+                      ),
+                      fillColor: Colors.white,
+                      elevation: 2,
+                      borderColor: secondaryColor,
+                      borderWidth: 1,
+                      borderRadius: defaultBorderRadius,
+                      margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      hidesUnderline: true,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                        child: TextFormField(
+                          controller: licenseNumberTextfieldController,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: secondaryColor,
+                                width: 1,
+                              ),
+                              borderRadius:
+                                  BorderRadius.circular(defaultBorderRadius),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: primaryColor,
+                                width: 1,
+                              ),
+                              borderRadius:
+                                  BorderRadius.circular(defaultBorderRadius),
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                            contentPadding: EdgeInsets.fromLTRB(18, 14, 18, 14),
+                          ),
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                            color: Colors.black,
+                            fontWeight: FontWeight.normal,
+                            fontSize: 14,
+                          ),
+                          maxLines: 1,
+                          keyboardType: TextInputType.number,
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
               Align(

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../flutter_flow/flutter_flow_radio_button.dart';
 
 import 'package:therapist_buddy/variables.dart';
 import 'patient_page.dart';
@@ -17,8 +16,6 @@ class MakeAppointmentPageWidget extends StatefulWidget {
 }
 
 class _MakeAppointmentPageWidgetState extends State<MakeAppointmentPageWidget> {
-  String radioButtonValue;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -165,66 +162,6 @@ class _MakeAppointmentPageWidgetState extends State<MakeAppointmentPageWidget> {
                   color: primaryColor,
                   fontWeight: FontWeight.w500,
                   fontSize: 18,
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(30, 0, 0, 8),
-              child: FlutterFlowRadioButton(
-                options: ['เวลาตรง', 'ช่วงเวลา'],
-                onChanged: (value) {
-                  setState(() => radioButtonValue = value);
-                },
-                optionHeight: 25,
-                textStyle: GoogleFonts.getFont(
-                  'Kanit',
-                  color: Colors.black,
-                  fontSize: 15,
-                ),
-                buttonPosition: RadioButtonPosition.left,
-                direction: Axis.horizontal,
-                radioButtonColor: primaryColor,
-                toggleable: false,
-                horizontalAlignment: WrapAlignment.start,
-                verticalAlignment: WrapCrossAlignment.start,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-              child: Container(
-                width: double.infinity,
-                height: 52,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(defaultBorderRadius),
-                  border: Border.all(
-                    color: secondaryColor,
-                    width: 1,
-                  ),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        '10.00 น.',
-                        style: GoogleFonts.getFont(
-                          'Kanit',
-                          color: Colors.black,
-                          fontWeight: FontWeight.normal,
-                          fontSize: 15,
-                        ),
-                      ),
-                      Icon(
-                        Icons.access_time_rounded,
-                        color: primaryColor,
-                        size: 24,
-                      )
-                    ],
-                  ),
                 ),
               ),
             ),
