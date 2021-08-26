@@ -63,107 +63,90 @@ class _ExerciseIntroductionPageWidgetState
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      width: 100,
-                      decoration: BoxDecoration(),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            'เวลา',
-                            textAlign: TextAlign.center,
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(18, 0, 18, 0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'ชื่อ',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 18,
+                          ),
+                        ),
+                        Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(),
+                          child: Text(
+                            'ยกแขนด้านข้าง',
                             style: GoogleFonts.getFont(
                               'Kanit',
                               color: Colors.black,
-                              fontWeight: FontWeight.w600,
                               fontSize: 16,
                             ),
                           ),
-                          Text(
-                            '03.15',
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 16,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 2,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                      ),
-                    ),
-                    Container(
-                      width: 100,
-                      decoration: BoxDecoration(),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            'จำนวน',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                            ),
-                          ),
-                          Text(
-                            '10 ครั้ง',
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 16,
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Align(
-                alignment: Alignment(-1, 0),
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                  child: Text(
-                    'คำแนะนำก่อนออกกำลังกาย',
-                    style: GoogleFonts.getFont(
-                      'Kanit',
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18,
+                        )
+                      ],
                     ),
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment(-1, 0),
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(20, 5, 20, 20),
-                  child: Text(
-                    'ทุกครั้งที่เราออกกำลังกายควรเตรียมร่างกายให้พร้อมก่อนเพื่อลดโอกาสที่จะเกิดการบาดเจ็บและเพิ่มประสิทธิภาพในการออกกำลังกาย บางคนอาจไม่รู้ว่าต้องปฏิบัติตัวยังไงเริ่มจากอะไรก่อนและควรทำนานเท่าไร สุดท้ายแล้วก็อาจทำได้เพียงหมุนคอ หมุนแขน สะบัดข้อมือ วันนี้เรามาดูกันว่าขั้นตอนและหลักการในการเตรียมความพร้อมก่อนออกกำลังกายเป็นอย่างไร ลองไปดูกันครับ 1. อบอุ่นร่างกายทั่วไปขั้นแรกให้เริ่มจากการอบอุ่นร่างกาย โดยทั่วไปแล้ววิธีการที่ง่ายที่สุดคือ การปฏิบัติกิจกรรมที่เราจะใช้ออกกำลังกายอย่างเบาๆและช้ากว่าการออกกำลังกายปกติ 2. การยืดกล้ามเนื้อแบบอยู่กับที่การยืดกล้ามเนื้อแบบอยู่กับที่ (Static stretching) เป็นการยืดกล้ามเนื้อที่ไม่มีการเคลื่อนไหวร่างกายเป็นการยืดในลักษณะเหยียดตึง เช่น ก้มเอามือแตะปลายเท้าเพื่อยืดกล้ามเนื้อหลัง ยกขาพาดเก้าอี้เพื่อยืดต้นขาด้านหลัง หรือยืนดันกำแพงเพื่อยืดน่อง เป็นต้น',
-                    style: GoogleFonts.getFont(
-                      'Kanit',
-                      color: Colors.black,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 14,
+              Divider(
+                height: 1,
+                thickness: 1,
+                color: Color(0xFFE5E5E5),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(18, 0, 18, 0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'ประเภทผู้ป่วย',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 18,
+                          ),
+                        ),
+                        Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(),
+                          child: Text(
+                            'Office Syndrome',
+                            style: GoogleFonts.getFont(
+                              'Kanit',
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
-              )
+              ),
+              Divider(
+                height: 1,
+                thickness: 1,
+                color: Color(0xFFE5E5E5),
+              ),
             ],
           ),
         ),
