@@ -18,17 +18,16 @@ class EditProfilePageWidget extends StatefulWidget {
 }
 
 class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
-  String dropDownValue1;
   TextEditingController firstNameTextfieldController;
   TextEditingController lastNameTextfieldController;
   TextEditingController phoneNumberTextfieldController;
   TextEditingController passwordTextfieldController;
   bool passwordTextfieldVisibility;
+  String dropDownValue1;
   String dropDownValue2;
   String dropDownValue3;
   String dropDownValue4;
   String dropDownValue5;
-  String dropDownValue6;
   String radioButtonValue;
   double saveAreaHeight = 125;
 
@@ -527,44 +526,6 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
                   child: Text(
-                    'ตำแหน่งทางการแพทย์',
-                    style: GoogleFonts.getFont(
-                      'Kanit',
-                      color: Colors.black,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(30, 8, 30, 0),
-                child: FlutterFlowDropDown(
-                  initialOption: 'นักกายบำบัดด้านระบบกระดูกและกล้ามเนื้อ',
-                  options: ['นักกายบำบัดด้านระบบกระดูกและกล้ามเนื้อ'],
-                  onChanged: (value) {
-                    setState(() => dropDownValue2 = value);
-                  },
-                  width: double.infinity,
-                  height: 49,
-                  textStyle: GoogleFonts.getFont(
-                    'Kanit',
-                    color: Colors.black,
-                    fontSize: 14,
-                  ),
-                  fillColor: Colors.white,
-                  elevation: 2,
-                  borderColor: secondaryColor,
-                  borderWidth: 1,
-                  borderRadius: defaultBorderRadius,
-                  margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                  hidesUnderline: true,
-                ),
-              ),
-              Align(
-                alignment: Alignment(-1, 0),
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(30, 8, 0, 0),
-                  child: Text(
                     'สถานพยาบาลที่ปฏิบัติงานอยู่',
                     style: GoogleFonts.getFont(
                       'Kanit',
@@ -580,7 +541,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                   initialOption: 'โรงพยาบาลสงขลานครินทร์',
                   options: ['โรงพยาบาลสงขลานครินทร์'],
                   onChanged: (value) {
-                    setState(() => dropDownValue3 = value);
+                    setState(() => dropDownValue2 = value);
                   },
                   width: double.infinity,
                   height: 49,
@@ -653,7 +614,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                         '31'
                       ],
                       onChanged: (value) {
-                        setState(() => dropDownValue4 = value);
+                        setState(() => dropDownValue3 = value);
                       },
                       width: (MediaQuery.of(context).size.width - 60 - 20) / 3,
                       height: 49,
@@ -688,7 +649,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                           'ธ.ค.'
                         ],
                         onChanged: (value) {
-                          setState(() => dropDownValue5 = value);
+                          setState(() => dropDownValue4 = value);
                         },
                         width:
                             (MediaQuery.of(context).size.width - 60 - 20) / 3,
@@ -839,7 +800,7 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                           '2564'
                         ],
                         onChanged: (value) {
-                          setState(() => dropDownValue6 = value);
+                          setState(() => dropDownValue5 = value);
                         },
                         width:
                             (MediaQuery.of(context).size.width - 60 - 20) / 3,
