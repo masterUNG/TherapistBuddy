@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:therapist_buddy/variables.dart';
-import 'previous_treatment_page.dart';
+import 'patient_in_previous_treatment_page.dart';
 
 class TreatmentsHistoryPageWidget extends StatefulWidget {
   TreatmentsHistoryPageWidget({Key key}) : super(key: key);
@@ -71,59 +71,63 @@ class _TreatmentsHistoryPageWidgetState
                   children: [
                     Padding(
                       padding: EdgeInsets.fromLTRB(18, 18, 18, 18),
-                      child: TextFormField(
-                        onChanged: (_) => setState(() {}),
-                        controller: textController,
-                        obscureText: false,
-                        decoration: InputDecoration(
-                          isDense: true,
-                          hintText: 'ค้นหา',
-                          hintStyle: GoogleFonts.getFont(
+                      child: Container(
+                        width: double.infinity,
+                        height: 42,
+                        child: TextFormField(
+                          onChanged: (_) => setState(() {}),
+                          controller: textController,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            isDense: true,
+                            hintText: 'ค้นหา',
+                            hintStyle: GoogleFonts.getFont(
+                              'Kanit',
+                              color: Color(0xFFA7A8AF),
+                              fontSize: 16,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            filled: true,
+                            fillColor: Color(0xFFF0F2F5),
+                            contentPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                            prefixIcon: Icon(
+                              Icons.search,
+                              color: Colors.black,
+                              size: 20,
+                            ),
+                            suffixIcon: textController.text.isNotEmpty
+                                ? InkWell(
+                                    onTap: () => setState(
+                                      () => textController.clear(),
+                                    ),
+                                    child: Icon(
+                                      Icons.clear,
+                                      color: Colors.black,
+                                      size: 22,
+                                    ),
+                                  )
+                                : null,
+                          ),
+                          style: GoogleFonts.getFont(
                             'Kanit',
-                            color: Color(0xFFA7A8AF),
+                            color: Colors.black,
                             fontSize: 16,
                           ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0x00000000),
-                              width: 1,
-                            ),
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0x00000000),
-                              width: 1,
-                            ),
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          filled: true,
-                          fillColor: Color(0xFFF0F2F5),
-                          contentPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                          prefixIcon: Icon(
-                            Icons.search,
-                            color: Colors.black,
-                            size: 15,
-                          ),
-                          suffixIcon: textController.text.isNotEmpty
-                              ? InkWell(
-                                  onTap: () => setState(
-                                    () => textController.clear(),
-                                  ),
-                                  child: Icon(
-                                    Icons.clear,
-                                    color: Colors.black,
-                                    size: 22,
-                                  ),
-                                )
-                              : null,
+                          maxLines: 1,
                         ),
-                        style: GoogleFonts.getFont(
-                          'Kanit',
-                          color: Colors.black,
-                          fontSize: 16,
-                        ),
-                        maxLines: 1,
                       ),
                     )
                   ],
@@ -170,7 +174,7 @@ class _TreatmentsHistoryPageWidgetState
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  PreviousTreatmentPageWidget(),
+                                  PatientInPreviousTreatmentPageWidget(),
                             ),
                           );
                         },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:therapist_buddy/variables.dart';
 import 'auth/firebase_user_provider.dart';
 
 import 'package:therapist_buddy/screens/login_page.dart';
@@ -84,84 +85,88 @@ class _NavBarPageState extends State<NavBarPage> {
     };
     return Scaffold(
       body: tabs[_currentPage],
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              color: Color(0xFF9E9E9E),
-              size: 24,
+      bottomNavigationBar: Container(
+        width: double.infinity,
+        height: bottomNavigationBarHeight,
+        child: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_outlined,
+                color: Color(0xFF9E9E9E),
+                size: 24,
+              ),
+              activeIcon: Icon(
+                Icons.home_sharp,
+                color: Color(0xFF0080FF),
+                size: 24,
+              ),
+              label: 'หน้าหลัก',
             ),
-            activeIcon: Icon(
-              Icons.home_sharp,
-              color: Color(0xFF0080FF),
-              size: 24,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.medical_services_outlined,
+                color: Color(0xFF9E9E9E),
+                size: 24,
+              ),
+              activeIcon: Icon(
+                Icons.medical_services,
+                color: Color(0xFF0080FF),
+                size: 24,
+              ),
+              label: 'การรักษา',
             ),
-            label: 'หน้าหลัก',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.medical_services_outlined,
-              color: Color(0xFF9E9E9E),
-              size: 24,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.add_circle_rounded,
+                color: Color(0xFF9E9E9E),
+                size: 24,
+              ),
+              activeIcon: Icon(
+                Icons.add_circle_rounded,
+                color: Color(0xFF0080FF),
+                size: 24,
+              ),
+              label: 'เพิ่ม',
             ),
-            activeIcon: Icon(
-              Icons.medical_services,
-              color: Color(0xFF0080FF),
-              size: 24,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.chat_outlined,
+                color: Color(0xFF9E9E9E),
+                size: 24,
+              ),
+              activeIcon: Icon(
+                Icons.chat,
+                color: Color(0xFF0080FF),
+                size: 24,
+              ),
+              label: 'แชท',
             ),
-            label: 'การรักษา',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.add_circle_rounded,
-              color: Color(0xFF9E9E9E),
-              size: 24,
-            ),
-            activeIcon: Icon(
-              Icons.add_circle_rounded,
-              color: Color(0xFF0080FF),
-              size: 24,
-            ),
-            label: 'เพิ่ม',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.chat_outlined,
-              color: Color(0xFF9E9E9E),
-              size: 24,
-            ),
-            activeIcon: Icon(
-              Icons.chat,
-              color: Color(0xFF0080FF),
-              size: 24,
-            ),
-            label: 'แชท',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.dehaze_rounded,
-              color: Color(0xFF9E9E9E),
-              size: 24,
-            ),
-            activeIcon: Icon(
-              Icons.dehaze_rounded,
-              color: Color(0xFF0080FF),
-              size: 24,
-            ),
-            label: 'อื่นๆ',
-          )
-        ],
-        backgroundColor: Colors.white,
-        currentIndex: tabs.keys.toList().indexOf(_currentPage),
-        selectedLabelStyle: TextStyle(fontFamily: 'Kanit'),
-        selectedItemColor: Color(0xFF0080FF),
-        unselectedLabelStyle: TextStyle(fontFamily: 'Kanit'),
-        unselectedItemColor: Color(0xFF7A7A7A),
-        onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        type: BottomNavigationBarType.fixed,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.dehaze_rounded,
+                color: Color(0xFF9E9E9E),
+                size: 24,
+              ),
+              activeIcon: Icon(
+                Icons.dehaze_rounded,
+                color: Color(0xFF0080FF),
+                size: 24,
+              ),
+              label: 'อื่นๆ',
+            )
+          ],
+          backgroundColor: Colors.white,
+          currentIndex: tabs.keys.toList().indexOf(_currentPage),
+          selectedLabelStyle: TextStyle(fontFamily: 'Kanit'),
+          selectedItemColor: Color(0xFF0080FF),
+          unselectedLabelStyle: TextStyle(fontFamily: 'Kanit'),
+          unselectedItemColor: Color(0xFF7A7A7A),
+          onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+          type: BottomNavigationBarType.fixed,
+        ),
       ),
     );
   }
