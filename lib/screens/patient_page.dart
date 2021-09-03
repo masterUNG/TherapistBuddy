@@ -355,7 +355,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                 children: [
                                   Container(
                                     width: 28,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -375,7 +374,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                   ),
                                   Container(
                                     width: 16,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -402,7 +400,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         36 -
                                         28 -
                                         16,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -428,7 +425,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                 children: [
                                   Container(
                                     width: 128,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -448,7 +444,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                   ),
                                   Container(
                                     width: 16,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -475,7 +470,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         36 -
                                         128 -
                                         16,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -628,7 +622,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                   children: [
                                     Container(
                                       width: 32,
-                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
@@ -648,7 +641,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                     ),
                                     Container(
                                       width: 16,
-                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
@@ -675,7 +667,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                           36 -
                                           32 -
                                           16,
-                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
@@ -725,7 +716,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                         'Kanit',
                                         color: primaryColor,
                                         fontWeight: FontWeight.w500,
-                                        fontSize: 19,
+                                        fontSize: 20,
                                       ),
                                     ),
                                     InkWell(
