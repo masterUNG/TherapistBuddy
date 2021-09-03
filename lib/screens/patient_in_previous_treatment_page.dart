@@ -605,7 +605,7 @@ class _PatientInPreviousTreatmentPageWidgetState
                                 'Kanit',
                                 color: primaryColor,
                                 fontWeight: FontWeight.w500,
-                                fontSize: 19,
+                                fontSize: 20,
                               ),
                             ),
                             InkWell(

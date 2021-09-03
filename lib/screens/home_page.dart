@@ -5,6 +5,7 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:therapist_buddy/variables.dart';
 import 'all_appointments_page.dart';
 import 'package:therapist_buddy/screens/patient_this_week_exercises_page.dart';
+import 'appointment_page.dart';
 
 class HomePageWidget extends StatefulWidget {
   HomePageWidget({Key key}) : super(key: key);
@@ -114,7 +115,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    appointmentCard(),
+                                    appointmentCard(context),
                                   ],
                                 ),
                               ),
@@ -202,6 +203,98 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       ),
     );
   }
+}
+
+Widget appointmentCard(context) {
+  return Padding(
+    padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+    child: InkWell(
+      onTap: () async {
+        await Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => AppointmentPageWidget(),
+          ),
+        );
+      },
+      child: Container(
+        width: 110,
+        child: Card(
+          margin: EdgeInsets.all(0),
+          clipBehavior: Clip.antiAliasWithSaveLayer,
+          color: Colors.white,
+          elevation: 2,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(0),
+                  bottomRight: Radius.circular(0),
+                  topLeft: Radius.circular(5),
+                  topRight: Radius.circular(5),
+                ),
+                child: Image.network(
+                  'https://picsum.photos/seed/897/600',
+                  width: 110,
+                  height: 85,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
+                child: Text(
+                  'ธนวิชญ์',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.getFont(
+                    'Kanit',
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+                child: Text(
+                  'แซ่ลิ่ม',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.getFont(
+                    'Kanit',
+                    color: Colors.black,
+                    fontSize: 12,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(8, 0, 8, 8),
+                child: Text(
+                  '10.00 - 12.00 น.',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.getFont(
+                    'Kanit',
+                    color: Colors.black,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 11,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 Widget patientThisWeekExerciseResult(context) {
@@ -360,91 +453,6 @@ Widget patientThisWeekExerciseResult(context) {
           ),
         )
       ],
-    ),
-  );
-}
-
-Widget appointmentCard() {
-  return Padding(
-    padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
-    child: Container(
-      width: 110,
-      height: 163,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 2,
-            color: Color(0x3F000000),
-            offset: Offset(0, 1),
-          )
-        ],
-        borderRadius: BorderRadius.circular(5),
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(0),
-              bottomRight: Radius.circular(0),
-              topLeft: Radius.circular(5),
-              topRight: Radius.circular(5),
-            ),
-            child: Image.network(
-              'https://picsum.photos/seed/897/600',
-              width: 110,
-              height: 85,
-              fit: BoxFit.cover,
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
-            child: Text(
-              'ธนวิชญ์',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.getFont(
-                'Kanit',
-                color: Colors.black,
-                fontWeight: FontWeight.w500,
-                fontSize: 16,
-              ),
-              overflow: TextOverflow.ellipsis,
-              maxLines: 1,
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
-            child: Text(
-              'แซ่ลิ่ม',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.getFont(
-                'Kanit',
-                color: Colors.black,
-                fontSize: 12,
-              ),
-              overflow: TextOverflow.ellipsis,
-              maxLines: 1,
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(8, 0, 8, 8),
-            child: Text(
-              '10.00 - 12.00 น.',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.getFont(
-                'Kanit',
-                color: Colors.black,
-                fontWeight: FontWeight.w300,
-                fontSize: 11,
-              ),
-              overflow: TextOverflow.ellipsis,
-              maxLines: 1,
-            ),
-          )
-        ],
-      ),
     ),
   );
 }

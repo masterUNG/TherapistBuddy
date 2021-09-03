@@ -4,6 +4,8 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:fl_chart/fl_chart.dart';
 
 import 'package:therapist_buddy/main.dart';
+import 'package:therapist_buddy/screens/patient_profile_page.dart';
+import 'package:therapist_buddy/screens/treatment_details_page.dart';
 import 'package:therapist_buddy/variables.dart';
 import 'assign_exercise_page.dart';
 import 'assigned_exercises_page.dart';
@@ -111,87 +113,74 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width - 24,
-                          child: Card(
-                            margin: EdgeInsets.all(0),
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            color: Colors.white,
-                            elevation: 2,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.fromLTRB(16, 15, 16, 15),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: Image.network(
-                                      'https://picsum.photos/seed/963/600',
-                                      width: 90,
-                                      height: 90,
-                                      fit: BoxFit.cover,
+                        child: InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    PatientProfilePageWidget(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: MediaQuery.of(context).size.width - 24,
+                            child: Card(
+                              margin: EdgeInsets.all(0),
+                              clipBehavior: Clip.antiAliasWithSaveLayer,
+                              color: Colors.white,
+                              elevation: 2,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(16, 15, 16, 15),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(
+                                          defaultBorderRadius),
+                                      child: Image.network(
+                                        'https://picsum.photos/seed/963/600',
+                                        width: 90,
+                                        height: 90,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(14, 0, 0, 0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'ข้อมูลโปรไฟล์คนไข้',
-                                          style: GoogleFonts.getFont(
-                                            'Kanit',
-                                            color: primaryColor,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 20,
+                                    Padding(
+                                      padding: EdgeInsets.fromLTRB(14, 0, 0, 0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'ข้อมูลโปรไฟล์คนไข้',
+                                            style: GoogleFonts.getFont(
+                                              'Kanit',
+                                              color: primaryColor,
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 20,
+                                            ),
                                           ),
-                                        ),
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Container(
-                                              width: 28,
-                                              decoration: BoxDecoration(),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    'ชื่อ',
-                                                    style: GoogleFonts.getFont(
-                                                      'Kanit',
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: 15,
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                            Container(
-                                              width: 16,
-                                              decoration: BoxDecoration(),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsets.fromLTRB(
-                                                            5, 0, 5, 0),
-                                                    child: Text(
-                                                      ':',
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                width: 28,
+                                                decoration: BoxDecoration(),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'ชื่อ',
                                                       style:
                                                           GoogleFonts.getFont(
                                                         'Kanit',
@@ -200,82 +189,87 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                             FontWeight.w500,
                                                         fontSize: 15,
                                                       ),
-                                                    ),
-                                                  )
-                                                ],
+                                                    )
+                                                  ],
+                                                ),
                                               ),
-                                            ),
-                                            Container(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width -
-                                                  24 -
-                                                  32 -
-                                                  90 -
-                                                  14 -
-                                                  28 -
-                                                  16,
-                                              decoration: BoxDecoration(),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    'ธนวิชญ์ แซ่ลิ่ม',
-                                                    style: GoogleFonts.getFont(
-                                                      'Kanit',
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontSize: 15,
-                                                    ),
-                                                  )
-                                                ],
+                                              Container(
+                                                width: 16,
+                                                decoration: BoxDecoration(),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsets.fromLTRB(
+                                                              5, 0, 5, 0),
+                                                      child: Text(
+                                                        ':',
+                                                        style:
+                                                            GoogleFonts.getFont(
+                                                          'Kanit',
+                                                          color: Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          fontSize: 15,
+                                                        ),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
                                               ),
-                                            )
-                                          ],
-                                        ),
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Container(
-                                              width: 28,
-                                              decoration: BoxDecoration(),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    'อายุ',
-                                                    style: GoogleFonts.getFont(
-                                                      'Kanit',
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: 15,
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                            Container(
-                                              width: 16,
-                                              decoration: BoxDecoration(),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsets.fromLTRB(
-                                                            5, 0, 5, 0),
-                                                    child: Text(
-                                                      ':',
+                                              Container(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    24 -
+                                                    32 -
+                                                    90 -
+                                                    14 -
+                                                    28 -
+                                                    16,
+                                                decoration: BoxDecoration(),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'ธนวิชญ์ แซ่ลิ่ม',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Kanit',
+                                                        color: Colors.black,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontSize: 15,
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                width: 28,
+                                                decoration: BoxDecoration(),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'อายุ',
                                                       style:
                                                           GoogleFonts.getFont(
                                                         'Kanit',
@@ -284,46 +278,76 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                             FontWeight.w500,
                                                         fontSize: 15,
                                                       ),
-                                                    ),
-                                                  )
-                                                ],
+                                                    )
+                                                  ],
+                                                ),
                                               ),
-                                            ),
-                                            Container(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width -
-                                                  24 -
-                                                  32 -
-                                                  90 -
-                                                  14 -
-                                                  28 -
-                                                  16,
-                                              decoration: BoxDecoration(),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    '20 ปี',
-                                                    style: GoogleFonts.getFont(
-                                                      'Kanit',
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontSize: 15,
-                                                    ),
-                                                  )
-                                                ],
+                                              Container(
+                                                width: 16,
+                                                decoration: BoxDecoration(),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsets.fromLTRB(
+                                                              5, 0, 5, 0),
+                                                      child: Text(
+                                                        ':',
+                                                        style:
+                                                            GoogleFonts.getFont(
+                                                          'Kanit',
+                                                          color: Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          fontSize: 15,
+                                                        ),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
                                               ),
-                                            )
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  )
-                                ],
+                                              Container(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    24 -
+                                                    32 -
+                                                    90 -
+                                                    14 -
+                                                    28 -
+                                                    16,
+                                                decoration: BoxDecoration(),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      '20 ปี',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Kanit',
+                                                        color: Colors.black,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontSize: 15,
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -340,14 +364,42 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'ข้อมูลการรักษา',
-                                style: GoogleFonts.getFont(
-                                  'Kanit',
-                                  color: primaryColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 20,
-                                ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    'ข้อมูลการรักษา',
+                                    style: GoogleFonts.getFont(
+                                      'Kanit',
+                                      color: primaryColor,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                  InkWell(
+                                    onTap: () async {
+                                      await Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              TreatmentDetailsPageWidget(),
+                                        ),
+                                      );
+                                    },
+                                    child: Text(
+                                      'ดูเพิ่มเติม',
+                                      style: GoogleFonts.getFont(
+                                        'Kanit',
+                                        color: primaryColor,
+                                        fontSize: 14,
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                  )
+                                ],
                               ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -765,114 +817,122 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                   0, 0, 15, 0),
                                               child: Container(
                                                 width: 155,
-                                                decoration: BoxDecoration(
+                                                child: Card(
+                                                  margin: EdgeInsets.all(0),
+                                                  clipBehavior: Clip
+                                                      .antiAliasWithSaveLayer,
                                                   color: Colors.white,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      blurRadius: 4,
-                                                      color: Color(0x40000000),
-                                                      offset: Offset(0, 2),
-                                                    )
-                                                  ],
-                                                  borderRadius:
-                                                      BorderRadius.circular(8),
-                                                ),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadius.only(
-                                                        bottomLeft:
-                                                            Radius.circular(0),
-                                                        bottomRight:
-                                                            Radius.circular(0),
-                                                        topLeft:
-                                                            Radius.circular(8),
-                                                        topRight:
-                                                            Radius.circular(8),
-                                                      ),
-                                                      child: Image.network(
-                                                        'https://image.freepik.com/free-photo/young-asian-woman-practicing-yoga-living-room_7861-1619.jpg',
-                                                        width: 155,
-                                                        height: 100,
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsets.fromLTRB(
-                                                              0, 8, 0, 0),
-                                                      child: Container(
-                                                        width: 130,
-                                                        decoration:
-                                                            BoxDecoration(),
-                                                        child: Column(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Text(
-                                                              'ยกแขนด้านข้าง',
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: GoogleFonts
-                                                                  .getFont(
-                                                                'Kanit',
-                                                                color: Colors
-                                                                    .black,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                                fontSize: 15,
-                                                              ),
-                                                              overflow:
-                                                                  TextOverflow
-                                                                      .ellipsis,
-                                                              maxLines: 1,
-                                                            )
-                                                          ],
+                                                  elevation: 2,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            5),
+                                                  ),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      ClipRRect(
+                                                        borderRadius:
+                                                            BorderRadius.only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  0),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  0),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  5),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  5),
+                                                        ),
+                                                        child: Image.network(
+                                                          'https://image.freepik.com/free-photo/young-asian-woman-practicing-yoga-living-room_7861-1619.jpg',
+                                                          width: 155,
+                                                          height: 100,
+                                                          fit: BoxFit.cover,
                                                         ),
                                                       ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsets.fromLTRB(
-                                                              0, 0, 0, 10),
-                                                      child: Container(
-                                                        width: 130,
-                                                        decoration:
-                                                            BoxDecoration(),
-                                                        child: Column(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .start,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            Text(
-                                                              '10 ครั้ง, 05.25 นาที',
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: GoogleFonts
-                                                                  .getFont(
-                                                                'Kanit',
-                                                                color: Colors
-                                                                    .black,
-                                                                fontSize: 15,
-                                                              ),
-                                                              maxLines: 1,
-                                                            )
-                                                          ],
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsets.fromLTRB(
+                                                                0, 8, 0, 0),
+                                                        child: Container(
+                                                          width: 130,
+                                                          decoration:
+                                                              BoxDecoration(),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            children: [
+                                                              Text(
+                                                                'ยกแขนด้านข้าง',
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                style:
+                                                                    GoogleFonts
+                                                                        .getFont(
+                                                                  'Kanit',
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                  fontSize: 15,
+                                                                ),
+                                                                overflow:
+                                                                    TextOverflow
+                                                                        .ellipsis,
+                                                                maxLines: 1,
+                                                              )
+                                                            ],
+                                                          ),
                                                         ),
                                                       ),
-                                                    )
-                                                  ],
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsets.fromLTRB(
+                                                                0, 0, 0, 10),
+                                                        child: Container(
+                                                          width: 130,
+                                                          decoration:
+                                                              BoxDecoration(),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
+                                                            children: [
+                                                              Text(
+                                                                '10 ครั้ง, 05.25 นาที',
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                style:
+                                                                    GoogleFonts
+                                                                        .getFont(
+                                                                  'Kanit',
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontSize: 15,
+                                                                ),
+                                                                maxLines: 1,
+                                                              )
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                             )
