@@ -33,7 +33,7 @@ class _AssignedExercisesPageWidgetState
             iconSize: 24,
           ),
           title: Text(
-            'รายการออกกำลังกาย',
+            'รายการออกกำลังกายที่มอบหมาย',
             style: GoogleFonts.getFont(
               'Kanit',
               color: primaryColor,
@@ -78,7 +78,6 @@ class _AssignedExercisesPageWidgetState
                                 children: [
                                   Container(
                                     width: 115,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -102,7 +101,6 @@ class _AssignedExercisesPageWidgetState
                                         115 -
                                         14 -
                                         30,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -115,6 +113,7 @@ class _AssignedExercisesPageWidgetState
                                             color: primaryColor,
                                             fontSize: 19,
                                           ),
+                                          overflow: TextOverflow.ellipsis,
                                         )
                                       ],
                                     ),
@@ -125,7 +124,6 @@ class _AssignedExercisesPageWidgetState
                                       child: Container(
                                         width: 30,
                                         height: 28,
-                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -170,7 +168,6 @@ class _AssignedExercisesPageWidgetState
                                   padding: EdgeInsets.fromLTRB(0, 0, 0, 12),
                                   child: Container(
                                     width: double.infinity,
-                                    decoration: BoxDecoration(),
                                     child: Padding(
                                       padding:
                                           EdgeInsets.fromLTRB(30, 0, 30, 0),
@@ -207,52 +204,22 @@ class _AssignedExercisesPageWidgetState
                                                   fontSize: 15,
                                                 ),
                                               ),
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Container(
-                                                    width: 23,
-                                                    decoration: BoxDecoration(),
-                                                    alignment: Alignment(-1, 0),
-                                                    child: Icon(
-                                                      Icons.close_rounded,
-                                                      color: Colors.black,
-                                                      size: 18,
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    '10 ครั้ง',
-                                                    style: GoogleFonts.getFont(
-                                                      'Kanit',
-                                                      color: Colors.black,
-                                                      fontSize: 14,
-                                                    ),
-                                                  )
-                                                ],
+                                              Text(
+                                                '5  ครั้ง/เซ็ต',
+                                                style: GoogleFonts.getFont(
+                                                  'Kanit',
+                                                  color: Colors.black,
+                                                  fontSize: 14,
+                                                ),
                                               ),
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Container(
-                                                    width: 23,
-                                                    decoration: BoxDecoration(),
-                                                    alignment: Alignment(-1, 0),
-                                                    child: Icon(
-                                                      Icons.access_time_rounded,
-                                                      color: Colors.black,
-                                                      size: 18,
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    '05.15',
-                                                    style: GoogleFonts.getFont(
-                                                      'Kanit',
-                                                      color: Colors.black,
-                                                      fontSize: 14,
-                                                    ),
-                                                  )
-                                                ],
-                                              )
+                                              Text(
+                                                '1  เซ็ต/วัน',
+                                                style: GoogleFonts.getFont(
+                                                  'Kanit',
+                                                  color: Colors.black,
+                                                  fontSize: 14,
+                                                ),
+                                              ),
                                             ],
                                           )
                                         ],
@@ -270,7 +237,6 @@ class _AssignedExercisesPageWidgetState
                                 children: [
                                   Container(
                                     width: 170,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -292,7 +258,6 @@ class _AssignedExercisesPageWidgetState
                                     width: MediaQuery.of(context).size.width -
                                         36 -
                                         170,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -320,7 +285,6 @@ class _AssignedExercisesPageWidgetState
                                 children: [
                                   Container(
                                     width: 186,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -342,7 +306,6 @@ class _AssignedExercisesPageWidgetState
                                     width: MediaQuery.of(context).size.width -
                                         36 -
                                         186,
-                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:

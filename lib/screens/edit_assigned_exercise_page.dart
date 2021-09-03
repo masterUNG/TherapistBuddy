@@ -5,7 +5,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 
 import 'package:therapist_buddy/variables.dart';
 import 'confirm_edited_exercise_page.dart';
-import 'exercise_introduction_page.dart';
+import 'exercise_introduction_for_assigning_page.dart';
 import 'patient_page.dart';
 
 class EditAssignedExercisePageWidget extends StatefulWidget {
@@ -180,117 +180,80 @@ class _EditAssignedExercisePageWidgetState
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  ExerciseIntroductionPageWidget(),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(),
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(5),
-                                    child: Image.network(
-                                      'https://picsum.photos/seed/331/600',
-                                      width: 92,
-                                      height: 61,
-                                      fit: BoxFit.cover,
-                                    ),
+                      Container(
+                        width: double.infinity,
+                        child: Padding(
+                          padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(5),
+                                  child: Image.network(
+                                    'https://picsum.photos/seed/331/600',
+                                    width: 92,
+                                    height: 61,
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
-                                Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'ยกแขนด้านข้าง',
-                                      style: GoogleFonts.getFont(
-                                        'Kanit',
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Container(
-                                          width: 23,
-                                          decoration: BoxDecoration(),
-                                          alignment: Alignment(-1, 0),
-                                          child: Icon(
-                                            Icons.close_rounded,
-                                            color: Colors.black,
-                                            size: 18,
-                                          ),
-                                        ),
-                                        Text(
-                                          '10 ครั้ง',
-                                          style: GoogleFonts.getFont(
-                                            'Kanit',
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Container(
-                                          width: 23,
-                                          decoration: BoxDecoration(),
-                                          alignment: Alignment(-1, 0),
-                                          child: Icon(
-                                            Icons.access_time_rounded,
-                                            color: Colors.black,
-                                            size: 18,
-                                          ),
-                                        ),
-                                        Text(
-                                          '05.15',
-                                          style: GoogleFonts.getFont(
-                                            'Kanit',
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                          ),
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                ),
-                                Expanded(
-                                  child: Align(
-                                    alignment: Alignment(1, 0),
-                                    child: Container(
-                                      width: 33,
-                                      height: 33,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                          color: secondaryColor,
-                                          width: 1,
-                                        ),
-                                      ),
+                              ),
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'ยกแขนด้านข้าง',
+                                    style: GoogleFonts.getFont(
+                                      'Kanit',
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
                                     ),
                                   ),
-                                )
-                              ],
-                            ),
+                                  Text(
+                                    '5  ครั้ง/เซ็ต',
+                                    style: GoogleFonts.getFont(
+                                      'Kanit',
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                  Text(
+                                    '1  เซ็ต/วัน',
+                                    style: GoogleFonts.getFont(
+                                      'Kanit',
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Expanded(
+                                child: Align(
+                                  alignment: Alignment(1, 0),
+                                  child: IconButton(
+                                    onPressed: () async {
+                                      await Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              ExerciseIntroductionForAssigningPageWidget(),
+                                        ),
+                                      );
+                                    },
+                                    icon: Icon(
+                                      Icons.arrow_forward_ios_outlined,
+                                      color: Colors.black,
+                                      size: 24,
+                                    ),
+                                    iconSize: 24,
+                                  ),
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       ),
@@ -408,7 +371,7 @@ class _EditAssignedExercisePageWidgetState
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 16, 0, 0),
+                padding: EdgeInsets.fromLTRB(20, 14, 0, 0),
                 child: Row(
                   children: [
                     Radio(

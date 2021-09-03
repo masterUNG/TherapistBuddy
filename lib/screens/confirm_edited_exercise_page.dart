@@ -55,7 +55,7 @@ class _ConfirmEditedExercisePageWidgetState
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(30, 25, 0, 8),
+                padding: EdgeInsets.fromLTRB(30, 20, 0, 8),
                 child: Text(
                   'โรคของคนไข้',
                   style: GoogleFonts.getFont(
@@ -148,52 +148,22 @@ class _ConfirmEditedExercisePageWidgetState
                                     fontSize: 15,
                                   ),
                                 ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Container(
-                                      width: 23,
-                                      decoration: BoxDecoration(),
-                                      alignment: Alignment(-1, 0),
-                                      child: Icon(
-                                        Icons.close_rounded,
-                                        color: Colors.black,
-                                        size: 18,
-                                      ),
-                                    ),
-                                    Text(
-                                      '10 ครั้ง',
-                                      style: GoogleFonts.getFont(
-                                        'Kanit',
-                                        color: Colors.black,
-                                        fontSize: 14,
-                                      ),
-                                    )
-                                  ],
+                                Text(
+                                  '5  ครั้ง/เซ็ต',
+                                  style: GoogleFonts.getFont(
+                                    'Kanit',
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                  ),
                                 ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Container(
-                                      width: 23,
-                                      decoration: BoxDecoration(),
-                                      alignment: Alignment(-1, 0),
-                                      child: Icon(
-                                        Icons.access_time_rounded,
-                                        color: Colors.black,
-                                        size: 18,
-                                      ),
-                                    ),
-                                    Text(
-                                      '05.15',
-                                      style: GoogleFonts.getFont(
-                                        'Kanit',
-                                        color: Colors.black,
-                                        fontSize: 14,
-                                      ),
-                                    )
-                                  ],
-                                )
+                                Text(
+                                  '1  เซ็ต/วัน',
+                                  style: GoogleFonts.getFont(
+                                    'Kanit',
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                  ),
+                                ),
                               ],
                             )
                           ],

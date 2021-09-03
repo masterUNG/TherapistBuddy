@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../flutter_flow/flutter_flow_youtube_player.dart';
@@ -61,41 +62,36 @@ class _ExerciseIntroductionPageWidgetState
                 showControls: true,
                 showFullScreen: true,
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(),
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(18, 0, 18, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'ชื่อ',
+              Container(
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(18, 20, 18, 20),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'ชื่อ',
+                        style: GoogleFonts.getFont(
+                          'Kanit',
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        child: Text(
+                          'ยกแขนด้านข้าง',
                           style: GoogleFonts.getFont(
                             'Kanit',
                             color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
+                            fontSize: 16,
                           ),
                         ),
-                        Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(),
-                          child: Text(
-                            'ยกแขนด้านข้าง',
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontSize: 16,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
+                      )
+                    ],
                   ),
                 ),
               ),
@@ -104,41 +100,36 @@ class _ExerciseIntroductionPageWidgetState
                 thickness: 1,
                 color: Color(0xFFE5E5E5),
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(),
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(18, 0, 18, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'ประเภทผู้ป่วย',
+              Container(
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(18, 20, 18, 20),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'ประเภทผู้ป่วย',
+                        style: GoogleFonts.getFont(
+                          'Kanit',
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        child: Text(
+                          'Office Syndrome',
                           style: GoogleFonts.getFont(
                             'Kanit',
                             color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
+                            fontSize: 16,
                           ),
                         ),
-                        Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(),
-                          child: Text(
-                            'Office Syndrome',
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontSize: 16,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
+                      )
+                    ],
                   ),
                 ),
               ),

@@ -113,7 +113,7 @@ class _TreatmentsPageWidgetState extends State<TreatmentsPageWidget> {
                       padding: EdgeInsets.fromLTRB(18, 18, 18, 18),
                       child: Container(
                         width: double.infinity,
-                        height: 42,
+                        height: 41,
                         child: TextFormField(
                           onChanged: (_) => setState(() {}),
                           controller: textController,

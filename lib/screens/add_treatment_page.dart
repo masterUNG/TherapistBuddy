@@ -12,7 +12,7 @@ class AddTreatmentPageWidget extends StatefulWidget {
 }
 
 class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
-  int genderValue = 1;
+  int searchTypeValue = 1;
   TextEditingController userIDTextController;
   TextEditingController patientNameTextController;
 
@@ -71,13 +71,13 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                         children: [
                           Radio(
                             value: 1,
-                            groupValue: genderValue,
+                            groupValue: searchTypeValue,
                             materialTapTargetSize:
                                 MaterialTapTargetSize.shrinkWrap,
                             onChanged: (value) {
                               setState(() {
-                                genderValue = value;
-                                print("radioButtonValue = $genderValue");
+                                searchTypeValue = value;
+                                print("searchTypeValue = $searchTypeValue");
                               });
                             },
                           ),
@@ -99,13 +99,13 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                         children: [
                           Radio(
                             value: 2,
-                            groupValue: genderValue,
+                            groupValue: searchTypeValue,
                             materialTapTargetSize:
                                 MaterialTapTargetSize.shrinkWrap,
                             onChanged: (value) {
                               setState(() {
-                                genderValue = value;
-                                print("radioButtonValue = $genderValue");
+                                searchTypeValue = value;
+                                print("radioButtonValue = $searchTypeValue");
                               });
                             },
                           ),
@@ -124,7 +124,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                   ),
                 ),
               ),
-              genderValue == 1
+              searchTypeValue == 1
                   ? Container(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -137,11 +137,12 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                 Expanded(
                                   child: Container(
                                     width: double.infinity,
-                                    height: 42,
+                                    height: 41,
                                     child: TextFormField(
                                       onChanged: (_) => setState(() {}),
                                       controller: userIDTextController,
                                       obscureText: false,
+                                      keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         isDense: true,
                                         hintText: 'โปรดใส่ไอดีผู้ใช้ของคนไข้',
@@ -204,7 +205,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                 ),
                                 Container(
                                   width: 40,
-                                  height: 42,
+                                  height: 41,
                                   decoration: BoxDecoration(
                                     color: Color(0xFFF0F2F5),
                                     borderRadius: BorderRadius.only(
@@ -267,7 +268,6 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                 FFButtonWidget(
                                   onPressed: () {
                                     print('Button pressed ...');
-                                    print(genderValue);
                                   },
                                   text: 'รักษา',
                                   options: FFButtonOptions(
@@ -297,7 +297,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                             padding: EdgeInsets.fromLTRB(18, 0, 18, 8),
                             child: Container(
                               width: double.infinity,
-                              height: 42,
+                              height: 41,
                               child: TextFormField(
                                 onChanged: (_) => setState(() {}),
                                 controller: patientNameTextController,

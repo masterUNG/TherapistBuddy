@@ -624,7 +624,6 @@ class _PatientInPreviousTreatmentPageWidgetState
                                                     0, 8, 0, 0),
                                                 child: Container(
                                                   width: 130,
-                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -651,7 +650,6 @@ class _PatientInPreviousTreatmentPageWidgetState
                                                     0, 0, 0, 10),
                                                 child: Container(
                                                   width: 130,
-                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -662,15 +660,20 @@ class _PatientInPreviousTreatmentPageWidgetState
                                                             .center,
                                                     children: [
                                                       Text(
-                                                        '10 ครั้ง, 05.25 นาที',
+                                                        '10 ครั้ง/เซ็ต, 1 เซ็ต/วัน',
                                                         textAlign:
                                                             TextAlign.center,
                                                         style:
                                                             GoogleFonts.getFont(
                                                           'Kanit',
                                                           color: Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w300,
                                                           fontSize: 15,
                                                         ),
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        maxLines: 1,
                                                       )
                                                     ],
                                                   ),
