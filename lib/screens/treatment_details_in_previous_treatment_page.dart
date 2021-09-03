@@ -3,16 +3,16 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:therapist_buddy/variables.dart';
 
-class TreatmentDetailsPageWidget extends StatefulWidget {
-  const TreatmentDetailsPageWidget({Key key}) : super(key: key);
+class TreatmentDetailsInPreviousPageWidget extends StatefulWidget {
+  const TreatmentDetailsInPreviousPageWidget({Key key}) : super(key: key);
 
   @override
-  _TreatmentDetailsPageWidgetState createState() =>
-      _TreatmentDetailsPageWidgetState();
+  _TreatmentDetailsInPreviousPageWidgetState createState() =>
+      _TreatmentDetailsInPreviousPageWidgetState();
 }
 
-class _TreatmentDetailsPageWidgetState
-    extends State<TreatmentDetailsPageWidget> {
+class _TreatmentDetailsInPreviousPageWidgetState
+    extends State<TreatmentDetailsInPreviousPageWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,7 +100,7 @@ class _TreatmentDetailsPageWidgetState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'โรคที่กำลังทำการรักษา',
+                        'โรคที่ทำการรักษา',
                         style: GoogleFonts.getFont(
                           'Kanit',
                           color: Colors.black,
@@ -153,6 +153,82 @@ class _TreatmentDetailsPageWidgetState
                           style: GoogleFonts.getFont(
                             'Kanit',
                             color: Colors.black,
+                            fontSize: 16,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Divider(
+                height: 1,
+                thickness: 1,
+                color: Color(0xFFE5E5E5),
+              ),
+              Container(
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(18, 20, 18, 20),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'วันที่เสร็จสิ้นการรักษา',
+                        style: GoogleFonts.getFont(
+                          'Kanit',
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        child: Text(
+                          '25 กันยายน 2564',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                            color: Colors.black,
+                            fontSize: 16,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Divider(
+                height: 1,
+                thickness: 1,
+                color: Color(0xFFE5E5E5),
+              ),
+              Container(
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(18, 20, 18, 20),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'สถานะการเสร็จสิ้นการรักษา',
+                        style: GoogleFonts.getFont(
+                          'Kanit',
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        child: Text(
+                          'ยกเลิกการรักษา',
+                          style: GoogleFonts.getFont(
+                            'Kanit',
+                            color: defaultRed,
                             fontSize: 16,
                           ),
                         ),

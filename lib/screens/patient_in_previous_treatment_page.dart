@@ -7,6 +7,8 @@ import 'package:therapist_buddy/variables.dart';
 import 'assigned_exercises_in_previous_treatment_page.dart';
 import 'patient_all_exercises_page.dart';
 import 'patient_treatment_results_page.dart';
+import 'patient_profile_page.dart';
+import 'package:therapist_buddy/screens/treatment_details_in_previous_treatment_page.dart';
 
 class PatientInPreviousTreatmentPageWidget extends StatefulWidget {
   PatientInPreviousTreatmentPageWidget({Key key}) : super(key: key);
@@ -88,195 +90,211 @@ class _PatientInPreviousTreatmentPageWidgetState
             children: [
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(18, 15, 18, 15),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                            'https://picsum.photos/seed/963/600',
-                            width: 90,
-                            height: 90,
-                            fit: BoxFit.cover,
-                          ),
+                child: InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PatientProfilePageWidget(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width - 24,
+                    child: Card(
+                      margin: EdgeInsets.all(0),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      color: Colors.white,
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(16, 15, 16, 15),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(5),
+                              child: Image.network(
+                                'https://picsum.photos/seed/963/600',
+                                width: 90,
+                                height: 90,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(14, 0, 0, 0),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'ข้อมูลโปรไฟล์คนไข้',
+                                    style: GoogleFonts.getFont(
+                                      'Kanit',
+                                      color: primaryColor,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 28,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'ชื่อ',
+                                              style: GoogleFonts.getFont(
+                                                'Kanit',
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 15,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        width: 16,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsets.fromLTRB(
+                                                  5, 0, 5, 0),
+                                              child: Text(
+                                                ':',
+                                                style: GoogleFonts.getFont(
+                                                  'Kanit',
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 15,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                24 -
+                                                32 -
+                                                90 -
+                                                14 -
+                                                28 -
+                                                16,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'ธนวิชญ์ แซ่ลิ่ม',
+                                              style: GoogleFonts.getFont(
+                                                'Kanit',
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.normal,
+                                                fontSize: 15,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 28,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'อายุ',
+                                              style: GoogleFonts.getFont(
+                                                'Kanit',
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 15,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        width: 16,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsets.fromLTRB(
+                                                  5, 0, 5, 0),
+                                              child: Text(
+                                                ':',
+                                                style: GoogleFonts.getFont(
+                                                  'Kanit',
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 15,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                24 -
+                                                32 -
+                                                90 -
+                                                14 -
+                                                28 -
+                                                16,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              '20 ปี',
+                                              style: GoogleFonts.getFont(
+                                                'Kanit',
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.normal,
+                                                fontSize: 15,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
                         ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(14, 0, 0, 0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'ข้อมูลโปรไฟล์คนไข้',
-                                style: GoogleFonts.getFont(
-                                  'Kanit',
-                                  color: primaryColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 20,
-                                ),
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: 28,
-                                    decoration: BoxDecoration(),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'ชื่อ',
-                                          style: GoogleFonts.getFont(
-                                            'Kanit',
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 15,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    width: 16,
-                                    decoration: BoxDecoration(),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          child: Text(
-                                            ':',
-                                            style: GoogleFonts.getFont(
-                                              'Kanit',
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: 15,
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    width: MediaQuery.of(context).size.width -
-                                        36 -
-                                        90 -
-                                        14 -
-                                        28 -
-                                        16,
-                                    decoration: BoxDecoration(),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'ธนวิชญ์ แซ่ลิ่ม',
-                                          style: GoogleFonts.getFont(
-                                            'Kanit',
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 15,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: 28,
-                                    decoration: BoxDecoration(),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'อายุ',
-                                          style: GoogleFonts.getFont(
-                                            'Kanit',
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 15,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    width: 16,
-                                    decoration: BoxDecoration(),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          child: Text(
-                                            ':',
-                                            style: GoogleFonts.getFont(
-                                              'Kanit',
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: 15,
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    width: MediaQuery.of(context).size.width -
-                                        36 -
-                                        90 -
-                                        14 -
-                                        28 -
-                                        16,
-                                    decoration: BoxDecoration(),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          '20 ปี',
-                                          style: GoogleFonts.getFont(
-                                            'Kanit',
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 15,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        )
-                      ],
+                      ),
                     ),
                   ),
                 ),
@@ -292,28 +310,54 @@ class _PatientInPreviousTreatmentPageWidgetState
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'ข้อมูลการรักษา',
-                        style: GoogleFonts.getFont(
-                          'Kanit',
-                          color: primaryColor,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20,
-                        ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            'ข้อมูลการรักษา',
+                            style: GoogleFonts.getFont(
+                              'Kanit',
+                              color: primaryColor,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20,
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      TreatmentDetailsInPreviousPageWidget(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'ดูเพิ่มเติม',
+                              style: GoogleFonts.getFont(
+                                'Kanit',
+                                color: primaryColor,
+                                fontSize: 14,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            width: 28,
-                            decoration: BoxDecoration(),
+                            width: 45,
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'โรค',
+                                  'โรค  :',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
                                     color: Colors.black,
@@ -325,33 +369,7 @@ class _PatientInPreviousTreatmentPageWidgetState
                             ),
                           ),
                           Container(
-                            width: 16,
-                            decoration: BoxDecoration(),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: Text(
-                                    ':',
-                                    style: GoogleFonts.getFont(
-                                      'Kanit',
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: MediaQuery.of(context).size.width -
-                                36 -
-                                28 -
-                                16,
-                            decoration: BoxDecoration(),
+                            width: MediaQuery.of(context).size.width - 36 - 45,
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -375,14 +393,13 @@ class _PatientInPreviousTreatmentPageWidgetState
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            width: 110,
-                            decoration: BoxDecoration(),
+                            width: 101,
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'เริ่มการรักษา',
+                                  'เริ่มการรักษา  :',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
                                     color: Colors.black,
@@ -394,33 +411,7 @@ class _PatientInPreviousTreatmentPageWidgetState
                             ),
                           ),
                           Container(
-                            width: 16,
-                            decoration: BoxDecoration(),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: Text(
-                                    ':',
-                                    style: GoogleFonts.getFont(
-                                      'Kanit',
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: MediaQuery.of(context).size.width -
-                                36 -
-                                110 -
-                                16,
-                            decoration: BoxDecoration(),
+                            width: MediaQuery.of(context).size.width - 36 - 101,
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -444,14 +435,13 @@ class _PatientInPreviousTreatmentPageWidgetState
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            width: 110,
-                            decoration: BoxDecoration(),
+                            width: 128,
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'เสร็จสิ้นการรักษา',
+                                  'เสร็จสิ้นการรักษา  :',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
                                     color: Colors.black,
@@ -463,33 +453,7 @@ class _PatientInPreviousTreatmentPageWidgetState
                             ),
                           ),
                           Container(
-                            width: 16,
-                            decoration: BoxDecoration(),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: Text(
-                                    ':',
-                                    style: GoogleFonts.getFont(
-                                      'Kanit',
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: MediaQuery.of(context).size.width -
-                                36 -
-                                110 -
-                                16,
-                            decoration: BoxDecoration(),
+                            width: MediaQuery.of(context).size.width - 36 - 128,
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -513,14 +477,13 @@ class _PatientInPreviousTreatmentPageWidgetState
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            width: 110,
-                            decoration: BoxDecoration(),
+                            width: 195,
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'สถานะการรักษา',
+                                  'สถานะการเสร็จสิ้นการรักษา  :',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
                                     color: Colors.black,
@@ -532,33 +495,7 @@ class _PatientInPreviousTreatmentPageWidgetState
                             ),
                           ),
                           Container(
-                            width: 16,
-                            decoration: BoxDecoration(),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: Text(
-                                    ':',
-                                    style: GoogleFonts.getFont(
-                                      'Kanit',
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: MediaQuery.of(context).size.width -
-                                36 -
-                                110 -
-                                16,
-                            decoration: BoxDecoration(),
+                            width: MediaQuery.of(context).size.width - 36 - 195,
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -567,7 +504,7 @@ class _PatientInPreviousTreatmentPageWidgetState
                                   'ยกเลิกการรักษา',
                                   style: GoogleFonts.getFont(
                                     'Kanit',
-                                    color: Color(0xffFA8072),
+                                    color: defaultRed,
                                     fontWeight: FontWeight.normal,
                                     fontSize: 15,
                                   ),
@@ -650,92 +587,94 @@ class _PatientInPreviousTreatmentPageWidgetState
                                       padding: EdgeInsets.fromLTRB(0, 0, 15, 0),
                                       child: Container(
                                         width: 155,
-                                        decoration: BoxDecoration(
+                                        child: Card(
+                                          margin: EdgeInsets.all(0),
+                                          clipBehavior:
+                                              Clip.antiAliasWithSaveLayer,
                                           color: Colors.white,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              blurRadius: 4,
-                                              color: Color(0x40000000),
-                                              offset: Offset(0, 2),
-                                            )
-                                          ],
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                        ),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            ClipRRect(
-                                              borderRadius: BorderRadius.only(
-                                                bottomLeft: Radius.circular(0),
-                                                bottomRight: Radius.circular(0),
-                                                topLeft: Radius.circular(8),
-                                                topRight: Radius.circular(8),
-                                              ),
-                                              child: Image.network(
-                                                'https://image.freepik.com/free-photo/young-asian-woman-practicing-yoga-living-room_7861-1619.jpg',
-                                                width: 155,
-                                                height: 100,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  0, 8, 0, 0),
-                                              child: Container(
-                                                width: 130,
-                                                decoration: BoxDecoration(),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Text(
-                                                      'ยกแขนด้านข้าง',
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      style:
-                                                          GoogleFonts.getFont(
-                                                        'Kanit',
-                                                        color: Colors.black,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontSize: 15,
-                                                      ),
-                                                    )
-                                                  ],
+                                          elevation: 2,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(5),
+                                          ),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.only(
+                                                  bottomLeft:
+                                                      Radius.circular(0),
+                                                  bottomRight:
+                                                      Radius.circular(0),
+                                                  topLeft: Radius.circular(5),
+                                                  topRight: Radius.circular(5),
+                                                ),
+                                                child: Image.network(
+                                                  'https://image.freepik.com/free-photo/young-asian-woman-practicing-yoga-living-room_7861-1619.jpg',
+                                                  width: 155,
+                                                  height: 100,
+                                                  fit: BoxFit.cover,
                                                 ),
                                               ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  0, 0, 0, 10),
-                                              child: Container(
-                                                width: 130,
-                                                decoration: BoxDecoration(),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.start,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
-                                                  children: [
-                                                    Text(
-                                                      '10 ครั้ง, 05.25 นาที',
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      style:
-                                                          GoogleFonts.getFont(
-                                                        'Kanit',
-                                                        color: Colors.black,
-                                                        fontSize: 15,
-                                                      ),
-                                                    )
-                                                  ],
+                                              Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    0, 8, 0, 0),
+                                                child: Container(
+                                                  width: 130,
+                                                  decoration: BoxDecoration(),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Text(
+                                                        'ยกแขนด้านข้าง',
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style:
+                                                            GoogleFonts.getFont(
+                                                          'Kanit',
+                                                          color: Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          fontSize: 15,
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
-                                            )
-                                          ],
+                                              Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    0, 0, 0, 10),
+                                                child: Container(
+                                                  width: 130,
+                                                  decoration: BoxDecoration(),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Text(
+                                                        '10 ครั้ง, 05.25 นาที',
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style:
+                                                            GoogleFonts.getFont(
+                                                          'Kanit',
+                                                          color: Colors.black,
+                                                          fontSize: 15,
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                              )
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     )

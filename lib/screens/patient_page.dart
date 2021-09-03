@@ -140,8 +140,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     ClipRRect(
-                                      borderRadius: BorderRadius.circular(
-                                          defaultBorderRadius),
+                                      borderRadius: BorderRadius.circular(5),
                                       child: Image.network(
                                         'https://picsum.photos/seed/963/600',
                                         width: 90,
@@ -172,7 +171,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                             children: [
                                               Container(
                                                 width: 28,
-                                                decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -195,7 +193,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                               ),
                                               Container(
                                                 width: 16,
-                                                decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -231,7 +228,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                     14 -
                                                     28 -
                                                     16,
-                                                decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -261,7 +257,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                             children: [
                                               Container(
                                                 width: 28,
-                                                decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -284,7 +279,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                               ),
                                               Container(
                                                 width: 16,
-                                                decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -320,7 +314,6 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                     14 -
                                                     28 -
                                                     16,
-                                                decoration: BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
