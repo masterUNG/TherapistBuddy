@@ -12,7 +12,7 @@ class AddTreatmentPageWidget extends StatefulWidget {
 }
 
 class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
-  int radioButtonValue = 1;
+  int genderValue = 1;
   TextEditingController userIDTextController;
   TextEditingController patientNameTextController;
 
@@ -62,7 +62,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                 width: double.infinity,
                 height: 70,
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(12, 0, 0, 0),
+                  padding: EdgeInsets.fromLTRB(18, 0, 0, 0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -71,11 +71,13 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                         children: [
                           Radio(
                             value: 1,
-                            groupValue: radioButtonValue,
+                            groupValue: genderValue,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
                             onChanged: (value) {
                               setState(() {
-                                radioButtonValue = value;
-                                print("radioButtonValue = $radioButtonValue");
+                                genderValue = value;
+                                print("radioButtonValue = $genderValue");
                               });
                             },
                           ),
@@ -97,11 +99,13 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                         children: [
                           Radio(
                             value: 2,
-                            groupValue: radioButtonValue,
+                            groupValue: genderValue,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
                             onChanged: (value) {
                               setState(() {
-                                radioButtonValue = value;
-                                print("radioButtonValue = $radioButtonValue");
+                                genderValue = value;
+                                print("radioButtonValue = $genderValue");
                               });
                             },
                           ),
@@ -120,7 +124,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                   ),
                 ),
               ),
-              radioButtonValue == 1
+              genderValue == 1
                   ? Container(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -263,7 +267,7 @@ class _AddTreatmentPageWidgetState extends State<AddTreatmentPageWidget> {
                                 FFButtonWidget(
                                   onPressed: () {
                                     print('Button pressed ...');
-                                    print(radioButtonValue);
+                                    print(genderValue);
                                   },
                                   text: 'รักษา',
                                   options: FFButtonOptions(

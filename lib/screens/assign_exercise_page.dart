@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../flutter_flow/flutter_flow_drop_down_template.dart';
-import '../flutter_flow/flutter_flow_radio_button.dart';
 
 import 'package:therapist_buddy/variables.dart';
 import 'confirm_exercise_page.dart';
@@ -19,9 +17,9 @@ class AssignExercisePageWidget extends StatefulWidget {
 }
 
 class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
-  String dropDownValue;
-  String radioButtonValue1;
-  String radioButtonValue2;
+  String diseaseValue = "Office Syndrome";
+  String exerciseFrequencyValue = "ทุกวัน";
+  bool _exercisesFinishBeforeNextAppointment;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +66,6 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                             ),
                             (r) => false,
                           );
-                          ;
                         },
                         child: Text(
                           'ยืนยัน',
@@ -124,26 +121,41 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                child: FlutterFlowDropDown(
-                  initialOption: 'Office Syndrome',
-                  options: ['Office Syndrome'],
-                  onChanged: (value) {
-                    setState(() => dropDownValue = value);
-                  },
+                child: Container(
                   width: double.infinity,
-                  height: 52,
-                  textStyle: GoogleFonts.getFont(
-                    'Kanit',
-                    color: Colors.black,
-                    fontSize: 15,
+                  height: 49,
+                  padding: const EdgeInsets.only(left: 20),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
+                    border: Border.all(
+                      color: secondaryColor,
+                      width: 1,
+                    ),
                   ),
-                  fillColor: Colors.white,
-                  elevation: 2,
-                  borderColor: Color(0xFFCCD0D5),
-                  borderWidth: 1,
-                  borderRadius: defaultBorderRadius,
-                  margin: EdgeInsets.fromLTRB(20, 0, 12, 0),
-                  hidesUnderline: true,
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                      value: diseaseValue,
+                      style: TextStyle(
+                        fontFamily: 'Kanit',
+                        fontSize: 14,
+                        color: Colors.black,
+                      ),
+                      items: <String>[
+                        'Office Syndrome',
+                      ].map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (String value) {
+                        setState(() {
+                          diseaseValue = value;
+                        });
+                      },
+                    ),
+                  ),
                 ),
               ),
               Padding(
@@ -292,7 +304,7 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 18, 0, 12),
                 child: Text(
-                  'ตารางการออกกำลังกาย',
+                  'ตารางการออกกำลังกายต่อสัปดาห์',
                   style: GoogleFonts.getFont(
                     'Kanit',
                     color: primaryColor,
@@ -303,236 +315,47 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: 37,
-                      height: 37,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: secondaryColor,
-                          width: 1,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'อา.',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 17,
-                            ),
-                          )
-                        ],
-                      ),
+                child: Container(
+                  width: double.infinity,
+                  height: 49,
+                  padding: const EdgeInsets.only(left: 20),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
+                    border: Border.all(
+                      color: secondaryColor,
+                      width: 1,
                     ),
-                    Container(
-                      width: 37,
-                      height: 37,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Color(0xFFCCD0D5),
-                          width: 1,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'จ.',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 17,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 37,
-                      height: 37,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: secondaryColor,
-                          width: 1,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'อ.',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 17,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 37,
-                      height: 37,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: secondaryColor,
-                          width: 1,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'พ.',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 17,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 37,
-                      height: 37,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: secondaryColor,
-                          width: 1,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'พฤ.',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 17,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 37,
-                      height: 37,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: secondaryColor,
-                          width: 1,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'ศ.',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 17,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 37,
-                      height: 37,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Color(0xFFCCD0D5),
-                          width: 1,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'ส.',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Kanit',
-                              color: Colors.black,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 17,
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(30, 16, 0, 0),
-                child: FlutterFlowRadioButton(
-                  options: ['ทุกวัน'],
-                  onChanged: (value) {
-                    setState(() => radioButtonValue1 = value);
-                  },
-                  optionHeight: 25,
-                  textStyle: GoogleFonts.getFont(
-                    'Kanit',
-                    color: Colors.black,
-                    fontSize: 15,
                   ),
-                  buttonPosition: RadioButtonPosition.left,
-                  direction: Axis.horizontal,
-                  radioButtonColor: primaryColor,
-                  toggleable: true,
-                  horizontalAlignment: WrapAlignment.start,
-                  verticalAlignment: WrapCrossAlignment.start,
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                      value: exerciseFrequencyValue,
+                      style: TextStyle(
+                        fontFamily: 'Kanit',
+                        fontSize: 14,
+                        color: Colors.black,
+                      ),
+                      items: <String>[
+                        '1 วัน',
+                        '2 วัน',
+                        '3 วัน',
+                        '4 วัน',
+                        '5 วัน',
+                        '6 วัน',
+                        'ทุกวัน',
+                      ].map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (String value) {
+                        setState(() {
+                          exerciseFrequencyValue = value;
+                        });
+                      },
+                    ),
+                  ),
                 ),
               ),
               Padding(
@@ -583,24 +406,32 @@ class _AssignExercisePageWidgetState extends State<AssignExercisePageWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(30, 16, 0, 0),
-                child: FlutterFlowRadioButton(
-                  options: ['ก่อนวันนัดครั้งต่อไป 1 วัน'],
-                  onChanged: (value) {
-                    setState(() => radioButtonValue2 = value);
-                  },
-                  optionHeight: 25,
-                  textStyle: GoogleFonts.getFont(
-                    'Kanit',
-                    color: Colors.black,
-                    fontSize: 15,
-                  ),
-                  buttonPosition: RadioButtonPosition.left,
-                  direction: Axis.horizontal,
-                  radioButtonColor: primaryColor,
-                  toggleable: true,
-                  horizontalAlignment: WrapAlignment.start,
-                  verticalAlignment: WrapCrossAlignment.start,
+                padding: EdgeInsets.fromLTRB(20, 16, 0, 0),
+                child: Row(
+                  children: [
+                    Radio(
+                      value: true,
+                      groupValue: _exercisesFinishBeforeNextAppointment,
+                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      toggleable: true,
+                      onChanged: (value) {
+                        setState(() {
+                          _exercisesFinishBeforeNextAppointment = value;
+                          print(
+                              "_exercisesFinishBeforeNextAppointment = $_exercisesFinishBeforeNextAppointment");
+                        });
+                      },
+                    ),
+                    Text(
+                      'ก่อนวันนัดครั้งต่อไป 1 วัน',
+                      style: GoogleFonts.getFont(
+                        'Kanit',
+                        color: Colors.black,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Align(

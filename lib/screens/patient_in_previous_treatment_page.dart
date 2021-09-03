@@ -208,6 +208,7 @@ class _PatientInPreviousTreatmentPageWidgetState
                                                 fontWeight: FontWeight.normal,
                                                 fontSize: 15,
                                               ),
+                                              overflow: TextOverflow.ellipsis,
                                             )
                                           ],
                                         ),
@@ -382,6 +383,7 @@ class _PatientInPreviousTreatmentPageWidgetState
                                     fontWeight: FontWeight.normal,
                                     fontSize: 15,
                                   ),
+                                  overflow: TextOverflow.ellipsis,
                                 )
                               ],
                             ),
@@ -424,6 +426,7 @@ class _PatientInPreviousTreatmentPageWidgetState
                                     fontWeight: FontWeight.normal,
                                     fontSize: 15,
                                   ),
+                                  overflow: TextOverflow.ellipsis,
                                 )
                               ],
                             ),

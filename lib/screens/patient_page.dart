@@ -213,6 +213,8 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                                               FontWeight.w500,
                                                           fontSize: 15,
                                                         ),
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                       ),
                                                     )
                                                   ],
@@ -399,14 +401,14 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
-                                    width: 28,
+                                    width: 44,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'โรค',
+                                          'โรค  :',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
                                             color: Colors.black,
@@ -418,33 +420,9 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                     ),
                                   ),
                                   Container(
-                                    width: 16,
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          child: Text(
-                                            ':',
-                                            style: GoogleFonts.getFont(
-                                              'Kanit',
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: 15,
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
                                     width: MediaQuery.of(context).size.width -
                                         36 -
-                                        28 -
-                                        16,
+                                        44,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -458,6 +436,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                             fontWeight: FontWeight.normal,
                                             fontSize: 15,
                                           ),
+                                          overflow: TextOverflow.ellipsis,
                                         )
                                       ],
                                     ),
@@ -469,14 +448,14 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
-                                    width: 128,
+                                    width: 143,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'วันที่เข้ารับการรักษา',
+                                          'วันที่เข้ารับการรักษา  :',
                                           style: GoogleFonts.getFont(
                                             'Kanit',
                                             color: Colors.black,
@@ -488,33 +467,9 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                     ),
                                   ),
                                   Container(
-                                    width: 16,
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          child: Text(
-                                            ':',
-                                            style: GoogleFonts.getFont(
-                                              'Kanit',
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: 15,
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
                                     width: MediaQuery.of(context).size.width -
                                         36 -
-                                        128 -
-                                        16,
+                                        143,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -528,6 +483,7 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                             fontWeight: FontWeight.normal,
                                             fontSize: 15,
                                           ),
+                                          overflow: TextOverflow.ellipsis,
                                         )
                                       ],
                                     ),
@@ -593,15 +549,14 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      width: 22,
-                                      decoration: BoxDecoration(),
+                                      width: 40,
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'วัน',
+                                            'วัน  :',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
                                               color: Colors.black,
@@ -613,35 +568,9 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       ),
                                     ),
                                     Container(
-                                      width: 16,
-                                      decoration: BoxDecoration(),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                            child: Text(
-                                              ':',
-                                              style: GoogleFonts.getFont(
-                                                'Kanit',
-                                                color: Colors.black,
-                                                fontWeight: FontWeight.w500,
-                                                fontSize: 15,
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    Container(
                                       width: MediaQuery.of(context).size.width -
                                           36 -
-                                          22 -
-                                          16,
-                                      decoration: BoxDecoration(),
+                                          40,
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
@@ -666,14 +595,14 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      width: 32,
+                                      width: 51,
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'เวลา',
+                                            'เวลา  :',
                                             style: GoogleFonts.getFont(
                                               'Kanit',
                                               color: Colors.black,
@@ -685,33 +614,9 @@ class _PatientPageWidgetState extends State<PatientPageWidget> {
                                       ),
                                     ),
                                     Container(
-                                      width: 16,
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                            child: Text(
-                                              ':',
-                                              style: GoogleFonts.getFont(
-                                                'Kanit',
-                                                color: Colors.black,
-                                                fontWeight: FontWeight.w500,
-                                                fontSize: 15,
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    Container(
                                       width: MediaQuery.of(context).size.width -
                                           36 -
-                                          32 -
-                                          16,
+                                          51,
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:

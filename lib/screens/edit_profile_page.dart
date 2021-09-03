@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../flutter_flow/flutter_flow_drop_down_template.dart';
-import '../flutter_flow/flutter_flow_radio_button.dart';
 
 import 'package:therapist_buddy/main.dart';
 import 'package:therapist_buddy/variables.dart';
@@ -24,12 +22,13 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
   TextEditingController passwordTextfieldController;
   TextEditingController licenseNumberTextfieldController;
   bool passwordTextfieldVisibility;
-  String dropDownValue1;
-  String dropDownValue2;
-  String dropDownValue3;
-  String dropDownValue4;
-  String dropDownValue5;
-  String radioButtonValue;
+  String nameTitleValue = "กภ.";
+  String licenseTitleValue = "กภ.";
+  String workplaceValue = "โรงพยาบาลสงขลานครินทร์";
+  String birthDayValue = "1";
+  String birthMonthValue = "ม.ค.";
+  String birthYearValue = "2564";
+  int genderValue = 1;
   double saveAreaHeight = 125;
 
   @override
@@ -203,26 +202,42 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    FlutterFlowDropDown(
-                      initialOption: 'กภ.',
-                      options: ['กภ.'],
-                      onChanged: (value) {
-                        setState(() => dropDownValue1 = value);
-                      },
+                    Container(
                       width: 95,
                       height: 49,
-                      textStyle: GoogleFonts.getFont(
-                        'Kanit',
-                        color: Colors.black,
-                        fontSize: 14,
+                      padding: const EdgeInsets.only(left: 20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius:
+                            BorderRadius.circular(defaultBorderRadius),
+                        border: Border.all(
+                          color: secondaryColor,
+                          width: 1,
+                        ),
                       ),
-                      fillColor: Colors.white,
-                      elevation: 2,
-                      borderColor: secondaryColor,
-                      borderWidth: 1,
-                      borderRadius: defaultBorderRadius,
-                      margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                      hidesUnderline: true,
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<String>(
+                          value: nameTitleValue,
+                          style: TextStyle(
+                            fontFamily: 'Kanit',
+                            fontSize: 14,
+                            color: Colors.black,
+                          ),
+                          items: <String>[
+                            'กภ.',
+                          ].map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                          onChanged: (String value) {
+                            setState(() {
+                              nameTitleValue = value;
+                            });
+                          },
+                        ),
+                      ),
                     ),
                     Expanded(
                       child: Padding(
@@ -542,26 +557,42 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    FlutterFlowDropDown(
-                      initialOption: 'กภ.',
-                      options: ['กภ.'],
-                      onChanged: (value) {
-                        setState(() => dropDownValue1 = value);
-                      },
+                    Container(
                       width: 95,
                       height: 49,
-                      textStyle: GoogleFonts.getFont(
-                        'Kanit',
-                        color: Colors.black,
-                        fontSize: 14,
+                      padding: const EdgeInsets.only(left: 20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius:
+                            BorderRadius.circular(defaultBorderRadius),
+                        border: Border.all(
+                          color: secondaryColor,
+                          width: 1,
+                        ),
                       ),
-                      fillColor: Colors.white,
-                      elevation: 2,
-                      borderColor: secondaryColor,
-                      borderWidth: 1,
-                      borderRadius: defaultBorderRadius,
-                      margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                      hidesUnderline: true,
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<String>(
+                          value: licenseTitleValue,
+                          style: TextStyle(
+                            fontFamily: 'Kanit',
+                            fontSize: 14,
+                            color: Colors.black,
+                          ),
+                          items: <String>[
+                            'กภ.',
+                          ].map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                          onChanged: (String value) {
+                            setState(() {
+                              licenseTitleValue = value;
+                            });
+                          },
+                        ),
+                      ),
                     ),
                     Expanded(
                       child: Padding(
@@ -620,26 +651,41 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(30, 8, 30, 0),
-                child: FlutterFlowDropDown(
-                  initialOption: 'โรงพยาบาลสงขลานครินทร์',
-                  options: ['โรงพยาบาลสงขลานครินทร์'],
-                  onChanged: (value) {
-                    setState(() => dropDownValue2 = value);
-                  },
+                child: Container(
                   width: double.infinity,
                   height: 49,
-                  textStyle: GoogleFonts.getFont(
-                    'Kanit',
-                    color: Colors.black,
-                    fontSize: 14,
+                  padding: const EdgeInsets.only(left: 20),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
+                    border: Border.all(
+                      color: secondaryColor,
+                      width: 1,
+                    ),
                   ),
-                  fillColor: Colors.white,
-                  elevation: 2,
-                  borderColor: secondaryColor,
-                  borderWidth: 1,
-                  borderRadius: defaultBorderRadius,
-                  margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                  hidesUnderline: true,
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                      value: workplaceValue,
+                      style: TextStyle(
+                        fontFamily: 'Kanit',
+                        fontSize: 14,
+                        color: Colors.black,
+                      ),
+                      items: <String>[
+                        'โรงพยาบาลสงขลานครินทร์',
+                      ].map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (String value) {
+                        setState(() {
+                          workplaceValue = value;
+                        });
+                      },
+                    ),
+                  ),
                 ),
               ),
               Align(
@@ -661,245 +707,288 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    FlutterFlowDropDown(
-                      initialOption: '1',
-                      options: [
-                        '1',
-                        '2',
-                        '3',
-                        '4',
-                        '5',
-                        '6',
-                        '7',
-                        '8',
-                        '9',
-                        '10',
-                        '11',
-                        '12',
-                        '13',
-                        '14',
-                        '15',
-                        '16',
-                        '17',
-                        '18',
-                        '19',
-                        '20',
-                        '21',
-                        '22',
-                        '23',
-                        '24',
-                        '25',
-                        '26',
-                        '27',
-                        '28',
-                        '29',
-                        '30',
-                        '31'
-                      ],
-                      onChanged: (value) {
-                        setState(() => dropDownValue3 = value);
-                      },
+                    Container(
                       width: (MediaQuery.of(context).size.width - 60 - 20) / 3,
                       height: 49,
-                      textStyle: GoogleFonts.getFont(
-                        'Kanit',
-                        color: Colors.black,
-                        fontSize: 14,
+                      padding: const EdgeInsets.only(left: 20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius:
+                            BorderRadius.circular(defaultBorderRadius),
+                        border: Border.all(
+                          color: secondaryColor,
+                          width: 1,
+                        ),
                       ),
-                      fillColor: Colors.white,
-                      elevation: 2,
-                      borderColor: secondaryColor,
-                      borderWidth: 1,
-                      borderRadius: defaultBorderRadius,
-                      margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                      hidesUnderline: true,
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<String>(
+                          value: birthDayValue,
+                          style: TextStyle(
+                            fontFamily: 'Kanit',
+                            fontSize: 14,
+                            color: Colors.black,
+                          ),
+                          items: <String>[
+                            '1',
+                            '2',
+                            '3',
+                            '4',
+                            '5',
+                            '6',
+                            '7',
+                            '8',
+                            '9',
+                            '10',
+                            '11',
+                            '12',
+                            '13',
+                            '14',
+                            '15',
+                            '16',
+                            '17',
+                            '18',
+                            '19',
+                            '20',
+                            '21',
+                            '22',
+                            '23',
+                            '24',
+                            '25',
+                            '26',
+                            '27',
+                            '28',
+                            '29',
+                            '30',
+                            '31',
+                          ].map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                          onChanged: (String value) {
+                            setState(() {
+                              birthDayValue = value;
+                            });
+                          },
+                        ),
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                      child: FlutterFlowDropDown(
-                        options: [
-                          'ม.ค.',
-                          'ก.พ.',
-                          'มี.ค.',
-                          'เม.ย.',
-                          'พ.ค.',
-                          'มิ.ย.',
-                          'ก.ค.',
-                          'ส.ค.',
-                          'ก.ย.',
-                          'ต.ค.',
-                          'พ.ย.',
-                          'ธ.ค.'
-                        ],
-                        onChanged: (value) {
-                          setState(() => dropDownValue4 = value);
-                        },
+                      child: Container(
                         width:
                             (MediaQuery.of(context).size.width - 60 - 20) / 3,
                         height: 49,
-                        textStyle: GoogleFonts.getFont(
-                          'Kanit',
-                          color: Colors.black,
-                          fontSize: 14,
+                        padding: const EdgeInsets.only(left: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius:
+                              BorderRadius.circular(defaultBorderRadius),
+                          border: Border.all(
+                            color: secondaryColor,
+                            width: 1,
+                          ),
                         ),
-                        fillColor: Colors.white,
-                        elevation: 2,
-                        borderColor: secondaryColor,
-                        borderWidth: 1,
-                        borderRadius: defaultBorderRadius,
-                        margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                        hidesUnderline: true,
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            value: birthMonthValue,
+                            style: TextStyle(
+                              fontFamily: 'Kanit',
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                            items: <String>[
+                              'ม.ค.',
+                              'ก.พ.',
+                              'มี.ค.',
+                              'เม.ย.',
+                              'พ.ค.',
+                              'มิ.ย.',
+                              'ก.ค.',
+                              'ส.ค.',
+                              'ก.ย.',
+                              'ต.ค.',
+                              'พ.ย.',
+                              'ธ.ค.',
+                            ].map<DropdownMenuItem<String>>((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                            onChanged: (String value) {
+                              setState(() {
+                                birthMonthValue = value;
+                              });
+                            },
+                          ),
+                        ),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                      child: FlutterFlowDropDown(
-                        initialOption: '2564',
-                        options: [
-                          '2440',
-                          '2441',
-                          '2442',
-                          '2443',
-                          '2444',
-                          '2445',
-                          '2446',
-                          '2447',
-                          '2448',
-                          '2449',
-                          '2450',
-                          '2451',
-                          '2452',
-                          '2453',
-                          '2454',
-                          '2455',
-                          '2456',
-                          '2457',
-                          '2458',
-                          '2459',
-                          '2460',
-                          '2461',
-                          '2462',
-                          '2463',
-                          '2464',
-                          '2465',
-                          '2466',
-                          '2467',
-                          '2468',
-                          '2469',
-                          '2470',
-                          '2471',
-                          '2472',
-                          '2473',
-                          '2474',
-                          '2475',
-                          '2476',
-                          '2477',
-                          '2478',
-                          '2479',
-                          '2480',
-                          '2481',
-                          '2482',
-                          '2483',
-                          '2484',
-                          '2485',
-                          '2486',
-                          '2487',
-                          '2488',
-                          '2489',
-                          '2490',
-                          '2491',
-                          '2492',
-                          '2493',
-                          '2494',
-                          '2495',
-                          '2496',
-                          '2497',
-                          '2498',
-                          '2499',
-                          '2500',
-                          '2501',
-                          '2502',
-                          '2503',
-                          '2504',
-                          '2505',
-                          '2506',
-                          '2507',
-                          '2508',
-                          '2509',
-                          '2510',
-                          '2511',
-                          '2512',
-                          '2513',
-                          '2514',
-                          '2515',
-                          '2516',
-                          '2517',
-                          '2518',
-                          '2519',
-                          '2520',
-                          '2521',
-                          '2522',
-                          '2523',
-                          '2524',
-                          '2525',
-                          '2526',
-                          '2527',
-                          '2528',
-                          '2529',
-                          '2530',
-                          '2531',
-                          '2532',
-                          '2533',
-                          '2534',
-                          '2535',
-                          '2536',
-                          '2537',
-                          '2538',
-                          '2539',
-                          '2540',
-                          '2541',
-                          '2542',
-                          '2543',
-                          '2544',
-                          '2545',
-                          '2546',
-                          '2547',
-                          '2548',
-                          '2549',
-                          '2550',
-                          '2551',
-                          '2552',
-                          '2553',
-                          '2554',
-                          '2555',
-                          '2556',
-                          '2557',
-                          '2558',
-                          '2559',
-                          '2560',
-                          '2561',
-                          '2562',
-                          '2563',
-                          '2564'
-                        ],
-                        onChanged: (value) {
-                          setState(() => dropDownValue5 = value);
-                        },
+                      child: Container(
                         width:
                             (MediaQuery.of(context).size.width - 60 - 20) / 3,
                         height: 49,
-                        textStyle: GoogleFonts.getFont(
-                          'Kanit',
-                          color: Colors.black,
-                          fontSize: 14,
+                        padding: const EdgeInsets.only(left: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius:
+                              BorderRadius.circular(defaultBorderRadius),
+                          border: Border.all(
+                            color: secondaryColor,
+                            width: 1,
+                          ),
                         ),
-                        fillColor: Colors.white,
-                        elevation: 2,
-                        borderColor: secondaryColor,
-                        borderWidth: 1,
-                        borderRadius: defaultBorderRadius,
-                        margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                        hidesUnderline: true,
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            value: birthYearValue,
+                            style: TextStyle(
+                              fontFamily: 'Kanit',
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                            items: <String>[
+                              '2440',
+                              '2441',
+                              '2442',
+                              '2443',
+                              '2444',
+                              '2445',
+                              '2446',
+                              '2447',
+                              '2448',
+                              '2449',
+                              '2450',
+                              '2451',
+                              '2452',
+                              '2453',
+                              '2454',
+                              '2455',
+                              '2456',
+                              '2457',
+                              '2458',
+                              '2459',
+                              '2460',
+                              '2461',
+                              '2462',
+                              '2463',
+                              '2464',
+                              '2465',
+                              '2466',
+                              '2467',
+                              '2468',
+                              '2469',
+                              '2470',
+                              '2471',
+                              '2472',
+                              '2473',
+                              '2474',
+                              '2475',
+                              '2476',
+                              '2477',
+                              '2478',
+                              '2479',
+                              '2480',
+                              '2481',
+                              '2482',
+                              '2483',
+                              '2484',
+                              '2485',
+                              '2486',
+                              '2487',
+                              '2488',
+                              '2489',
+                              '2490',
+                              '2491',
+                              '2492',
+                              '2493',
+                              '2494',
+                              '2495',
+                              '2496',
+                              '2497',
+                              '2498',
+                              '2499',
+                              '2500',
+                              '2501',
+                              '2502',
+                              '2503',
+                              '2504',
+                              '2505',
+                              '2506',
+                              '2507',
+                              '2508',
+                              '2509',
+                              '2510',
+                              '2511',
+                              '2512',
+                              '2513',
+                              '2514',
+                              '2515',
+                              '2516',
+                              '2517',
+                              '2518',
+                              '2519',
+                              '2520',
+                              '2521',
+                              '2522',
+                              '2523',
+                              '2524',
+                              '2525',
+                              '2526',
+                              '2527',
+                              '2528',
+                              '2529',
+                              '2530',
+                              '2531',
+                              '2532',
+                              '2533',
+                              '2534',
+                              '2535',
+                              '2536',
+                              '2537',
+                              '2538',
+                              '2539',
+                              '2540',
+                              '2541',
+                              '2542',
+                              '2543',
+                              '2544',
+                              '2545',
+                              '2546',
+                              '2547',
+                              '2548',
+                              '2549',
+                              '2550',
+                              '2551',
+                              '2552',
+                              '2553',
+                              '2554',
+                              '2555',
+                              '2556',
+                              '2557',
+                              '2558',
+                              '2559',
+                              '2560',
+                              '2561',
+                              '2562',
+                              '2563',
+                              '2564',
+                            ].map<DropdownMenuItem<String>>((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                            onChanged: (String value) {
+                              setState(() {
+                                birthYearValue = value;
+                              });
+                            },
+                          ),
+                        ),
                       ),
                     )
                   ],
@@ -922,26 +1011,110 @@ class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
               Align(
                 alignment: Alignment(-1, 0),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(30, 8, 0, 20),
-                  child: FlutterFlowRadioButton(
-                    options: ['ชาย', 'หญิง', 'อื่นๆ', 'ไม่ระบุ'],
-                    onChanged: (value) {
-                      setState(() => radioButtonValue = value);
-                    },
-                    optionHeight: 35,
-                    textStyle: GoogleFonts.getFont(
-                      'Kanit',
-                      color: Colors.black,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 18,
-                    ),
-                    textPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                    buttonPosition: RadioButtonPosition.left,
-                    direction: Axis.vertical,
-                    radioButtonColor: primaryColor,
-                    toggleable: false,
-                    horizontalAlignment: WrapAlignment.start,
-                    verticalAlignment: WrapCrossAlignment.start,
+                  padding: EdgeInsets.fromLTRB(18, 8, 0, 0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Radio(
+                            value: 1,
+                            groupValue: genderValue,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
+                            onChanged: (value) {
+                              setState(() {
+                                genderValue = value;
+                                print("genderValue = $genderValue");
+                              });
+                            },
+                          ),
+                          Text(
+                            'ชาย',
+                            style: GoogleFonts.getFont(
+                              'Kanit',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Radio(
+                            value: 2,
+                            groupValue: genderValue,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
+                            onChanged: (value) {
+                              setState(() {
+                                genderValue = value;
+                                print("genderValue = $genderValue");
+                              });
+                            },
+                          ),
+                          Text(
+                            'หญิง',
+                            style: GoogleFonts.getFont(
+                              'Kanit',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Radio(
+                            value: 3,
+                            groupValue: genderValue,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
+                            onChanged: (value) {
+                              setState(() {
+                                genderValue = value;
+                                print("genderValue = $genderValue");
+                              });
+                            },
+                          ),
+                          Text(
+                            'อื่นๆ',
+                            style: GoogleFonts.getFont(
+                              'Kanit',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Radio(
+                            value: 4,
+                            groupValue: genderValue,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
+                            onChanged: (value) {
+                              setState(() {
+                                genderValue = value;
+                                print("radioButtonValue = $genderValue");
+                              });
+                            },
+                          ),
+                          Text(
+                            'ไม่ระบุ',
+                            style: GoogleFonts.getFont(
+                              'Kanit',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),
