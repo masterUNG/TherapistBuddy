@@ -43,7 +43,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
         backgroundColor: Colors.white,
         elevation: 0,
         label: Text(
-          'สร้างบัญชีใหม่',
+          'สร้างบัญชีใหม',
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
             'Kanit',
