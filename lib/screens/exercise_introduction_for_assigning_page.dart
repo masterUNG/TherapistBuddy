@@ -382,10 +382,10 @@ class _ExerciseIntroductionForAssigningPageWidgetState
                     ),
                     style: ElevatedButton.styleFrom(
                       primary: primaryColor,
-                      fixedSize:
-                          Size(MediaQuery.of(context).size.width - 36, 48),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5.0)),
+                      // fixedSize:
+                      //     Size(MediaQuery.of(context).size.width - 36, 48),
+                      // shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(5.0)),
                     ),
                   ),
                 ],
